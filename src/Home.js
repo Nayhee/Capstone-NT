@@ -20,10 +20,10 @@ export const Home = () => {
                     {/* <h3>What would you like to do today?</h3> */}
                     <div className="home__greeting__buttons">
                         <Link to={`/putt`}>
-                            <button>My Discs</button>
+                            <button>Discs</button>
                         </Link>
                         <Link to={`/putt`}>
-                            <button>My Rounds</button>
+                            <button>Rounds</button>
                         </Link>
                         <Link to={`/putt`}>
                             <button>Start Putting</button>

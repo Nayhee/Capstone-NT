@@ -29,9 +29,8 @@
     width: 85px;
     height: 75px;
     margin: 0px .5em 0px .5em;
-    border: 3px solid #1d2351;
+    border: 4px solid #1d2351;
     background-color: #3fbdc2;
-    color: #1d2351;
     font-weight: bold;
     border-radius: 50%;
     justify-items: center;
@@ -45,7 +44,7 @@
     margin: 0px;
     display: flex;
     justify-content: center;
-    color: #1d2351;
+    color: white;
 }
 
 .navbar__logo__li {
@@ -55,21 +54,15 @@
 
 .navbar__link {
     text-decoration: none;
-    font-style: italic;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #1d2351;
-    background-color: #3fbdc2;
-    color: #1d2351;
-    border-radius: 80%;
-    height: 50px;
+    color: #3fbdc2;
+    height: 20px;
     width: 50px;
-    /* justify-items: center; */
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Acme', sans-serif;
     padding: .2em;
-    opacity: 90%;
 }
 
 .navbar__link:link {
@@ -80,10 +73,14 @@
     text-decoration: none;
 }
 .navbar__link:hover {
-    opacity: 100%;
     text-decoration: none;
     background:#1d2351;
-    color: #3fbdc2;
+    color: #1d2351;
+    border: 2px solid #1d2351;
+    background-color: #3fbdc2;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
     box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
 }
 
