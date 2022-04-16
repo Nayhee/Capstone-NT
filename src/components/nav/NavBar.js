@@ -16,9 +16,14 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
     
     return (
         <ul className="navbar">
-            <li className="navbar__item">
+            <div className="navbar__logo">
+                <p>Putt</p>
+                <p>Tracker</p>
+            </div>
+            
+            {/* <li className="navbar__logo__li">
                 <img className="navbar__logo" src="images/logo1.png"></img>
-            </li>
+            </li> */}
 
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/">Home</Link>
