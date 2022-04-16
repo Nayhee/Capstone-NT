@@ -1,0 +1,72 @@
+
+
+.home__greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 35%;
+   
+    margin: auto;
+    padding: 10px;
+    /* margin: 300px 5px 5px 0500px; */
+}
+
+.home__greeting h2 {
+    margin: 10px 0px 10px 0px;
+    color: #3fbdc2;
+    font-weight: bold;
+    font-size: 32px;
+    border: 2px solid #3fbdc2;
+    border-radius: 8px;
+    background-color: #1d2351;
+    padding: .5em;
+    font-family: 'Acme', sans-serif;
+    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
+}
+/* .home__greeting h3 {
+    margin: 5px 0px 10px 0px;
+} */
+
+.home__greeting__buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__greeting__buttons button:hover {
+    background:  #1d2351;
+    color: #3fbdc2;
+    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
+}
+
+.home__greeting__buttons button {
+    margin: .3em;
+    border: 1px solid #ced4da;
+    background-color: #3fbdc2;
+    color:  #1d2351;
+    font-weight: bold;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    justify-items: center;
+    font-size: 24px;
+    font-family: 'Acme', sans-serif;
+    padding: .3em;
+}
+
+
+
+/*Image colors to use. Light to darker. 
+#5f92a5
+#2d8296
+#526184
+#275694  first actual blue one. 
+#123d72   medium dark blue
+#1d2351  dark blue
+#0d0f21 darkest. almost blackish.
+
+#9fdee1
+#3fbdc2
+
+
+*/
