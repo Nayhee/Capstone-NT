@@ -1,5 +1,5 @@
 import React from "react"
-import { Route, Routes, Navigate } from "react-router-dom"
+import { Route, Routes, Outlet, Navigate } from "react-router-dom"
 import { Home } from "../Home"
 import { DiscList } from './disc/DiscList.js'
 import { DiscDetail } from "./disc/DiscDetail.js"
@@ -14,9 +14,9 @@ import { Register } from "./auth/Register";
 
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
     
-    const PrivateRoute = ({ children }) => {
-        return isAuthenticated ? children : <Navigate to="/login" />;
-    }
+    const PrivateOutlet = () => {
+		return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+	}
     
     const setAuthUser = (user) => {
         sessionStorage.setItem("putt_user", JSON.stringify(user))
@@ -25,46 +25,22 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
     
     return (
         <>
-                <Routes>
-                    <Route exact path="/" element={<Home/>}/>
-
-                    <Route exact path="/discs" element={
-                        <PrivateRoute>
-                            <DiscList/>
-                        </PrivateRoute>
-                    } />
+            <Routes>
+                <Route path="/" element={<PrivateOutlet/>}/>
+                    <Route path="/home" element={<Home/>} />
+                    <Route path="/discs" element={<DiscList/>} />
                     <Route path="/discs/create" element={<DiscForm/>}/>
-                    <Route exact path="/discs/:discId" element={
-                        <PrivateRoute>
-                            <DiscDetail />
-                        </PrivateRoute>
-                    } />
-                    <Route path="/discs/:discId/edit" element={
-                        <PrivateRoute>
-                            <DiscEditForm />
-                        </PrivateRoute>
-                    } />
+                    <Route path="/discs/:discId" element={<DiscDetail/>}/>
+                    <Route path="/discs/:discId/edit" element={<DiscEditForm/>}/>
 
-                    <Route exact path="/rounds" element={
-                        <PrivateRoute>
-                            <RoundList/>
-                        </PrivateRoute>
-                    } />
+                    <Route path="/rounds" element={<RoundList/>}/>
                     <Route path="/rounds/create" element={<RoundForm/>}/>
-                    <Route exact path="/rounds/:roundId" element={
-                        <PrivateRoute>
-                            <RoundDetail />
-                        </PrivateRoute>
-                    } />
-                    <Route path="/rounds/:roundId/edit" element={
-                        <PrivateRoute>
-                            <RoundEditForm />
-                        </PrivateRoute>
-                    } />
+                    <Route path="/rounds/:roundId" element={<RoundDetail/>}/>
+                    <Route path="/rounds/:roundId/edit" element={<RoundEditForm/>}/>
 
-                    <Route exact path="/login" element={<Login setAuthUser={setAuthUser}/>}/>
-                    <Route exact path="/register" element={<Register/>}/>
-                </Routes>
+                    <Route path="/login" element={<Login setAuthUser={setAuthUser}/>}/>
+                    <Route path="/register" element={<Register/>}/>
+            </Routes>
         </>
 
     )

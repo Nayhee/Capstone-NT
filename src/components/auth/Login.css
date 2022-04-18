@@ -1,19 +1,39 @@
 .h1, h1 {
     font-size: 2.5rem;
+    color: white;
+    margin: .5em 0px .5em 0px;
+}
+h2 {
+    color: #1d2351;
+    margin: 5px 0px 5px 0px;
 }
 
 fieldset {
     min-width: 0;
-    padding: 1rem 0;
+    padding: .5rem 0;
     margin: 0;
     border: 0;
 }
 
 .form--login {
     display: inline-block;
-    margin: 0 auto;
+    margin: 2em 1em 1.5em 1em;
+    /* margin: 0 auto; */
     text-align: left;
-    padding: .5em;
+    padding: .5em 1em .5em 1em;
+    border: 5px solid #1d2351;
+    border-radius: .5em;
+    z-index: 1;
+    min-height: 15rem;
+    min-width: 25rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #2d8296;
+    opacity: 92%;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+
+    
 }
 
 .form--login > fieldset > input[type="email"],
@@ -47,19 +67,6 @@ fieldset {
     text-align: center;
 }
 
-.form--login {
-    background-position-x: right;
-    background-color: #2d8296;
-    opacity: 92%;
-    /* background-color: hsla(0,0%,100%,0.40); */
-    /* background-image: url(../../../public/images/editedPutt.jpg); */
-    z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-}
-
 .button--close {
     position: relative;
     bottom: -2rem;
@@ -76,9 +83,37 @@ fieldset {
     background-color: #1d2351;
     color: #3fbdc2;
     font-weight: bold;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    border-radius: .25em;
+    height: 35px;
+    width: 70px;
     justify-items: center;
     font-size: 14px;
+}
+
+.signInButton:hover {
+    text-decoration: none;
+    background:#1d2351;
+    color: #1d2351;
+    border: 2px solid #1d2351;
+    background-color: #3fbdc2;
+    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
+}
+
+.link--register a {
+    /* text-decoration: none; */
+    color: #ced4da;
+    font-style: italic;
+    border: 2px solid #1d2351;
+    border-radius: .25em;
+    background-color: #2d8296; 
+    padding: .5em;
+    font-weight: bold;
+}
+
+.link--register a:hover {
+    background:#1d2351;
+    color: #1d2351;
+    border: 2px solid #1d2351;
+    background-color: #3fbdc2;
+    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
 }

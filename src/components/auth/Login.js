@@ -21,7 +21,7 @@ export const Login = ({setAuthUser}) => {
             .then(exists => {
                 if (exists) {
                     setAuthUser(exists)
-                    navigate("/")
+                    navigate("/home")
                 } else {
                     existDialog.current.showModal()
                 }
@@ -55,7 +55,7 @@ export const Login = ({setAuthUser}) => {
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">New to Putt Tracker? Register</Link>
+                <Link to="/register">New User? Register</Link>
             </section>
         </main>
     )

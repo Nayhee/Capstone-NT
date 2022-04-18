@@ -4,14 +4,14 @@ import "./Home.css"
 
 export const Home = () => {
     
-    // const [usersName, setUsersName] = useState([]);
+    const [usersName, setUsersName] = useState([]);
 
 
-    // const getLoggedInUsersName = () => {
-    //     let userObj = sessionStorage.getItem("putt_user");
-    //     setUsersName(userObj);
-    //     return userObj;
-    // }
+    const getLoggedInUsersName = () => {
+        let userObj = sessionStorage.getItem("putt_user");
+        setUsersName(userObj);
+        return userObj;
+    }
     
     return (
         <>
