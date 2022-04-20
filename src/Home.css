@@ -9,7 +9,7 @@
 }
 
 .home__greeting h2 {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
     color: white;
     font-weight: bold;
     font-size: 32px;
@@ -45,6 +45,14 @@
     font-size: 24px;
     font-family: 'Acme', sans-serif;
     padding: .3em;
+}
+
+.slogan {
+    color: #1d2351;
+    font-size: 24px;
+    font-style: italic;
+    font-family: 'Acme', sans-serif;
+    margin: 0px;
 }
 
 

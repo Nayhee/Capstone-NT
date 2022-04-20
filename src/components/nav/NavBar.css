@@ -30,30 +30,17 @@
 .navbar__logo {
     display: flex;
     flex-direction: column;
-    width: 85px;
-    height: 75px;
+    height: 120px;
     margin: 0px .5em 0px .5em;
-    border: 4px solid #1d2351;
-    background-color: #3fbdc2;
-    font-weight: bold;
-    border-radius: 50%;
     justify-items: center;
     align-content: center;
-    font-size: 24px;
-    font-family: 'Acme', sans-serif;
-    padding: .5em;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
 }
+
 .navbar__logo p {
     margin: 0px;
     display: flex;
     justify-content: center;
     color: white;
-}
-
-.navbar__logo__li {
-    display: flex;
-    justify-content: flex-start;
 }
 
 .navbar__link {

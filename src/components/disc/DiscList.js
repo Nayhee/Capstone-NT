@@ -10,8 +10,8 @@ export const DiscList = () => {
     
     const navigate = useNavigate();
 
-    const currentUser = JSON.parse(sessionStorage.getItem('putt__user'));
-    console.log(currentUser)
+    const currentUser = JSON.parse(sessionStorage.getItem('putt_user'))
+    const currentUserId = currentUser.id;
 
     const getDiscs = (currentUserId) => {
         return getAUsersDiscs(currentUserId).then(discsFromAPI => {
@@ -28,7 +28,7 @@ export const DiscList = () => {
     }
 
     useEffect(() => {
-        getDiscs(currentUser);
+        getDiscs(currentUserId);
     }, [])
 
     return (
