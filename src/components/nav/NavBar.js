@@ -1,17 +1,17 @@
 import React from "react"
-import { Link, useNavigate, useLocation } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
 // import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
 // import { faHouse } from '@fontawesome/free-solid-svg-icons'
 
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
-    const location = useLocation();
+    
     const navigate = useNavigate();
 
     const handleLogout = () => {
         clearUser();
-        navigate('/')   //changed from home to Login since homepage is user specific. 
+        navigate('/login')   //changed from home to Login since homepage is user specific. 
     }
     
     return (
@@ -26,19 +26,19 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
             </li> */}
 
             {isAuthenticated && <li className="navbar__item">
-                <Link className={`navbar__link ${location.pathname === '/home' ? 'active':''}`} to="/home">Home</Link>
+                <Link className="navbar__link" to="/">Home</Link>
             </li>}
 
             {isAuthenticated && <li className="navbar__item">
-                <Link className={`navbar__link ${location.pathname === '/putt' ? 'active':''}`} to="/putt">Putt</Link>
+                <Link className="navbar__link" to="/putt">Putt</Link>
             </li>}
 
             {isAuthenticated && <li className="navbar__item">
-                <Link className={`navbar__link ${location.pathname === '/discs' ? 'active':''}`} to="/discs">Discs</Link>
+                <Link className="navbar__link" to="/discs">Discs</Link>
             </li>}
 
             {isAuthenticated && <li className="navbar__item">
-                <Link className={`navbar__link ${location.pathname === '/rounds' ? 'active':''}`} to="/rounds">Rounds</Link>
+                <Link className="navbar__link" to="/rounds">Rounds</Link>
             </li>}
 
             {isAuthenticated

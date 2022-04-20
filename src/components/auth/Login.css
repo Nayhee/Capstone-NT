@@ -54,7 +54,7 @@ fieldset {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #1d2351;
+    color: #3fbdc2;
     background-color: #1d2351;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -78,15 +78,17 @@ fieldset {
 }
 
 .signInButton {
-    margin: 5px;
+    display: flex;
     border: 1px solid #ced4da;
     background-color: #1d2351;
-    color: #3fbdc2;
+    color: white;
     font-weight: bold;
     border-radius: .25em;
     height: 35px;
-    width: 70px;
-    justify-items: center;
+    width: 25%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     font-size: 14px;
 }
 

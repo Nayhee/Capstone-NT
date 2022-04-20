@@ -6,7 +6,13 @@ export const getDiscById = (discId) => {
     .then(res => res.json())
 }
 
-//will use for Disc List
+export const getAUsersDiscs = (userId) => {
+    return fetch(`${remoteURL}/discs?_expand=user`)
+    .then(res => res.json())
+}
+
+
+//not yet needed but potentially for a stretch goal. 
 export const getAllDiscs = () => {
     return fetch(`${remoteURL}/discs?_expand=user`)
     .then(res => res.json())

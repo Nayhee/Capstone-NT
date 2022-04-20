@@ -21,7 +21,7 @@ export const Login = ({setAuthUser}) => {
             .then(exists => {
                 if (exists) {
                     setAuthUser(exists)
-                    navigate("/home")
+                    navigate("/")
                 } else {
                     existDialog.current.showModal()
                 }

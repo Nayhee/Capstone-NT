@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 
 export const DiscCard = ({ disc, handleDeleteDisc }) => {
     return (
-      <div className="card">
-        <div className="card-content">
-          <picture>
+      <div className="card-disc">
+        <div className="card-disc-content">
+          <div className="image_div">
               <img src={disc.image} alt="My Disc" />
-            </picture>
-          <h3>Name: <span className="card-discname">
+          </div>
+          <h3><span className="card-disc-name">
             {disc.name}
           </span></h3>
           <p>Type: {disc.type}</p>
-          <p>Type: {disc.weight}</p>
+          <p>Weight: {disc.weight}</p>
           <Link to={`/discs/${disc.id}/edit`}>
               <button>Edit</button>
           </Link>
-          <button type="button" onClick={()=> handleDeleteDisc(disc.id)}>Delete Disc</button>
+          <button type="button" onClick={()=> handleDeleteDisc(disc.id)}>Delete</button>
         </div>
       </div>
     );

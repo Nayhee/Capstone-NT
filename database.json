@@ -1,37 +1,239 @@
 {
-    "users": [
-        { "id": 1, "firstName": "Nathan", "lastName": "Traczewski", "email": "nayhee@gmail.com"},
-        { "id": 2, "firstName": "Ryan", "lastName": "Bogle", "email": "bogle@gmail.com"},
-        { "id": 3, "firstName": "Palmer", "lastName": "Adams", "email": "palmer@gmail.com"},
-        { "id": 4, "firstName": "Vince", "lastName": "Swann", "email": "vince@gmail.com"}
-    ],
-    "discs": [
-        { "id": 1, "userId": 1, "name": "Envy", "type": "Putter", "weight": "174g", "image": "/images/envy.jpg"},
-        { "id": 2, "userId": 1, "name": "Luna", "type": "Putter", "weight": "173g", "image": "/images/luna.jpg"},
-        { "id": 3, "userId": 2, "name": "Judge", "type": "Putter", "weight": "174g", "image": "/images/judge.jpeg"},
-        { "id": 4, "userId": 2, "name": "Aviar", "type": "Putter", "weight": "173g", "image": "/images/aviar.jpg"},
-        { "id": 5, "userId": 3, "name": "Proxy", "type": "Putter", "weight": "174g", "image": "/images/proxy.jpg"},
-        { "id": 6, "userId": 3, "name": "MD4", "type": "Mid-Range", "weight": "178g", "image": "/images/md4.jpg"},
-        { "id": 7, "userId": 4, "name": "P2", "type": "Putter", "weight": "172g", "image": "/images/p2.jpg"},
-        { "id": 8, "userId": 4, "name": "KC Aviar", "type": "Putter", "weight": "172g", "image": "/images/kcAviar.jpg"},
-        { "id": 9, "userId": 4, "name": "Envy", "type": "Putter", "weight": "174g", "image": "/images/envy.jpg"},
-        { "id": 10, "userId": 4, "name": "Luna", "type": "Putter", "weight": "173g", "image": "/images/luna.jpg"},
-        { "id": 11, "userId": 1, "name": "Judge", "type": "Putter", "weight": "174g", "image": "/images/judge.jpeg"},
-        { "id": 12, "userId": 3, "name": "Aviar", "type": "Putter", "weight": "173g", "image": "/images/aviar.jpg"},
-        { "id": 13, "userId": 1, "name": "Proxy", "type": "Putter", "weight": "174g", "image": "/images/proxy.jpg"},
-        { "id": 14, "userId": 2, "name": "MD4", "type": "Mid-Range", "weight": "178g", "image": "/images/md4.jpg"},
-        { "id": 15, "userId": 3, "name": "P2", "type": "Putter", "weight": "172g", "image": "/images/p2.jpg"},
-        { "id": 16, "userId": 2, "name": "KC Aviar", "type": "Putter", "weight": "172g", "image": "/images/kcAviar.jpg"}
-    ],
-    "rounds": [
-        { "id": 1, "userId": "1", "date" : "4/05/2022", "discId": 1, "distance": 20, "putts": 10, "made": 9},
-        { "id": 2, "userId": "1", "date" : "4/05/2022", "discId": 1, "distance": 25, "putts": 10, "made": 8},
-        { "id": 3, "userId": "1", "date" : "4/06/2022", "discId": 2, "distance": 30, "putts": 10, "made": 7},
-        { "id": 4, "userId": "2", "date" : "4/07/2022", "discId": 3, "distance": 15, "putts": 10, "made": 6},
-        { "id": 5, "userId": "2", "date" : "4/07/2022", "discId": 4, "distance": 20, "putts": 10, "made": 7},
-        { "id": 6, "userId": "3", "date" : "4/07/2022", "discId": 5, "distance": 20, "putts": 10, "made": 5},
-        { "id": 7, "userId": "3", "date" : "4/07/2022", "discId": 6, "distance": 25, "putts": 10, "made": 3},
-        { "id": 8, "userId": "4", "date" : "4/08/2022", "discId": 7, "distance": 30, "putts": 10, "made": 2},
-        { "id": 9, "userId": "4", "date" : "4/08/2022", "discId": 8, "distance": 20, "putts": 10, "made": 6}
-    ]
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Nathan",
+      "lastName": "Traczewski",
+      "email": "nayhee@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstName": "Ryan",
+      "lastName": "Bogle",
+      "email": "bogle@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Palmer",
+      "lastName": "Adams",
+      "email": "palmer@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstName": "Vince",
+      "lastName": "Swann",
+      "email": "vince@gmail.com"
+    },
+    {
+      "email": "holly@gmail.com",
+      "name": "Holly Traczewski",
+      "id": 5
+    }
+  ],
+  "discs": [
+    {
+        "id": 1,
+        "userId": 1,
+        "name": "Envy",
+        "type": "Putter",
+        "weight": "175g",
+        "image": "/images/d12.png"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Luna",
+      "type": "Putter",
+      "weight": "173g",
+      "image": "/images/luna.jpg"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Judge",
+      "type": "Putter",
+      "weight": "174g",
+      "image": "/images/d1.jpg"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "name": "Aviar",
+      "type": "Putter",
+      "weight": "173g",
+      "image": "/images/aviar.jpg"
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "name": "Proxy",
+      "type": "Putter",
+      "weight": "174g",
+      "image": "/images/proxy.jpg"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "name": "MD4",
+      "type": "Mid-Range",
+      "weight": "178g",
+      "image": "/images/md4.jpg"
+    },
+    {
+      "id": 7,
+      "userId": 4,
+      "name": "P2",
+      "type": "Putter",
+      "weight": "172g",
+      "image": "/images/p2.jpg"
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "name": "Aviar3",
+      "type": "Putter",
+      "weight": "172g",
+      "image": "/images/d5.png"
+    },
+    {
+      "id": 9,
+      "userId": 4,
+      "name": "Envy",
+      "type": "Putter",
+      "weight": "174g",
+      "image": "/images/d6.png"
+    },
+    {
+      "id": 10,
+      "userId": 4,
+      "name": "Luna",
+      "type": "Putter",
+      "weight": "173g",
+      "image": "/images/d10.png"
+    },
+    {
+      "id": 11,
+      "userId": 1,
+      "name": "Judge",
+      "type": "Putter",
+      "weight": "174g",
+      "image": "/images/d11.png"
+    },
+    {
+      "id": 12,
+      "userId": 3,
+      "name": "Aviar",
+      "type": "Putter",
+      "weight": "173g",
+      "image": "/images/d1.jpg"
+    },
+    {
+      "id": 13,
+      "userId": 1,
+      "name": "Proxy",
+      "type": "Putter",
+      "weight": "174g",
+      "image": "/images/d2.png"
+    },
+    {
+      "id": 14,
+      "userId": 2,
+      "name": "MD4",
+      "type": "Mid-Range",
+      "weight": "178g",
+      "image": "/images/d9.png"
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "name": "P2",
+      "type": "Putter",
+      "weight": "172g",
+      "image": "/images/d14.png"
+    }
+    
+  ],
+  "rounds": [
+    {
+      "id": 1,
+      "userId": "1",
+      "date": "4/05/2022",
+      "discId": 1,
+      "distance": 20,
+      "putts": 10,
+      "made": 9
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "date": "4/05/2022",
+      "discId": 1,
+      "distance": 25,
+      "putts": 10,
+      "made": 8
+    },
+    {
+      "id": 3,
+      "userId": "1",
+      "date": "4/06/2022",
+      "discId": 2,
+      "distance": 30,
+      "putts": 10,
+      "made": 7
+    },
+    {
+      "id": 4,
+      "userId": "2",
+      "date": "4/07/2022",
+      "discId": 3,
+      "distance": 15,
+      "putts": 10,
+      "made": 6
+    },
+    {
+      "id": 5,
+      "userId": "2",
+      "date": "4/07/2022",
+      "discId": 4,
+      "distance": 20,
+      "putts": 10,
+      "made": 7
+    },
+    {
+      "id": 6,
+      "userId": "3",
+      "date": "4/07/2022",
+      "discId": 5,
+      "distance": 20,
+      "putts": 10,
+      "made": 5
+    },
+    {
+      "id": 7,
+      "userId": "3",
+      "date": "4/07/2022",
+      "discId": 6,
+      "distance": 25,
+      "putts": 10,
+      "made": 3
+    },
+    {
+      "id": 8,
+      "userId": "4",
+      "date": "4/08/2022",
+      "discId": 7,
+      "distance": 30,
+      "putts": 10,
+      "made": 2
+    },
+    {
+      "id": 9,
+      "userId": "4",
+      "date": "4/08/2022",
+      "discId": 8,
+      "distance": 20,
+      "putts": 10,
+      "made": 6
+    }
+  ]
 }

@@ -3,15 +3,12 @@ import { Link } from "react-router-dom";
 import "./Home.css"
 
 export const Home = () => {
-    
-    const [usersName, setUsersName] = useState([]);
 
-
-    const getLoggedInUsersName = () => {
-        let userObj = sessionStorage.getItem("putt_user");
-        setUsersName(userObj);
-        return userObj;
-    }
+    // const getLoggedInUsersName = () => {
+    //     let userObj = sessionStorage.getItem("putt_user");
+    //     setUsersName(userObj);
+    //     return userObj;
+    // }
     
     return (
         <>
@@ -19,11 +16,11 @@ export const Home = () => {
                     <h2>Welcome  to Putt Tracker!</h2>
                     {/* <h3>What would you like to do today?</h3> */}
                     <div className="home__greeting__buttons">
-                        <Link to={`/putt`}>
-                            <button>Discs</button>
+                        <Link to={`/discs`}>
+                            <button>My Discs</button>
                         </Link>
-                        <Link to={`/putt`}>
-                            <button>Rounds</button>
+                        <Link to={`/rounds`}>
+                            <button>My Rounds</button>
                         </Link>
                         <Link to={`/putt`}>
                             <button>Start Putting</button>
