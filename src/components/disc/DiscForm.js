@@ -13,11 +13,15 @@ import './DiscForm.css'
 
 export const DiscForm = () => {
     
+    const currentUser = JSON.parse(sessionStorage.getItem('putt_user'));
+    const currentUserId = currentUser.id;
+
     const [disc, setDisc] = useState({
         name: "",
         type: "",
         weight: "",
-        image: 'd1.jpg'
+        image: "/images/d1.jpg",
+        userId: currentUserId
     })
     
     const [isLoading, setIsLoading] = useState(false)
@@ -42,6 +46,7 @@ export const DiscForm = () => {
         //if all disc properties aren't null, setIsLoading to true, addDisc, then navigate to /discs. 
         if(disc.name !== "" && disc.type > 0 && disc.weight !== "") {
             setIsLoading(true);
+            disc.image = 
             addDisc(disc)
             .then(() => navigate("/discs"))
         } else {
@@ -50,43 +55,48 @@ export const DiscForm = () => {
     }
 
     return (
-        <form className="discForm">
-            <h2 className="discForm-title">New Disc</h2>
+        <main style={{ textAlign: "center" }}>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Disc Name:</label>
-                    <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxlength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
-                </div>
-            </fieldset>
+            <form className="discForm">
+                <h1 className="discForm-title">New Disc</h1>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Disc Weight:</label>
-                    <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxlength="4" required autoFocus placeholder="Disc weight in grams (ex: 173g)" value={disc.weight} />
-                </div>
-            </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="type">Disc Type:</label>
+                        <select value={disc.type} name="type" id="type" onChange={handleControlledInputChange} className="form-control">
+                            <option value="0" style={{ color: "#8e8e8e" }} >Select Disc Type</option>
+                            <option value="1">Putter</option>
+                            <option value="2">Mid-Range</option>
+                            <option value="3">Fairway-Driver</option>
+                            <option value="4">Distance-Driver</option>
+                        </select>
+                    </div>
+                </fieldset>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="type">Disc Type:</label>
-                    <select value={disc.type} name="type" id="type" onChange={handleControlledInputChange} className="form-control">
-                        <option value="0">Select A Disc Type</option>
-                        <option value="1">Putter</option>
-                        <option value="2">Mid-Range</option>
-                        <option value="3">Fairway-Driver</option>
-                        <option value="4">Distance-Driver</option>
-                    </select>
-                </div>
-            </fieldset>
-            <button 
-                type="button"
-                className="save-disc-button"
-                disabled={isLoading}
-                onClick={handleClickSaveDisc}>
-                Save Disc
-            </button>
-        </form>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="name">Disc Name:</label>
+                        <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="weight">Disc Weight:</label>
+                        <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="4" required autoFocus placeholder="Ex: 173g" value={disc.weight} />
+                    </div>
+                </fieldset>
+
+                <button 
+                    type="button"
+                    className="save-disc-button"
+                    disabled={isLoading}
+                    onClick={handleClickSaveDisc}>
+                    Save Disc
+                </button>
+            </form>
+
+        </main>
     )
 
 }

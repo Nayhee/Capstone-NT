@@ -9,9 +9,9 @@ export const DiscCard = ({ disc, handleDeleteDisc }) => {
           <div className="image_div">
               <img src={disc.image} alt="My Disc" />
           </div>
-          <h3><span className="card-disc-name">
+          <h2><span className="card-disc-name">
             {disc.name}
-          </span></h3>
+          </span></h2>
           <p>Type: {disc.type}</p>
           <p>Weight: {disc.weight}</p>
           <Link to={`/discs/${disc.id}/edit`}>

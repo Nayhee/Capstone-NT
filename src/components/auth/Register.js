@@ -71,7 +71,7 @@ export const Register = ({setAuthUser}) => {
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <button type="submit">Register</button>
+                    <button className="registerButton" type="submit">Register</button>
                 </fieldset>
             </form>
         </main>
