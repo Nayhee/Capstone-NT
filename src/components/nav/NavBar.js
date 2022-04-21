@@ -7,17 +7,22 @@ import "./NavBar.css"
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
     
+    //maybe need to pass the homepage's state here so that if user logs out, we can change the state
+    //from here, so that homepage stuff dissapears. 
+
     const navigate = useNavigate();
 
     const handleLogout = () => {
         clearUser();
+        //CHANGE THE STATE
+
         navigate('/login')   //changed from home to Login since homepage is user specific. 
     }
     
     return (
         <ul className="navbar">
             
-            <li className="navbar__logo__li">
+            <li className="navbar__item">
                 <img className="navbar__logo" src="images/LOGO8.png"></img>
             </li>
 

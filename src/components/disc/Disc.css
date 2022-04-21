@@ -47,13 +47,15 @@
     margin-bottom: .5em;
     font-weight: bold;
     color: #1d2351;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
 }
   
 .card-disc-content p {
     color: #1d2351;
     margin: 0px 0px 5px 0px;
-    font-size: 14px;
+    font-size: 17px;
+    font-family: 'Acme', sans-serif;
 }
 
 .card-disc button {
@@ -63,11 +65,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     padding: .5em;
     border-radius: 2px;
     margin: .1em;
     width: 100%;
+    font-family: 'Acme', sans-serif;
 }
   
 .card-disc button:hover {
@@ -78,17 +81,19 @@
     display: flex;
     margin: auto;
     margin-top: 10px;
-    background-color: #123d72;
+    background-color: #275694;
     border: 3px solid #0d0f21;
     border-radius: 5px;
-    color: white;
-    font-weight: bold;
+    color: cornsilk;
+    /* font-weight: bold; */
     padding: .6em;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: 'Acme', sans-serif;
 }
 .add-disc-button:hover {
     background-color: #3fbdc2;
     color: #1d2351;
+
 }
 
 

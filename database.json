@@ -28,16 +28,21 @@
       "email": "holly@gmail.com",
       "name": "Holly Traczewski",
       "id": 5
+    },
+    {
+      "email": "jeff@gmail.com",
+      "name": "Jeff Traczewski",
+      "id": 6
     }
   ],
   "discs": [
     {
-        "id": 1,
-        "userId": 1,
-        "name": "Envy",
-        "type": "Putter",
-        "weight": "175g",
-        "image": "/images/d12.png"
+      "id": 1,
+      "userId": 2,
+      "name": "Rainbow Barf Kitty",
+      "type": "Putter",
+      "weight": "175g",
+      "image": "/images/d12.png"
     },
     {
       "id": 2,
@@ -89,7 +94,7 @@
     },
     {
       "id": 8,
-      "userId": 4,
+      "userId": 2,
       "name": "Aviar3",
       "type": "Putter",
       "weight": "172g",
@@ -97,23 +102,23 @@
     },
     {
       "id": 9,
-      "userId": 4,
-      "name": "Envy",
+      "userId": 1,
+      "name": "Sleepy Panda",
       "type": "Putter",
       "weight": "174g",
       "image": "/images/d6.png"
     },
     {
       "id": 10,
-      "userId": 4,
-      "name": "Luna",
+      "userId": 1,
+      "name": "Aviar",
       "type": "Putter",
       "weight": "173g",
-      "image": "/images/d10.png"
+      "image": "/images/d1.jpg"
     },
     {
       "id": 11,
-      "userId": 1,
+      "userId": 2,
       "name": "Judge",
       "type": "Putter",
       "weight": "174g",
@@ -121,16 +126,16 @@
     },
     {
       "id": 12,
-      "userId": 3,
-      "name": "Aviar",
+      "userId": 1,
+      "name": "Space Kitty",
       "type": "Putter",
       "weight": "173g",
-      "image": "/images/d1.jpg"
+      "image": "/images/d10.png"
     },
     {
       "id": 13,
-      "userId": 1,
-      "name": "Proxy",
+      "userId": 2,
+      "name": "Immortal Spirit",
       "type": "Putter",
       "weight": "174g",
       "image": "/images/d2.png"
@@ -138,7 +143,7 @@
     {
       "id": 14,
       "userId": 2,
-      "name": "MD4",
+      "name": "Laser Kitty",
       "type": "Mid-Range",
       "weight": "178g",
       "image": "/images/d9.png"
@@ -150,8 +155,23 @@
       "type": "Putter",
       "weight": "172g",
       "image": "/images/d14.png"
+    },
+    {
+      "id": 16,
+      "userId": 1,
+      "name": "Samurai",
+      "type": "Putter",
+      "weight": "172g",
+      "image": "/images/samurai.png"
+    },
+    {
+      "id": 17,
+      "userId": 1,
+      "name": "MD4",
+      "type": "Mid-Range",
+      "weight": "178g",
+      "image": "/images/md4.jpg"
     }
-    
   ],
   "rounds": [
     {

@@ -4,14 +4,14 @@ import "./Home.css"
 
 export const Home = () => {
     
-    const currentUser= JSON.parse(sessionStorage.getItem('putt_user'));
-    const userName = currentUser.firstName;
-
+    // const currentUser= JSON.parse(sessionStorage.getItem('putt_user'));
+    // const userName = currentUser.firstName;
+    
 
     return (
         <>
             <div className="home__greeting">
-                    <h2>Welcome  to Putt Tracker, {userName}!</h2>
+                    <h2>Welcome  to Putt Tracker!</h2>
                     <p className="slogan">The Putting Tool For Disc Golfers</p>
                     <div className="home__greeting__buttons">
                         <Link to={`/discs`}>
