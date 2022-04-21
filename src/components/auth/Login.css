@@ -16,6 +16,7 @@ fieldset {
 }
 
 .form--login {
+    font-family: 'Acme', sans-serif;
     display: inline-block;
     margin: 2em 1em 1.5em 1em;
     /* margin: 0 auto; */
@@ -61,6 +62,9 @@ fieldset {
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control.placeholder {
+    color: red;
 }
 
 .container--login {
