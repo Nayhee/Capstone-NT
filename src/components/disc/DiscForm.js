@@ -44,9 +44,8 @@ export const DiscForm = () => {
         //WRITE SOME CODE TO CHECK AND MAKE SURE THE USER TYPED IN A 3DIGIT NUMBER FOLLOWED BY A G. (EX: 173g)
 
         //if all disc properties aren't null, setIsLoading to true, addDisc, then navigate to /discs. 
-        if(disc.name !== "" && disc.type > 0 && disc.weight !== "") {
+        if(disc.name !== "" && disc.type !== 0 && disc.weight !== "") {
             setIsLoading(true);
-            disc.image = 
             addDisc(disc)
             .then(() => navigate("/discs"))
         } else {
@@ -65,10 +64,10 @@ export const DiscForm = () => {
                         <label htmlFor="type">Disc Type:</label>
                         <select value={disc.type} name="type" id="type" onChange={handleControlledInputChange} className="form-control">
                             <option value="0" style={{ color: "#8e8e8e" }} >Select Disc Type</option>
-                            <option value="1">Putter</option>
-                            <option value="2">Mid-Range</option>
-                            <option value="3">Fairway-Driver</option>
-                            <option value="4">Distance-Driver</option>
+                            <option>Putter</option>
+                            <option>Mid-Range</option>
+                            <option>Fairway-Driver</option>
+                            <option>Distance-Driver</option>
                         </select>
                     </div>
                 </fieldset>

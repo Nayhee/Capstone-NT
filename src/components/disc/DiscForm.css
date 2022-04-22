@@ -13,6 +13,7 @@ fieldset {
 
 .discForm {
     display: inline-block;
+    font-family: 'Acme', sans-serif;
     margin: 2em 1em 1.5em 1em;
     /* margin: 0 auto; */
     text-align: left;
@@ -55,3 +56,4 @@ fieldset {
 }
 
 /* my input areas have className of form-control so they're pulling CSS from login.css*/
+

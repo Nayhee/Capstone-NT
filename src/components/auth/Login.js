@@ -40,7 +40,7 @@ export const Login = ({setAuthUser}) => {
                     <h1>Putt Tracker</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email Address </label>
+                        <label className="login-label" htmlFor="inputEmail"> Email Address </label>
                         <input ref={email} type="email"
                             id="email"
                             className="form-control"

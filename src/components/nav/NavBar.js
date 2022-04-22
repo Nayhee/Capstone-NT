@@ -20,37 +20,38 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
     }
     
     return (
-        <ul className="navbar">
-            
-            <li className="navbar__item">
-                <img className="navbar__logo" src="images/LOGO8.png"></img>
-            </li>
+            <ul className="navbar">
 
-            {isAuthenticated && <li className="navbar__item">
-                <Link className="navbar__link" to="/">Home</Link>
-            </li>}
-
-            {isAuthenticated && <li className="navbar__item">
-                <Link className="navbar__link" to="/putt">Putt</Link>
-            </li>}
-
-            {isAuthenticated && <li className="navbar__item">
-                <Link className="navbar__link" to="/discs">Discs</Link>
-            </li>}
-
-            {isAuthenticated && <li className="navbar__item">
-                <Link className="navbar__link" to="/rounds">Rounds</Link>
-            </li>}
-
-            {isAuthenticated
-                ? <li className="navbar__item">
-                    <Link className="navbar__link" to="/" onClick={handleLogout}> Logout </Link>
+                <li className="navbar__item">
+                    <img className="navbar__logo" src="images/LOGO8.png"></img>
                 </li>
-                : <li className="navbar__item">
-                    <Link className="navbar__link" to="/login">Login</Link>
+
+                {isAuthenticated && <li className="navbar__item">
+                    <Link className="navbar__link" to="/">Home</Link>
                 </li>}
-            
-        </ul>
+
+                {isAuthenticated && <li className="navbar__item">
+                    <Link className="navbar__link" to="/putt">Putt</Link>
+                </li>}
+
+                {isAuthenticated && <li className="navbar__item">
+                    <Link className="navbar__link" to="/discs">Discs</Link>
+                </li>}
+
+                {isAuthenticated && <li className="navbar__item">
+                    <Link className="navbar__link" to="/rounds">Rounds</Link>
+                </li>}
+
+                {isAuthenticated
+                    ? <li className="navbar__item">
+                        <Link className="navbar__link" to="/" onClick={handleLogout}> Logout </Link>
+                    </li>
+                    : <li className="navbar__item">
+                        <Link className="navbar__link" to="/login">Login</Link>
+                    </li>}
+                    
+            </ul>
+
     )
 }
 //isAuthenticated is the State passed from Capstone.js that lets us block certain Links if the User is not Authenticated. 

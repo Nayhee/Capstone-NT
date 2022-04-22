@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Disc.css"
-import { getAUsersDiscs, updateDisc } from "../../modules/DiscManager";
+import { getAUsersDiscs, deleteDisc } from "../../modules/DiscManager";
 import { useNavigate } from "react-router-dom";
 import { DiscCard } from "./DiscCard";
 
@@ -14,17 +14,14 @@ export const DiscList = () => {
     const currentUserId = currentUser.id;
 
     const getDiscs = (currentUserId) => {
-        return getAUsersDiscs(currentUserId).then(discsFromAPI => {
-            setDiscs(discsFromAPI)
+        return getAUsersDiscs(currentUserId).then(usersDiscs => {
+            setDiscs(usersDiscs)
         })
     }
 
-    const handleDeleteDisc = (disc) => {
-        updateDisc(disc)
-        .then(() => getAUsersDiscs()
-        .then(allDiscs => {
-        setDiscs(allDiscs)
-    }))
+    const handleDeleteDisc = (id) => {
+        deleteDisc(id)
+        .then(() => getAUsersDiscs(currentUserId).then(setDiscs))
     }
 
     useEffect(() => {
