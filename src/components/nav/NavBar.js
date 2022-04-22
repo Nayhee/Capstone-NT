@@ -1,24 +1,20 @@
 import React from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import "./NavBar.css"
 // import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
 // import { faHouse } from '@fontawesome/free-solid-svg-icons'
 
-
 export const NavBar = ({ clearUser, isAuthenticated }) => {
     
-    //maybe need to pass the homepage's state here so that if user logs out, we can change the state
-    //from here, so that homepage stuff dissapears. 
-
     const navigate = useNavigate();
 
     const handleLogout = () => {
         clearUser();
-        //CHANGE THE STATE
-
-        navigate('/login')   //changed from home to Login since homepage is user specific. 
+        navigate('/login')
     }
     
+    const location = useLocation();
+
     return (
             <ul className="navbar">
 
@@ -27,19 +23,19 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                 </li>
 
                 {isAuthenticated && <li className="navbar__item">
-                    <Link className="navbar__link" to="/">Home</Link>
+                    <Link className={`navbar__link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
                 </li>}
 
                 {isAuthenticated && <li className="navbar__item">
-                    <Link className="navbar__link" to="/putt">Putt</Link>
+                    <Link className={`navbar__link ${location.pathname === '/rounds/create' ? 'active' : ''}`} to="/rounds/create">Putt</Link>
                 </li>}
 
                 {isAuthenticated && <li className="navbar__item">
-                    <Link className="navbar__link" to="/discs">Discs</Link>
+                    <Link className={`navbar__link ${location.pathname === '/discs' ? 'active' : ''}`} to="/discs">Discs</Link>
                 </li>}
 
                 {isAuthenticated && <li className="navbar__item">
-                    <Link className="navbar__link" to="/rounds">Rounds</Link>
+                    <Link className={`navbar__link ${location.pathname === '/rounds' ? 'active' : ''}`} to="/rounds">Rounds</Link>
                 </li>}
 
                 {isAuthenticated

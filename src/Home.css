@@ -23,7 +23,7 @@
 
 .home__greeting__buttons {
     display: flex;
-    flex-direction: column;
+    margin-top: 1em;
 }
 
 .home__greeting__buttons button:hover {
@@ -55,6 +55,45 @@
     margin: .5em 0px 1em 0px;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: 8em 4em;
+    font-size: 24px;
+    justify-content: center;
+    margin: .5em 0em 1.5em 0em;
+    font-family: 'Acme', sans-serif;
+    
+}
+
+.wrapper > div{
+    background-color: #1d2351;   
+    border: 2px solid #0d0f21;
+    color: cornsilk;
+}
+
+.wrapper > div:nth-child(odd){
+    background-color: #3fbdc2;
+}
+
+.userScorecard {
+    margin: 3em 0em 1em 0em;
+    background-color: #0d0f21;
+    box-shadow: 0 0 2px #275694, 0 0 10px #275694, 0 0 20px #275694, 0 0 100px #275694;
+}
+.userScorecard > h3 {
+    font-size: 2.5rem;
+    color: cornsilk;
+    margin: .5em 1em .5em 1em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+}
+
+.scorecardItem {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+}
 
 
 /*Image colors to use. Light to darker. 
