@@ -19,6 +19,7 @@ export const DiscForm = () => {
     const [disc, setDisc] = useState({
         name: "",
         type: "",
+        brand: "",
         weight: "",
         image: "/images/d1.jpg",
         userId: currentUserId
@@ -44,7 +45,7 @@ export const DiscForm = () => {
         //WRITE SOME CODE TO CHECK AND MAKE SURE THE USER TYPED IN A 3DIGIT NUMBER FOLLOWED BY A G. (EX: 173g)
 
         //if all disc properties aren't null, setIsLoading to true, addDisc, then navigate to /discs. 
-        if(disc.name !== "" && disc.type !== 0 && disc.weight !== "") {
+        if(disc.name !== "" && disc.type !== 0 && disc.brand !== 0 && disc.weight !== "") {
             setIsLoading(true);
             addDisc(disc)
             .then(() => navigate("/discs"))
@@ -57,13 +58,32 @@ export const DiscForm = () => {
         <main style={{ textAlign: "center" }}>
 
             <form className="discForm">
-                <h1 className="discForm-title">New Disc</h1>
+                <h1 className="discFormTitle">New Disc</h1>
 
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="type">Disc Type:</label>
+                        <label htmlFor="brand">Brand:</label>
+                        <select value={disc.brand} name="brand" id="brand" onChange={handleControlledInputChange} className="form-control">
+                            <option value="0" style={{ color: "#8e8e8e" }} >Select Brand</option>
+                            <option>Innova</option>
+                            <option>Discraft</option>
+                            <option>Dynamic Discs</option>
+                            <option>Discmania</option>
+                            <option>Prodigy</option>
+                            <option>MVP</option>
+                            <option>Axiom</option>
+                            <option>Latitude 64</option>
+                            <option>Westside</option>
+                            <option>Kataplast</option>
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="type">Type:</label>
                         <select value={disc.type} name="type" id="type" onChange={handleControlledInputChange} className="form-control">
-                            <option value="0" style={{ color: "#8e8e8e" }} >Select Disc Type</option>
+                            <option value="0" style={{ color: "#8e8e8e" }} >Select Type</option>
                             <option>Putter</option>
                             <option>Mid-Range</option>
                             <option>Fairway-Driver</option>
@@ -74,14 +94,14 @@ export const DiscForm = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="name">Disc Name:</label>
+                        <label htmlFor="name">Name:</label>
                         <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="weight">Disc Weight:</label>
+                        <label htmlFor="weight">Weight:</label>
                         <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="4" required autoFocus placeholder="Ex: 173g" value={disc.weight} />
                     </div>
                 </fieldset>

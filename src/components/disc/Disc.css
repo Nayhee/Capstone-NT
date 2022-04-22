@@ -58,51 +58,31 @@
     /* font-family: 'Acme', sans-serif; */
 }
 
-/* .card-disc button {
+.card-disc button {
     background-color: #275694;
-    border: 1px solid cornsilk;
+    border: 1px solid #3fbdc2;
     color: cornsilk;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
     font-size: 18px;
     padding: .3em;
     border-radius: 2px;
-    margin: .2em;
+    width: 100%;
+    margin: .1em;
     font-family: 'Acme', sans-serif;
-} */
+}
   
 .card-disc button:hover {
     background-color: #1d2351;
 }
-
-.editDeleteButtonsContainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.editDeleteButtonsContainer button {
-    background-color: #275694;
-    border: 1px solid cornsilk;
-    color: cornsilk;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    padding: .3em;
-    border-radius: 2px;
-    margin: .2em;
-    width: 8em;
-    font-family: 'Acme', sans-serif;
-}
-
-
 
 .add-disc-button {
     display: flex;
     margin: auto;
     margin-top: 10px;
     background-color: #275694;
-    border: 3px solid 0d0f21;
+    border: 3px solid #3fbdc2;
     border-radius: 5px;
     color: cornsilk;
     /* font-weight: bold; */
@@ -113,7 +93,7 @@
 .add-disc-button:hover {
     background-color: #3fbdc2;
     color: #1d2351;
-
+    border-color: #1d2351;
 }
 
 
