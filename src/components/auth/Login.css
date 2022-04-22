@@ -42,9 +42,8 @@ fieldset {
     width: 25em;
 }
 
-.label--login {
-    width: 8rem;
-    display: inline-block;
+.login-label {
+    font-size: 18px;
 }
 
 .form-control {
@@ -86,14 +85,13 @@ fieldset {
     border: 1px solid #ced4da;
     background-color: #1d2351;
     color: white;
-    font-weight: bold;
     border-radius: .25em;
     height: 35px;
     width: 25%;
     margin: auto;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .signInButton:hover {
@@ -112,7 +110,7 @@ fieldset {
     border: 2px solid #1d2351;
     border-radius: .25em;
     background-color: #2d8296; 
-    padding: .5em;
+    padding: .2em;
     font-weight: bold;
 }
 

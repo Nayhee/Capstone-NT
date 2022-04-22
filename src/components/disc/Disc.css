@@ -7,86 +7,102 @@
 
 }
 
-
 .image_div img {
-    /* height: 160px; */
     width: 100%;
     border-radius: 3px;
-    margin: auto;
-    /* margin-left: 25px; */
-    
+    margin: auto;    
 }
   
 .card-disc {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
     transition: 0.3s;
     border-radius: 5px; 
     background: #5f92a5;
     margin: 1em .5em 1em 1em;
     flex: 0 1 24%;
-    max-width: 15%;
+    max-width: 18%;
+    z-index: 1;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #2d8296;
+    opacity: 98%;
 }
-
   
 .card-disc-content {
     padding: .5em;
 }
 
 .image_div {
-    /* height: 160px; */
     background-color: white; 
-    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; 
     flex: 0 1 24%;
     width: 100%;
-    opacity: 94%;
+    opacity: 88%;
 }
   
 .card-disc-content h2 {
     margin-bottom: .5em;
     font-weight: bold;
     color: #1d2351;
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'Acme', sans-serif;
 }
   
 .card-disc-content p {
     color: #1d2351;
     margin: 0px 0px 5px 0px;
-    font-size: 16px;
+    font-size: 18px;
     /* font-family: 'Acme', sans-serif; */
 }
 
-.card-disc-name {
-
-}
-
-.card-disc button {
+/* .card-disc button {
     background-color: #275694;
-    border: none;
+    border: 1px solid cornsilk;
     color: cornsilk;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    padding: .5em;
+    font-size: 18px;
+    padding: .3em;
     border-radius: 2px;
-    margin: .1em;
-    width: 100%;
+    margin: .2em;
     font-family: 'Acme', sans-serif;
-}
+} */
   
 .card-disc button:hover {
     background-color: #1d2351;
 }
+
+.editDeleteButtonsContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.editDeleteButtonsContainer button {
+    background-color: #275694;
+    border: 1px solid cornsilk;
+    color: cornsilk;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding: .3em;
+    border-radius: 2px;
+    margin: .2em;
+    width: 8em;
+    font-family: 'Acme', sans-serif;
+}
+
+
 
 .add-disc-button {
     display: flex;
     margin: auto;
     margin-top: 10px;
     background-color: #275694;
-    border: 3px solid #0d0f21;
+    border: 3px solid 0d0f21;
     border-radius: 5px;
     color: cornsilk;
     /* font-weight: bold; */
@@ -99,6 +115,8 @@
     color: #1d2351;
 
 }
+
+
 
 
   /*Image colors to use. Light to darker. 

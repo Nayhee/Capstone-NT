@@ -14,10 +14,15 @@ export const DiscCard = ({ disc, handleDeleteDisc }) => {
           </span></h2>
           <p>Type: {disc.type}</p>
           <p>Weight: {disc.weight}</p>
-          <Link to={`/discs/${disc.id}/edit`}>
-              <button>Edit</button>
-          </Link>
-          <button type="button" onClick={()=> handleDeleteDisc(disc.id)}>Delete</button>
+          <p>Brand: {disc.brand}</p>
+          
+          <div className="editDeleteButtonsContainer">
+            <Link to={`/discs/${disc.id}/edit`}>
+                <button>Edit</button>
+            </Link>
+            <button type="button" onClick={()=> handleDeleteDisc(disc.id)}>Delete</button>
+          </div>
+
         </div>
       </div>
     );
