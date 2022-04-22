@@ -66,7 +66,7 @@
 }
 
 .wrapper > div{
-    background-color: #1d2351;   
+    background-color: #0d0f21;
     border: 2px solid #0d0f21;
     color: cornsilk;
 }
@@ -77,8 +77,10 @@
 
 .userScorecard {
     margin: 3em 0em 1em 0em;
-    background-color: #0d0f21;
-    box-shadow: 0 0 2px #275694, 0 0 10px #275694, 0 0 20px #275694, 0 0 100px #275694;
+    background-color: #1d2351;   
+    border: 3px solid #3fbdc2;
+    border-radius: 15px;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 100px #3fbdc2;
 }
 .userScorecard > h3 {
     font-size: 2.5rem;
