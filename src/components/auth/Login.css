@@ -17,8 +17,8 @@ fieldset {
 
 .form--login {
     font-family: 'Acme', sans-serif;
-    display: inline-block;
     margin: 3em 1em 1.5em 1em;
+    display: inline-block;
     /* margin: 0 auto; */
     text-align: left;
     padding: .5em 1em .5em 1em;
@@ -33,9 +33,9 @@ fieldset {
     background-color: #2d8296;
     opacity: 92%;
     box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
-
-    
 }
+
+
 
 .form--login > fieldset > input[type="email"],
 .form--login > fieldset > input[type="password"] {

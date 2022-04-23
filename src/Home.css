@@ -77,6 +77,9 @@
 }
 
 .userScorecard {
+    overflow: hidden;
+    position: relative;
+    /* animation: flyIn 20s ease-out;     */
     margin: 3em 0em 1em 0em;
     background-color: #1d2351;
     border: .4em solid;
@@ -85,11 +88,19 @@
         #ff512f,    
         #dd2476,
         #1c64ff) 1;
-    animation: rotate
-    3s
-    ease-in
-    infinite;
+    animation: 
+        rotate 3s ease-in infinite,
+        flyIn 1s ease-out;
     /* box-shadow: 0 0 2px #275694, 0 0 10px #275694, 0 0 20px #275694, 0 0 50px #275694; */
+}
+
+@keyframes flyIn {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%)
+    }
 }
 
 @keyframes rotate {
