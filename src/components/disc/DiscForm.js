@@ -39,16 +39,27 @@ export const DiscForm = () => {
         setDisc(newDisc);
     }
 
+    const checkUsersWeightInput = (weight) => {
+        if(!isNaN(weight[0]) && !isNaN(weight[1]) && !isNaN(weight[2])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     const handleClickSaveDisc = (event) => {
         event.preventDefault();
 
-        //WRITE SOME CODE TO CHECK AND MAKE SURE THE USER TYPED IN A 3DIGIT NUMBER FOLLOWED BY A G. (EX: 173g)
-
-        //if all disc properties aren't null, setIsLoading to true, addDisc, then navigate to /discs. 
         if(disc.name !== "" && disc.type !== 0 && disc.brand !== 0 && disc.weight !== "") {
-            setIsLoading(true);
-            addDisc(disc)
-            .then(() => navigate("/discs"))
+            
+            if(checkUsersWeightInput(disc.weight)) {
+                setIsLoading(true);
+                disc.weight = `${disc.weight}g`
+                addDisc(disc)
+                .then(() => navigate("/discs"))
+            } else {
+                window.alert("Please input 3 numbers for Weight.")
+            }
         } else {
             window.alert("Please complete each field")
         }
@@ -72,8 +83,6 @@ export const DiscForm = () => {
                             <option>Prodigy</option>
                             <option>MVP</option>
                             <option>Axiom</option>
-                            <option>Latitude 64</option>
-                            <option>Westside</option>
                             <option>Kataplast</option>
                         </select>
                     </div>
@@ -102,7 +111,7 @@ export const DiscForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="weight">Weight:</label>
-                        <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="4" required autoFocus placeholder="Ex: 173g" value={disc.weight} />
+                        <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
                     </div>
                 </fieldset>
 

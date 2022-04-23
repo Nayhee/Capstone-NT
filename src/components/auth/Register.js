@@ -9,7 +9,6 @@ export const Register = ({setAuthUser}) => {
     const conflictDialog = useRef()
     const navigate = useNavigate()
 
-
     const existingUserCheck = () => {
         return fetch(`http://localhost:8088/users?email=${email.current.value}`)
             .then(res => res.json())
@@ -18,7 +17,6 @@ export const Register = ({setAuthUser}) => {
 
     const handleRegister = (e) => {
         e.preventDefault()
-
 
         existingUserCheck()
             .then((userExists) => {
@@ -37,6 +35,7 @@ export const Register = ({setAuthUser}) => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 setAuthUser(createdUser)
+                                //maybe call the 
                                 navigate("/")
                             }
                         })
