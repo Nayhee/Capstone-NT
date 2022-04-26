@@ -41,7 +41,7 @@
     /* position: absolute; */
     position: relative;
     animation: 
-        flyIn 1s ease-out;
+        flyIn .8s ease-out;
 }
 
 .home__container__buttons button:hover {
@@ -102,7 +102,7 @@
         #1c64ff) 1;
     animation: 
         rotate 3s ease-in infinite,
-        flyIn 1s ease-out;
+        flyIn .8s ease-out;
     /* box-shadow: 0 0 2px #275694, 0 0 10px #275694, 0 0 20px #275694, 0 0 50px #275694; */
 }
 

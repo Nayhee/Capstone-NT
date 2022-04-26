@@ -246,9 +246,9 @@
     {
       "id": 1,
       "userId": "1",
-      "date": "4/15/2022",
+      "date": "4/15/22",
       "discId": 10,
-      "distance": 20,
+      "distance": "20",
       "putts": 25,
       "made": 22,
       "percentage": 88
@@ -256,7 +256,7 @@
     {
       "id": 2,
       "userId": "1",
-      "date": "4/15/2022",
+      "date": "4/15/22",
       "discId": 10,
       "distance": 25,
       "putts": 25,
@@ -266,7 +266,7 @@
     {
       "id": 3,
       "userId": "1",
-      "date": "4/16/2022",
+      "date": "4/16/22",
       "discId": 9,
       "distance": 30,
       "putts": 25,
@@ -276,7 +276,7 @@
     {
       "id": 4,
       "userId": "1",
-      "date": "4/17/2022",
+      "date": "4/17/22",
       "discId": 9,
       "distance": 15,
       "putts": 10,
@@ -286,7 +286,7 @@
     {
       "id": 5,
       "userId": "2",
-      "date": "4/17/2022",
+      "date": "4/17/22",
       "discId": 4,
       "distance": 20,
       "putts": 10,
@@ -296,7 +296,7 @@
     {
       "id": 6,
       "userId": "3",
-      "date": "4/17/2022",
+      "date": "4/17/22",
       "discId": 5,
       "distance": 20,
       "putts": 10,
@@ -306,7 +306,7 @@
     {
       "id": 7,
       "userId": "3",
-      "date": "4/17/2022",
+      "date": "4/17/22",
       "discId": 6,
       "distance": 25,
       "putts": 10,
@@ -316,7 +316,7 @@
     {
       "id": 8,
       "userId": "2",
-      "date": "4/18/2022",
+      "date": "4/18/22",
       "discId": 12,
       "distance": 30,
       "putts": 10,
@@ -326,7 +326,7 @@
     {
       "id": 9,
       "userId": "1",
-      "date": "4/18/2022",
+      "date": "4/18/22",
       "discId": 12,
       "distance": 20,
       "putts": 10,
