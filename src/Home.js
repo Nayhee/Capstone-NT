@@ -17,7 +17,8 @@ export const Home = () => {
 
     const decimalToPercentage = (decimal) => {
         let percent = decimal * 100;
-        return `${percent}%`
+        let rounded = Math.round(percent)
+        return `${rounded}%`
     }
 
     useEffect(() => {
@@ -40,13 +41,6 @@ export const Home = () => {
             setPuttPercentage(percentage);
         })
     }, [])
-    
-
-    // <div classname="homeGreeting">
-    //                 <h2 classname="greeting">Welcome to Putt Tracker!</h2>
-    //                 <p className="slogan">The Putting Tool For Disc Golfers</p>
-    //             </div>
-
 
     return (
         <>

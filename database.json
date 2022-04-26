@@ -182,7 +182,7 @@
     },
     {
       "name": "Immortal Spirit",
-      "weight": "173g",
+      "weight": "174g",
       "typeId": "1",
       "brandId": "3",
       "image": "/images/d2.png",
@@ -246,8 +246,8 @@
     {
       "id": 1,
       "userId": "1",
-      "date": "4/05/2022",
-      "discId": 1,
+      "date": "4/15/2022",
+      "discId": 2,
       "distance": 20,
       "putts": 25,
       "made": 22
@@ -255,8 +255,8 @@
     {
       "id": 2,
       "userId": "1",
-      "date": "4/05/2022",
-      "discId": 1,
+      "date": "4/15/2022",
+      "discId": 2,
       "distance": 25,
       "putts": 25,
       "made": 21
@@ -264,25 +264,25 @@
     {
       "id": 3,
       "userId": "1",
-      "date": "4/06/2022",
-      "discId": 2,
+      "date": "4/16/2022",
+      "discId": 9,
       "distance": 30,
       "putts": 25,
-      "made": 17
+      "made": 18
     },
     {
       "id": 4,
-      "userId": "2",
-      "date": "4/07/2022",
-      "discId": 3,
+      "userId": "1",
+      "date": "4/17/2022",
+      "discId": 9,
       "distance": 15,
       "putts": 10,
-      "made": 6
+      "made": 9
     },
     {
       "id": 5,
       "userId": "2",
-      "date": "4/07/2022",
+      "date": "4/17/2022",
       "discId": 4,
       "distance": 20,
       "putts": 10,
@@ -291,7 +291,7 @@
     {
       "id": 6,
       "userId": "3",
-      "date": "4/07/2022",
+      "date": "4/17/2022",
       "discId": 5,
       "distance": 20,
       "putts": 10,
@@ -300,7 +300,7 @@
     {
       "id": 7,
       "userId": "3",
-      "date": "4/07/2022",
+      "date": "4/17/2022",
       "discId": 6,
       "distance": 25,
       "putts": 10,
@@ -309,7 +309,7 @@
     {
       "id": 8,
       "userId": "4",
-      "date": "4/08/2022",
+      "date": "4/18/2022",
       "discId": 7,
       "distance": 30,
       "putts": 10,
@@ -318,7 +318,7 @@
     {
       "id": 9,
       "userId": "4",
-      "date": "4/08/2022",
+      "date": "4/18/2022",
       "discId": 8,
       "distance": 20,
       "putts": 10,

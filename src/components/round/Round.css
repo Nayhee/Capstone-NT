@@ -1,12 +1,120 @@
-.rounds {
+.roundContainer {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem 10rem 10rem 8rem;
+    font-size: 24px;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Acme', sans-serif;
+    /* width: 65%; */
+    padding: .3rem;
+    border-radius: 1rem;
+}
+.roundRow {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .round {
-      flex-basis: 28%;
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
-  }
+    justify-content: center;
+    background-color: #3fbdc2;
+    align-items: center;
+    /* border-bottom: .3rem solid #1d2351; */
+}
+
+/*slightly darker green/blue
+3fbdc2c1
+*/
+
+
+.roundListContainer {
+    padding: 1rem;
+    background-color: #1d2351;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68%;
+    margin: auto;
+    position: relative;
+    top: 4rem;
+    font-family: 'Acme', sans-serif;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+
+
+}
+
+.roundListHeader {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* justify-content: space-between; */
+    margin: 1rem 1rem 0px 1rem;
+    align-items: center;
+    /* position: absolute;
+    left: 24.5rem;
+    top: 8rem; */
+}
+
+.roundListHeader h2 {
+    color: white;
+    /* border: 3px solid #3fbdc2;
+    background-color: #1d2351; */
+    padding: .5rem;
+    /* border-radius: .2rem; */
+    font-family: 'Acme', sans-serif;
+    font-size: 2.5rem;
+    
+}
+
+.roundListLabels {
+   color: white;
+   display: grid;
+   grid-template-columns: 10rem 10rem 10rem 10rem 10rem 8rem;
+   font-size: 1.6rem;
+   font-weight: bold;
+}
+
+.roundListLabel {
+    display: flex;
+    justify-content: center;
+    padding: .2rem;
+}
+
+.roundEditButton {
+    display: flex;
+    background-color: #3fbdc2;
+}
+.roundEditButton button {
+    border: 1px solid cornsilk;
+    background-color: #275694;
+    color:  white;
+    /* font-weight: bold; */
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    justify-items: center;
+    font-size: 1Rem;
+    font-family: 'Acme', sans-serif;
+    padding: .3em;
+    margin: .1rem;
+}
+.roundEditButton button:hover {
+    background-color:#1d2351;
+}
+
+.newRoundButton {
+    display: flex;
+    margin: 1rem 0px 0px 0px;
+    background-color: #275694;
+    border: 3px solid #3fbdc2;
+    border-radius: 8px;
+    color: white;
+    /* font-weight: bold; */
+    padding: .2em;
+    font-size: 1.2rem;
+    font-family: 'Acme', sans-serif;
+    position: relative;
+    left: -2.25rem;
+
+}
+
+.newRoundButton:hover {
+    color: #1d2351;
+    background-color:#3fbdc2;
+}
