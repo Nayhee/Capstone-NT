@@ -55,6 +55,7 @@ export const RoundList = () => {
                     <div className="roundListLabel">Distance:</div>
                     <div className="roundListLabel">Total Putts:</div>
                     <div className="roundListLabel">Total Made:</div>
+                    <div className="roundListLabel"><b>Putting %</b></div>
                 </div>
                     <div className="roundList">
                         {rounds.map(round => 
