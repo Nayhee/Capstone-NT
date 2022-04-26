@@ -16,37 +16,42 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
     const location = useLocation();
 
     return (
-            <ul className="navbar">
 
-                <li className="navbar__item">
-                    <img className="navbar__logo" src="images/LOGO8.png"></img>
-                </li>
+                <ul className="navbar">
 
-                {isAuthenticated && <li className="navbar__item">
-                    <Link className={`navbar__link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
-                </li>}
-
-                {isAuthenticated && <li className="navbar__item">
-                    <Link className={`navbar__link ${location.pathname === '/rounds/create' ? 'active' : ''}`} to="/rounds/create">Putt</Link>
-                </li>}
-
-                {isAuthenticated && <li className="navbar__item">
-                    <Link className={`navbar__link ${location.pathname === '/discs' ? 'active' : ''}`} to="/discs">Discs</Link>
-                </li>}
-
-                {isAuthenticated && <li className="navbar__item">
-                    <Link className={`navbar__link ${location.pathname === '/rounds' ? 'active' : ''}`} to="/rounds">Rounds</Link>
-                </li>}
-
-                {isAuthenticated
-                    ? <li className="navbar__item">
-                        <Link className="navbar__link" to="/" onClick={handleLogout}> Logout </Link>
+                    <li className="navbar__item">
+                        <img className="navbar__logo" src="images/editedLogo.png"></img>
                     </li>
-                    : <li className="navbar__item">
-                        <Link className="navbar__link" to="/login">Login</Link>
+
+                    {isAuthenticated && <li className="navbar__item">
+                        <Link className={`navbar__link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
                     </li>}
-                    
-            </ul>
+
+                    {isAuthenticated && <li className="navbar__item">
+                        <Link className={`navbar__link ${location.pathname === '/rounds/create' ? 'active' : ''}`} to="/rounds/create">Putt</Link>
+                    </li>}
+
+                    <li className="navbar__item">
+                        <h3 className="navbar__slogan">The Putting App for Disc Golfers</h3>
+                    </li>
+
+                    {isAuthenticated && <li className="navbar__item">
+                        <Link className={`navbar__link ${location.pathname === '/discs' ? 'active' : ''}`} to="/discs">Discs</Link>
+                    </li>}
+
+                    {isAuthenticated && <li className="navbar__item">
+                        <Link className={`navbar__link ${location.pathname === '/rounds' ? 'active' : ''}`} to="/rounds">Rounds</Link>
+                    </li>}
+
+                    {isAuthenticated
+                        ? <li className="navbar__item">
+                            <Link className="navbar__link" to="/" onClick={handleLogout}> Logout </Link>
+                        </li>
+                        : <li className="navbar__item">
+                            <Link className="navbar__link" to="/login">Login</Link>
+                        </li>}
+                        
+                </ul>
 
     )
 }

@@ -40,8 +40,8 @@
       "id": 1,
       "userId": 2,
       "name": "Rainbow Barf Kitty",
-      "type": "Putter",
-      "brand": "Dynamic Discs",
+      "typeId": 1,
+      "brandId": 3,
       "weight": "175g",
       "image": "/images/d12.png"
     },
@@ -49,17 +49,17 @@
       "id": 2,
       "userId": 1,
       "name": "Luna",
-      "type": "Putter",
+      "typeId": 1,
       "weight": "173g",
-      "brand": "Discraft",
+      "brandId": 2,
       "image": "/images/luna.jpg"
     },
     {
       "id": 3,
       "userId": 2,
       "name": "Judge",
-      "type": "Putter",
-      "brand": "Dynamic Discs",
+      "typeId": 1,
+      "brandId": 3,
       "weight": "174g",
       "image": "/images/d1.jpg"
     },
@@ -67,8 +67,8 @@
       "id": 4,
       "userId": 3,
       "name": "Aviar",
-      "type": "Putter",
-      "brand": "Innova",
+      "typeId": 1,
+      "brandId": 1,
       "weight": "173g",
       "image": "/images/aviar.jpg"
     },
@@ -76,8 +76,8 @@
       "id": 5,
       "userId": 3,
       "name": "Proxy",
-      "brand": "Axiom",
-      "type": "Putter",
+      "brandId": 7,
+      "typeId": 1,
       "weight": "174g",
       "image": "/images/proxy.jpg"
     },
@@ -85,8 +85,8 @@
       "id": 6,
       "userId": 3,
       "name": "MD4",
-      "type": "Mid-Range",
-      "brand": "Discmania",
+      "typeId": 1,
+      "brandId": 4,
       "weight": "178g",
       "image": "/images/md4.jpg"
     },
@@ -94,8 +94,8 @@
       "id": 7,
       "userId": 4,
       "name": "P2",
-      "type": "Putter",
-      "brand": "Discmania",
+      "typeId": 1,
+      "brandId": 4,
       "weight": "172g",
       "image": "/images/p2.jpg"
     },
@@ -103,26 +103,26 @@
       "id": 8,
       "userId": 2,
       "name": "Aviar3",
-      "type": "Putter",
-      "brand": "Innova",
+      "typeId": 1,
+      "brandId": 1,
       "weight": "172g",
       "image": "/images/d5.png"
     },
     {
       "id": 9,
       "userId": 1,
-      "name": "Sleepy Panda",
-      "type": "Putter",
-      "brand": "Dynamic Discs",
-      "weight": "174g",
-      "image": "/images/d6.png"
+      "name": "Space Kitty",
+      "typeId": 1,
+      "brandId": 3,
+      "weight": "173g",
+      "image": "/images/d10.png"
     },
     {
       "id": 10,
       "userId": 1,
       "name": "Aviar",
-      "type": "Putter",
-      "brand": "Innova",
+      "typeId": 1,
+      "brandId": 1,
       "weight": "173g",
       "image": "/images/d1.jpg"
     },
@@ -130,35 +130,26 @@
       "id": 11,
       "userId": 4,
       "name": "Judge",
-      "type": "Putter",
-      "brand": "Dynamic Discs",
+      "typeId": 1,
+      "brandId": 3,
       "weight": "174g",
       "image": "/images/d11.png"
     },
     {
       "id": 12,
       "userId": 1,
-      "name": "Space Kitty",
-      "type": "Putter",
-      "brand": "Dynamic Discs",
-      "weight": "173g",
-      "image": "/images/d10.png"
-    },
-    {
-      "id": 13,
-      "userId": 2,
-      "name": "Immortal Spirit",
-      "type": "Putter",
-      "brand": "Dynamic Discs",
-      "weight": "174g",
-      "image": "/images/d2.png"
+      "name": "Sleepy Panda",
+      "typeId": 1,
+      "brandId": 3,
+      "weight": "174",
+      "image": "/images/d6.png"
     },
     {
       "id": 14,
       "userId": 2,
       "name": "Laser Kitty",
-      "type": "Mid-Range",
-      "brand": "Dynamic Discs",
+      "typeId": 2,
+      "brandId": 3,
       "weight": "178g",
       "image": "/images/d9.png"
     },
@@ -166,17 +157,17 @@
       "id": 15,
       "userId": 3,
       "name": "P2",
-      "type": "Putter",
-      "brand": "Discmania",
+      "typeId": 1,
+      "brandId": 4,
       "weight": "172g",
       "image": "/images/d14.png"
     },
     {
       "id": 16,
-      "userId": 1,
+      "userId": 2,
       "name": "Samurai",
-      "type": "Putter",
-      "brand": "Innova",
+      "typeId": 1,
+      "brandId": 1,
       "weight": "172g",
       "image": "/images/samurai.png"
     },
@@ -184,10 +175,71 @@
       "id": 17,
       "userId": 3,
       "name": "MD4",
-      "type": "Mid-Range",
-      "brand": "Discmania",
+      "typeId": 2,
+      "brandId": 4,
       "weight": "178g",
       "image": "/images/md4.jpg"
+    },
+    {
+      "name": "Immortal Spirit",
+      "weight": "173g",
+      "typeId": "1",
+      "brandId": "3",
+      "image": "/images/d2.png",
+      "userId": 1,
+      "id": 18
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Innova"
+    },
+    {
+      "id": 2,
+      "name": "Discraft"
+    },
+    {
+      "id": 3,
+      "name": "Dynamic Discs"
+    },
+    {
+      "id": 4,
+      "name": "Discmania"
+    },
+    {
+      "id": 5,
+      "name": "Prodigy"
+    },
+    {
+      "id": 6,
+      "name": "MVP"
+    },
+    {
+      "id": 7,
+      "name": "Axiom"
+    },
+    {
+      "id": 8,
+      "name": "Kataplast"
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Putter"
+    },
+    {
+      "id": 2,
+      "name": "Mid-Range"
+    },
+    {
+      "id": 3,
+      "name": "Fairway Driver"
+    },
+    {
+      "id": 4,
+      "name": "Distance-Driver"
     }
   ],
   "rounds": [
@@ -197,8 +249,8 @@
       "date": "4/05/2022",
       "discId": 1,
       "distance": 20,
-      "putts": 10,
-      "made": 9
+      "putts": 25,
+      "made": 22
     },
     {
       "id": 2,
@@ -206,8 +258,8 @@
       "date": "4/05/2022",
       "discId": 1,
       "distance": 25,
-      "putts": 10,
-      "made": 8
+      "putts": 25,
+      "made": 21
     },
     {
       "id": 3,
@@ -215,8 +267,8 @@
       "date": "4/06/2022",
       "discId": 2,
       "distance": 30,
-      "putts": 10,
-      "made": 7
+      "putts": 25,
+      "made": 17
     },
     {
       "id": 4,

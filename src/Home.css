@@ -1,14 +1,17 @@
-.home__greeting {
+.home__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 35%;
+   
     margin: auto;
     padding: 10px;
 }
 
-.home__greeting h2 {
+/* .home__container h2 {
+    position: absolute;
+    left: 2rem;
+    top: 20rem;
     margin: 10px 0px 0px 0px;
     color: white;
     font-weight: bold;
@@ -19,41 +22,50 @@
     padding: .5em;
     font-family: 'Acme', sans-serif;
     box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
-}
+} */
 
-.home__greeting__buttons {
+/* .slogan {
+    color: white;
+    font-size: 21px;
+    font-style: italic;
+    font-family: 'Acme', sans-serif;
+    margin: .5em 0px 1em 0px;
+    position: absolute;
+    left: 5.7rem;
+    top: 25rem;
+} */
+
+.home__container__buttons {
     display: flex;
     margin-top: 1em;
+    /* position: absolute; */
+    position: relative;
+    animation: 
+        flyIn 1s ease-out;
 }
 
-.home__greeting__buttons button:hover {
+.home__container__buttons button:hover {
     background:  #1d2351;
     color: #3fbdc2;
-    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 50px #3fbdc2, 0 0 200px #3fbdc2;
+    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2;
 }
 
-.home__greeting__buttons button {
+.home__container__buttons button {
     margin: 0px 1em 0px 1em;
     border: 3px solid #1d2351;
     background-color: #3fbdc2;
     color:  #1d2351;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 50%;
-    height: 125px;
-    width: 125px;
+    height: 7rem;
+    width: 7rem;
     justify-items: center;
     font-size: 24px;
     font-family: 'Acme', sans-serif;
     padding: .3em;
 }
 
-.slogan {
-    color: #1d2351;
-    font-size: 22px;
-    /* font-style: italic; */
-    font-family: 'Acme', sans-serif;
-    margin: .5em 0px 1em 0px;
-}
+
 
 .wrapper {
     display: grid;
@@ -96,10 +108,10 @@
 
 @keyframes flyIn {
     0% {
-        transform: translateX(200%);
+        transform: translateY(200%);
     }
     100% {
-        transform: translateX(0%)
+        transform: translateY(0%)
     }
 }
 
@@ -126,7 +138,28 @@
     display: flex;
     justify-content: center;
     padding: .5em;
+    border-radius: .1em;
 }
+
+.scorecardPercValue {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border-radius: .1em;
+    font-weight: bold;
+}
+
+
+.scorecardPercLabel {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    border-radius: .1em;
+    font-weight: bold;
+}
+
+
+
 
 /*COMPLEMENTARY COLOR
 #E6551B 
