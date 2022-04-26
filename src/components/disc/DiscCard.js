@@ -12,9 +12,9 @@ export const DiscCard = ({ disc, handleDeleteDisc }) => {
           <h2><span className="card-disc-name">
             {disc.name}
           </span></h2>
-          <p>Type: {disc.type}</p>
+          <p>Type: {disc.type.name}</p>
           <p>Weight: {disc.weight}</p>
-          <p>Brand: {disc.brand}</p>
+          <p>Brand: {disc.brand.name}</p>
           
           <div className="editDeleteButtonsContainer">
             <Link to={`/discs/${disc.id}/edit`}>

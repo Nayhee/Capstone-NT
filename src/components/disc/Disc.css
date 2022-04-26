@@ -9,7 +9,7 @@
 
 .image_div img {
     width: 100%;
-    border-radius: 3px;
+    border-radius: 50%;
     margin: auto;    
 }
   
@@ -41,6 +41,7 @@
     flex: 0 1 24%;
     width: 100%;
     opacity: 88%;
+
 }
   
 .card-disc-content h2 {
@@ -54,8 +55,8 @@
 .card-disc-content p {
     color: #1d2351;
     margin: 0px;
-    font-size: 18px;
-    /* font-family: 'Acme', sans-serif; */
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
 }
 
 .card-disc button {
@@ -80,7 +81,7 @@
 .add-disc-button {
     display: flex;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 1rem;
     background-color: #275694;
     border: 3px solid #3fbdc2;
     border-radius: 5px;
@@ -95,12 +96,6 @@
     color: #1d2351;
     border-color: #1d2351;
 }
-
-.editDeleteButtonsContainer {
-    
-}
-
-
 
 
   /*Image colors to use. Light to darker. 

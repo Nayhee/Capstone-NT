@@ -7,7 +7,7 @@ export const getDiscById = (discId) => {
 }
 
 export const getAUsersDiscs = (userId) => {
-    return fetch(`${remoteURL}/discs?userId=${userId}`)
+    return fetch(`${remoteURL}/discs?userId=${userId}&_expand=type&_expand=brand`)
     .then(res => res.json())
 }
 

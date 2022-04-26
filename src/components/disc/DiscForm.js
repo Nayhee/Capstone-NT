@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react"
 import { useNavigate } from "react-router-dom"
 import { addDisc, getAUsersDiscs } from "../../modules/DiscManager";
+import {getAllBrands} from "../../modules/BrandManager"
+import {getAllTypes} from "../../modules/TypeManager"
 import './DiscForm.css'
 
 
@@ -18,23 +20,41 @@ export const DiscForm = () => {
 
     const [disc, setDisc] = useState({
         name: "",
-        type: "",
-        brand: "",
         weight: "",
-        image: "/images/d1.jpg",
+        typeId: 0,
+        brandId: 0,
+        image: "/images/d2.png",
         userId: currentUserId
     })
     
-    const [isLoading, setIsLoading] = useState(false)
-
+    const [isLoading, setIsLoading] = useState(true)
+    
     const navigate = useNavigate();
-
+    
+    const [brands, setBrands] = useState([])
+    const [types, setTypes] = useState([])
+    
+    useEffect(() => {
+        getAllBrands()
+        .then(allBrands => {
+            setBrands(allBrands)
+        })
+        getAllTypes()
+        .then(allTypes => {
+            setTypes(allTypes)
+        })
+        setIsLoading(false);
+    }, [])
+    
     //create copy of current state. Grab the user's input value.
     //set the value of the newDisc using bracket notation.
     //update state to reflect the new animal. 
     const handleControlledInputChange = (event) => {
         const newDisc = {...disc}
-        let userInputValue = event.target.value
+        let userInputValue = event.target.value;
+        if(event.target.value.includes("Id")) {
+            userInputValue = parseInt(userInputValue)
+        }
         newDisc[event.target.id] = userInputValue;
         setDisc(newDisc);
     }
@@ -50,7 +70,7 @@ export const DiscForm = () => {
     const handleClickSaveDisc = (event) => {
         event.preventDefault();
 
-        if(disc.name !== "" && disc.type !== 0 && disc.brand !== 0 && disc.weight !== "") {
+        if(disc.name !== "" && disc.typeId !== 0 && disc.brandId !== 0 && disc.weight !== "") {
             
             if(checkUsersWeightInput(disc.weight)) {
                 setIsLoading(true);
@@ -70,37 +90,7 @@ export const DiscForm = () => {
 
             <form className="discForm">
                 <h1 className="discFormTitle">New Disc</h1>
-
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="brand">Brand:</label>
-                        <select value={disc.brand} name="brand" id="brand" onChange={handleControlledInputChange} className="form-control">
-                            <option value="0" style={{ color: "#8e8e8e" }} >Select Brand</option>
-                            <option>Innova</option>
-                            <option>Discraft</option>
-                            <option>Dynamic Discs</option>
-                            <option>Discmania</option>
-                            <option>Prodigy</option>
-                            <option>MVP</option>
-                            <option>Axiom</option>
-                            <option>Kataplast</option>
-                        </select>
-                    </div>
-                </fieldset>
                 
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="type">Type:</label>
-                        <select value={disc.type} name="type" id="type" onChange={handleControlledInputChange} className="form-control">
-                            <option value="0" style={{ color: "#8e8e8e" }} >Select Type</option>
-                            <option>Putter</option>
-                            <option>Mid-Range</option>
-                            <option>Fairway-Driver</option>
-                            <option>Distance-Driver</option>
-                        </select>
-                    </div>
-                </fieldset>
-
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
@@ -114,6 +104,35 @@ export const DiscForm = () => {
                         <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
                     </div>
                 </fieldset>
+
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="brand">Brand:</label>
+                        <select value={disc.brandId} name="brandId" id="brandId" onChange={handleControlledInputChange} className="form-control">
+                            <option value="0" style={{ color: "#8e8e8e" }} >Select Brand</option>
+                            {brands.map(b => (
+                                <option key={b.id} value={b.id}>
+                                    {b.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="type">Type:</label>
+                        <select value={disc.typeId} name="typeId" id="typeId" onChange={handleControlledInputChange} className="form-control">
+                            <option value="0" style={{ color: "#8e8e8e" }} >Select Type</option>
+                            {types.map(t => (
+                                <option key={t.id} value={t.id}>
+                                    {t.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </fieldset>
+
 
                 <button 
                     type="button"

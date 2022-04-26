@@ -30,6 +30,7 @@ export const Login = ({setAuthUser}) => {
 
     return (
         <main className="container--login">
+            
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>User does not exist</div>
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
@@ -37,7 +38,7 @@ export const Login = ({setAuthUser}) => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Putt Tracker</h1>
+                    <h1>Welcome to Putt Tracker!</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label className="login-label" htmlFor="inputEmail"> Email Address </label>

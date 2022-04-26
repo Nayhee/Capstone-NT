@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-fieldset {
+.discForm fieldset {
     min-width: 0;
     padding: .5rem 0;
     margin: 0;
@@ -16,7 +16,8 @@ fieldset {
 .discForm {
     display: inline-block;
     font-family: 'Acme', sans-serif;
-    margin: 3em 1em 1.5em 1em;
+    font-weight: bold;
+    margin: 2em 1em 1.5em 1em;
     /* margin: 0 auto; */
     text-align: left;
     padding: .5em 1em .5em 1em;
@@ -30,8 +31,35 @@ fieldset {
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #2d8296;
-    opacity: 92%;
+    opacity: 94%;
     box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+}
+
+.titleAndImages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titleAndImages img {
+    width: 7rem;
+    border-radius: 50%;
+    margin: 0px;
+}
+
+.form-controls {
+    /* display: block; */
+    width: 94%;
+    height: calc(1.5em + .5rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #3fbdc2;
+    background-color: #1d2351;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .save-disc-button {
@@ -44,6 +72,7 @@ fieldset {
     height: 35px;
     width: 25%;
     margin: auto;
+    margin-top: .5rem;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;

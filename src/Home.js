@@ -1,42 +1,72 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css"
+import {getAUsersRounds} from "../src/modules/RoundManager"
 
 export const Home = () => {
     
     const currentUser= JSON.parse(sessionStorage.getItem('putt_user'));
-    const userName = currentUser.firstName;
+    const currentUsersName = currentUser.firstName;
+    const currentUsersId = currentUser.id;
 
-    //will have functions to calculate the values
+    const [totalRounds, setTotalRounds] = useState();
+    const [totalPutts, setTotalPutts] = useState();
+    const [puttsMade, setPuttsMade] = useState();
+    const [puttPercentage, setPuttPercentage] = useState();
+
+
+    const decimalToPercentage = (decimal) => {
+        let percent = decimal * 100;
+        return `${percent}%`
+    }
+
+    useEffect(() => {
+        getAUsersRounds(currentUsersId)
+        .then(allRounds => {
+            
+            let roundCount = allRounds.length;
+            setTotalRounds(roundCount);
+
+            let puttCount = 0;
+            allRounds.forEach(round => puttCount += round.putts)
+            setTotalPutts(puttCount);
+
+            let madeCount = 0;
+            allRounds.forEach(round => madeCount += round.made)
+            setPuttsMade(madeCount);
+
+            let decimal = madeCount / puttCount;
+            let percentage = decimalToPercentage(decimal)
+            setPuttPercentage(percentage);
+        })
+    }, [])
     
-    //MOVED THESE OUT OF THE RETURN TO SEE HOW IT WOULD LOOK 
-    // <h2>Welcome  to Putt Tracker!</h2>
-    //<p className="slogan">The Putting Tool For Disc Golfers</p>
+
+    // <div classname="homeGreeting">
+    //                 <h2 classname="greeting">Welcome to Putt Tracker!</h2>
+    //                 <p className="slogan">The Putting Tool For Disc Golfers</p>
+    //             </div>
 
 
     return (
         <>
-            <div className="home__greeting">
-                    
+            <div className="home__container">
 
                     <div className="userScorecard">
-                        <h3>{userName}'s Scorecard</h3>
+                        <h3>{currentUsersName}'s Scorecard</h3>
                         <div className="wrapper">
                             <div className="scorecardItem">Total Rounds:</div>
-                            <div className="scorecardItem">24</div>
+                            <div className="scorecardItem">{totalRounds}</div>
                             <div className="scorecardItem">Total Putts:</div>
-                            <div className="scorecardItem">312</div>
+                            <div className="scorecardItem">{totalPutts}</div>
                             <div className="scorecardItem">Putts Made:</div>
-                            <div className="scorecardItem">276</div>
-                            <div className="scorecardItem">Putting %</div>
-                            <div className="scorecardItem">88%</div>
-
+                            <div className="scorecardItem">{puttsMade}</div>
+                            <div className="scorecardPercLabel">Putting %</div>
+                            <div className="scorecardPercValue">{puttPercentage}</div>
                         </div>
                     </div>
 
-
-
-                    <div className="home__greeting__buttons">
+                    <div className="home__container__buttons">
                         <Link to={`/discs`}>
                             <button>My Discs</button>
                         </Link>
