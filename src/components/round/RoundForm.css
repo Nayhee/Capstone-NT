@@ -1,0 +1,85 @@
+.roundForm {
+    display: inline-block;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    margin: 2em 1em 1.5em 1em;
+    /* margin: 0 auto; */
+    text-align: left;
+    padding: .5em 1em .5em 1em;
+    border: 5px solid #1d2351;
+    border-radius: .5em;
+    z-index: 1;
+    min-height: 16rem;
+    width: 24%;
+    font-size: 1.375rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #2d8296;
+    opacity: 94%;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+}
+
+.fieldsetDiv {
+    font-size: 1.375Rem;
+    justify-content: center;
+    /* margin: auto; */
+    font-family: 'Acme', sans-serif;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.roundFormTitle {
+    font-size: 2.5rem;
+    color: white;
+    margin: .2em 0px .2em 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.roundFormDate {
+    margin: 0px 0px .15rem 0px;
+    display: flex;
+    /* justify-content: center; */
+    font-weight: normal;
+    font-size: 1.05rem;
+    font-style: italic;
+}
+
+.roundFormControls {
+    display: flex;
+    width: 96%;
+    padding: .375rem .75rem;
+    font-size: 1.1rem;
+    /* line-height: 1; */
+    color: #3fbdc2;
+    background-color: #1d2351;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.save-round-button {
+    display: flex;
+    border: 1px solid #ced4da;
+    background-color: #1d2351;
+    color: white;
+    font-weight: bold;
+    border-radius: .25em;
+    height: 35px;
+    width: 35%;
+    margin: auto;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.save-round-button:hover {
+    text-decoration: none;
+    background:#1d2351;
+    color: #1d2351;
+    border: 2px solid #1d2351;
+    background-color: #3fbdc2;
+}
