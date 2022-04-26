@@ -1,6 +1,6 @@
 .roundContainer {
     display: grid;
-    grid-template-columns: 9rem 10rem 9rem 9rem 9rem 9rem 7.5rem;
+    grid-template-columns: 9rem 9rem 9rem 9rem 9rem 9rem 7.5rem;
     font-size: 24px;
     justify-content: center;
     margin: auto;
@@ -9,17 +9,31 @@
     padding: .3rem;
     /* border-radius: 1rem;; */
 }
+
 .roundRow {
     display: flex;
     justify-content: center;
-    background-color: #3fbdc2;
+    /* background-color: #3fbdc2; */
     align-items: center;
-    /* border-bottom: .3rem solid #1d2351; */
+    border-bottom: .2rem solid #1d2351;
+}
+
+.roundList > :nth-child(odd) {
+    background-color: #3fbdc2;
+}
+.roundList > :nth-child(even) {
+    background-color: #3fbdc2d9;
 }
 
 /*slightly darker green/blue
 3fbdc2c1
 */
+
+.roundRow img {
+    width: 4.5rem;
+    border-radius: 50%;
+    margin: .05rem;
+}
 
 
 .roundListContainer {
@@ -28,7 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 71%;
+    width: 72%;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -39,9 +53,8 @@
         #dd2476,
         #1c64ff) 1;
     animation: 
-        rotate 3s ease-in infinite,
-        flyIn 1s ease-out;
-    top: 3rem;
+        rotate 3s ease-in infinite;
+    top: 2.5rem;
     font-family: 'Acme', sans-serif;
     border-radius: 1rem;
     /* box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;*/
@@ -86,7 +99,7 @@
 .roundListLabels {
    color: white;
    display: grid;
-   grid-template-columns: 9rem 10rem 9rem 9rem 9rem 9rem 7.5rem;
+   grid-template-columns: 9rem 9rem 9rem 9rem 9rem 9rem 7.5rem;
    font-size: 1.4rem;
 }
 
@@ -98,8 +111,10 @@
 
 .roundEditButton {
     display: flex;
-    background-color: #3fbdc2;
+    border-bottom: .2rem solid #1d2351;
+    align-items: center;
 }
+
 .roundEditButton button {
     border: 1px solid white;
     background-color:#275694;
@@ -112,8 +127,10 @@
     font-size: 1Rem;
     font-family: 'Acme', sans-serif;
     padding: .3em;
-    margin: .1rem .1rem .1rem 0px;
+    margin: .2rem .2rem .2rem 0px;
 }
+
+
 .roundEditButton button:hover {
     color: #3fbdc2;;
     background-color:#1d2351;
