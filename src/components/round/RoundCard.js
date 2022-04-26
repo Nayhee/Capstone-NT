@@ -2,23 +2,23 @@ import React from "react"
 import "./Round.css"
 import { Link } from "react-router-dom";
 
-//will generate a roundCard. Passed: a round as a parameter 
 export const RoundCard = ({ round, handleDeleteRound }) => {
     return (
-      <div className="card">
-        <div className="card-content">
-          <h3>Date: <span className="card-rounddate">
-            {round.date}
-          </span></h3>
-          <p>Putter: {round.disc}</p>
-          <Link to={`/rounds/${round.id}`}>
-            <button>Details</button>
-          </Link>
-          <Link to={`/rounds/${round.id}/edit`}>
-              <button>Edit</button>
-          </Link>
-          <button type="button" onClick={()=> handleDeleteRound(round.id)}>Delete Round</button>
-        </div>
+      <div className="roundContainer">
+
+          <div className="roundRow">{round.date} </div>
+          <div className="roundRow">{round.disc.name} </div>
+          <div className="roundRow">{round.distance}ft </div>
+          <div className="roundRow">{round.putts} </div>
+          <div className="roundRow">{round.made} </div>
+
+          <div className="roundEditButton">
+              <Link to={`/rounds/${round.id}/edit`}>
+                  <button>Edit</button>
+              </Link>
+              <button type="button" onClick={()=> handleDeleteRound(round.id)}>Delete</button>
+          </div>
+
       </div>
     );
   }

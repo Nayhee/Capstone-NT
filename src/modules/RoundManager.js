@@ -3,7 +3,7 @@ const remoteURL = "http://localhost:8088"
 
 //used for Scorecard calculation. 
 export const getAUsersRounds = (userId) => {
-    return fetch(`${remoteURL}/rounds?userId=${userId}`)
+    return fetch(`${remoteURL}/rounds?userId=${userId}&_expand=disc&_expand=user`)
     .then(res => res.json())
 }
 

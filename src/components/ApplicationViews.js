@@ -2,11 +2,9 @@ import React from "react"
 import { Route, Routes, Navigate } from "react-router-dom"
 import { Home } from "../Home"
 import { DiscList } from './disc/DiscList.js'
-import { DiscDetail } from "./disc/DiscDetail.js"
 import { DiscForm} from './disc/DiscForm'
 import { DiscEditForm } from "./disc/DiscEditForm"
 import { RoundList } from './round/RoundList.js'
-import { RoundDetail } from "./round/RoundDetail.js"
 import { RoundForm } from "./round/RoundForm"
 import { RoundEditForm } from "./round/RoundEditForm"
 import { Login } from "./auth/Login";
@@ -38,11 +36,6 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                         </PrivateRoute>
                     } />
                     <Route path="/discs/create" element={<DiscForm/>}/>
-                    <Route exact path="/discs/:discId" element={
-                        <PrivateRoute>
-                           <DiscDetail/>
-                        </PrivateRoute>
-                    } />
                     <Route path="/discs/:discId/edit" element={
                         <PrivateRoute>
                             <DiscEditForm/>
@@ -54,11 +47,6 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                         </PrivateRoute>
                     }/>
                     <Route path="/rounds/create" element={<RoundForm/>}/>
-                    <Route exact path="/rounds/:roundId" element={
-                        <PrivateRoute>
-                            <RoundDetail/>
-                        </PrivateRoute>
-                    }/>
                     <Route path="/rounds/:roundId/edit" element={
                         <PrivateRoute>
                             <RoundEditForm/>
