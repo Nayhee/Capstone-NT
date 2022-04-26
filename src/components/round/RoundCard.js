@@ -3,6 +3,7 @@ import "./Round.css"
 import { Link } from "react-router-dom";
 
 export const RoundCard = ({ round, handleDeleteRound }) => {
+    
     return (
       <div className="roundContainer">
 
@@ -11,6 +12,7 @@ export const RoundCard = ({ round, handleDeleteRound }) => {
           <div className="roundRow">{round.distance}ft </div>
           <div className="roundRow">{round.putts} </div>
           <div className="roundRow">{round.made} </div>
+          <div className="roundRow"><b>{round.percentage}%</b></div>
 
           <div className="roundEditButton">
               <Link to={`/rounds/${round.id}/edit`}>
