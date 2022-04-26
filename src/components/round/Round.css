@@ -1,13 +1,13 @@
 .roundContainer {
     display: grid;
-    grid-template-columns: 9.5rem 9.5rem 9.5rem 9.5rem 9.5rem 9.5rem 7.5rem;
+    grid-template-columns: 9rem 10rem 9rem 9rem 9rem 9rem 7.5rem;
     font-size: 24px;
     justify-content: center;
     margin: auto;
     font-family: 'Acme', sans-serif;
     /* width: 65%; */
     padding: .3rem;
-    border-radius: 1rem;;
+    /* border-radius: 1rem;; */
 }
 .roundRow {
     display: flex;
@@ -23,26 +23,46 @@
 
 
 .roundListContainer {
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: #1d2351;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 73%;
+    width: 71%;
     margin: auto;
     position: relative;
+    overflow: hidden;
+    border: .5em solid;
+    border-image: 
+    linear-gradient(
+        #ff512f,    
+        #dd2476,
+        #1c64ff) 1;
+    animation: 
+        rotate 3s ease-in infinite,
+        flyIn 1s ease-out;
     top: 3rem;
     font-family: 'Acme', sans-serif;
     border-radius: 1rem;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    /* box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;*/
+} 
 
-
+@keyframes rotate {
+    50%{
+        border-image:
+        linear-gradient(
+            360deg,
+            #ff512f, 
+            #dd2476,
+            #1c64ff) 1;
+    }
 }
+
 
 .roundListHeader {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    max-width: 18%;
     /* justify-content: space-between; */
     margin: 1rem 1rem 0px 1rem;
     align-items: flex-start;
@@ -66,8 +86,8 @@
 .roundListLabels {
    color: white;
    display: grid;
-   grid-template-columns: 9.5rem 9.5rem 9.5rem 9.5rem 9.5rem 9.5rem 7.5rem;
-   font-size: 1.6rem;
+   grid-template-columns: 9rem 10rem 9rem 9rem 9rem 9rem 7.5rem;
+   font-size: 1.4rem;
 }
 
 .roundListLabel {
@@ -95,8 +115,9 @@
     margin: .1rem .1rem .1rem 0px;
 }
 .roundEditButton button:hover {
-    color: #1d2351;
-    background-color:#3fbdc2;
+    color: #3fbdc2;;
+    background-color:#1d2351;
+    border-color: #1d2351;
 }
 
 .newRoundButton {
@@ -117,3 +138,5 @@
     color: #1d2351;
     background-color:#3fbdc2;
 }
+
+
