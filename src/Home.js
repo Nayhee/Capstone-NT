@@ -64,11 +64,11 @@ export const Home = () => {
                         <Link to={`/discs`}>
                             <button>My Discs</button>
                         </Link>
-                        <Link to={`/rounds`}>
-                            <button>My Rounds</button>
-                        </Link>
                         <Link to={`/create/round`}>
                             <button>Start Putting</button>
+                        </Link>
+                        <Link to={`/rounds`}>
+                            <button>My Rounds</button>
                         </Link>
                     </div>
             </div>
