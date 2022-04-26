@@ -8,7 +8,9 @@ export const RoundCard = ({ round, handleDeleteRound }) => {
       <div className="roundContainer">
 
           <div className="roundRow">{round.date} </div>
-          <div className="roundRow">{round.disc.name} </div>
+          <div className="roundRow">
+              <img src={round.disc.image}></img>
+          </div>
           <div className="roundRow">{round.distance}ft </div>
           <div className="roundRow">{round.putts} </div>
           <div className="roundRow">{round.made} </div>
