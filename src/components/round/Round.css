@@ -1,12 +1,12 @@
 .roundContainer {
     display: grid;
     grid-template-columns: 7rem 7.5rem 7rem 7rem 7rem 7.5rem 4.5rem;
-    font-size: 1.375Rem;
+    font-size: 1.2Rem;
     justify-content: center;
     margin: auto;
     font-family: 'Acme', sans-serif;
     /* width: 65%; */
-    padding: .3rem;
+    padding: .1rem;
     /* border-radius: 1rem;; */
 }
 
@@ -30,7 +30,7 @@
 */
 
 .roundRow img {
-    width: 5rem;
+    width: 3.75rem;
     border-radius: 50%;
     margin: .1rem;
 }
@@ -123,10 +123,10 @@
     color:white;
     /* font-weight: bold; */
     border-radius: 10%;
-    height: 2rem;
-    width: 3.5rem;
+    height: 1.5rem;
+    width: 3.3rem;
     justify-items: center;
-    font-size: .9Rem;
+    font-size: .85Rem;
     font-family: 'Acme', sans-serif;
     padding: .1rem;
     margin: .18rem 0px .18rem 0px;

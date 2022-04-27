@@ -16,16 +16,25 @@ export const RoundForm = () => {
         let dd = today.getDate();
         let mm = today.getMonth()+1;
         let yyyy = today.getFullYear();
-        return `mm/dd/yyyy`
+        return `${mm}/${dd}/${yyyy}`
     }
     
+    const [border, setBorder] = useState("newRoundForm")
+    const [isButton, setIsButton] = useState(false)
+
     const [round, setRound ] = useState({
         userId: currentUserId,
         date: dateFunc(),
         discId: 0,
         distance: "",
-        putts: "",
-        made: ""
+        putts: 0,
+        made: 0
+    })
+
+    const [todayScorecard, setTodayScorecard] = useState({
+        totalPutts: 0,
+        totalMade: 0,
+        puttingPercentage: ""
     })
 
     const [discs, setDiscs] = useState([])
@@ -39,9 +48,35 @@ export const RoundForm = () => {
         })
         setIsLoading(false);
     }, [])
+
+    const scorecardCalc = () => {
+        getAUsersRounds(currentUserId)
+        .then(usersRounds => {
+            let todaysRounds =usersRounds.filter(round => round.date === dateFunc())
+            let totalPutts = 0;
+            let totalMade = 0;
+            todaysRounds.forEach(round => totalPutts += parseInt(round.putts))
+            todaysRounds.forEach(round => totalMade += parseInt(round.made))
+            let percentage = totalMade / totalPutts;
+            let puttingPercentage = (percentage.toFixed(2) * 100)
+
+
+            let todayScorecardObj = {
+                totalPutts: totalPutts,
+                totalMade: totalMade,
+                puttingPercentage: puttingPercentage
+            }
+            setTodayScorecard(todayScorecardObj);
+        })
+    }
+
+    useEffect(() => {
+        scorecardCalc();
+    }, [isButton])
     
-    //for the summary, I will want to getAUsersRounds then filter for rounds that match today.
-    //maybe split the date by /, and then compare 0 and 1 to todays date. If they match, sum them and display on DOM.
+
+    //for the border, maybe onclick I toggle to a almost identical class that's the same 
+    // but with a border animation thats 1second animation duration.
 
     const handleControlledInputChange = (event) => {
         const newRound = {...round}
@@ -53,13 +88,31 @@ export const RoundForm = () => {
         setRound(newRound);
     }
 
+    const borderFunc = () => {
+        if(border === "newRoundForm") {
+            setBorder("newRoundFormBorderFlash")
+        } else {
+            setBorder("newRoundFormBorderFlashTWO")
+
+        }
+    }
+
+
     const handleClickSaveRound = (event) => {
         event.preventDefault();
 
-        if(round.discId !== 0 && round.distance !== "" && round.putts !== "" && round.made !== "") {
+        if(round.discId !== 0 && round.distance !== "" && round.putts > 0 && round.made > 0) {
             setIsLoading(true);
+            
+            setIsButton(!isButton)
+            
+            round.putts = parseInt(round.putts);
+            round.made = parseInt(round.made);
+            
             addRound(round)
-            .then(() => navigate("/rounds"))
+            .then(() => scorecardCalc())
+            .then(() => borderFunc())
+            .then(setIsLoading(false))
         } else {
             window.alert("Please complete each field")
         }
@@ -69,7 +122,13 @@ export const RoundForm = () => {
     return (
         <main style={{ textAlign: "center" }}>
 
-            <form className="newRoundForm">
+            <div className="todayScorecard">
+                <div className="todayScorecardPutts">{todayScorecard.totalPutts}</div>
+                <div className="todayScorecardMade">{todayScorecard.totalMade}</div>
+                <div className="todayScorecardPercentage">{todayScorecard.puttingPercentage}%</div>
+            </div>
+            
+            <form className={border}>
                 <h1 className="newRoundFormTitle">Track New Round</h1>
 
                 <div className="newRoundGridDiv">
@@ -95,7 +154,7 @@ export const RoundForm = () => {
                         onChange={handleControlledInputChange} 
                         required
                         maxLength="3"
-                        placeholder="Distance"
+                        placeholder="20"
                         value={round.distance} />
                     </div>
 
@@ -108,7 +167,7 @@ export const RoundForm = () => {
                         onChange={handleControlledInputChange} 
                         required
                         maxLength="3"
-                        placeholder="# Putts"
+                        placeholder="10"
                         value={round.putts} />
                     </div>
 
@@ -121,7 +180,7 @@ export const RoundForm = () => {
                         onChange={handleControlledInputChange} 
                         required
                         maxLength="3"
-                        placeholder="# Made"
+                        placeholder="8"
                         value={round.made} />
                     </div>
 
