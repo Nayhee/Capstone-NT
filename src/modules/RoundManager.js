@@ -7,7 +7,6 @@ export const getAUsersRounds = (userId) => {
     .then(res => res.json())
 }
 
-
 //will use this for Round Detail
 export const getRoundById = (roundId) => {
     return fetch(`${remoteURL}/rounds/${roundId}?_expand=disc&_expand=user`)

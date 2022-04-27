@@ -1,3 +1,10 @@
+.todayScorecard {
+    border: 5px solid white;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+}
+
 .roundForm {
     display: inline-block;
     font-family: 'Acme', sans-serif;
@@ -51,9 +58,10 @@
     width: 98%;
     padding: .375rem;
     font-size: 1.1rem;
+    font-style: italic;
     /* line-height: 1; */
     color: #3fbdc2;
-    background-color: #1d2351;
+    background-color: #0d0f21;
     border: 1px solid white;
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -68,7 +76,7 @@
     font-weight: bold;
     border-radius: .8em;
     height: 2rem;
-    width: 100%;
+    width: 40%;
     margin: auto;
     margin-top: .8rem;
     margin-bottom: .8rem;
@@ -89,7 +97,6 @@
 
 
 
-
 .newRoundForm {
         display: inline-block;
         font-family: 'Acme', sans-serif;
@@ -97,7 +104,7 @@
         /* margin: 2em 1em 1.5em 1em; */
         /* text-align: left; */
         padding: .6em;
-        border: 4px solid white;
+        border: 6px solid white;
         border-radius: .5em;
         z-index: 1;
         height: 14rem;
@@ -114,6 +121,77 @@
         left: 2rem;
 }
 
+
+.newRoundFormBorderFlash {
+        display: inline-block;
+        font-family: 'Acme', sans-serif;
+        font-weight: bold;
+        padding: .6em;
+        border: 6px solid white;
+        border-radius: .5em;
+        z-index: 1;
+        height: 14rem;
+        width: 32%;
+        font-size: 1.375rem;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #1d2351;
+        opacity: 96%;
+        position: relative;
+        top: 9.5rem;
+        left: 2rem;
+        overflow: hidden;
+        position: relative;
+        border-image: 
+        linear-gradient(
+            #1d2351) 1;
+        animation: 
+            rotate 1s ease-in 1s;
+    /*find how to stop animation after few seconds*/
+   
+}
+
+.newRoundFormBorderFlashTWO {
+    display: inline-block;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    padding: .6em;
+    border: 6px solid white;
+    border-radius: .5em;
+    z-index: 1;
+    height: 14rem;
+    width: 32%;
+    font-size: 1.375rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #1d2351;
+    opacity: 96%;
+    position: relative;
+    top: 9.5rem;
+    left: 2rem;
+    overflow: hidden;
+    position: relative;
+    border-image: 
+    linear-gradient(
+        #1d2351) 1;
+    animation: 
+        rotate 1s ease-in 1s;
+/*find how to stop animation after few seconds*/
+
+}
+
+@keyframes rotate {
+    50%{
+        border-image:
+        linear-gradient(
+            360deg,
+            #ff512f, 
+            #dd2476,
+            #1c64ff) 1;
+    }
+}
 
 .newRoundGridDiv {
     display: grid;
@@ -148,12 +226,12 @@
 .submitRoundButton {
     display: flex;
     border: 2px solid #3fbdc2;
-    background-color: #275694;
+    background-color: #0d0f21;
     color: white;
     font-weight: bold;
     border-radius: .8em;
     height: 2rem;
-    width: 100%;
+    width: 50%;
     margin: auto;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;

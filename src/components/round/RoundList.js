@@ -3,7 +3,6 @@ import "./Round.css"
 import { getAUsersRounds, deleteRound } from "../../modules/RoundManager"
 import { useNavigate } from "react-router-dom"
 import { RoundCard } from "./RoundCard"
-import { DiscCard } from "../disc/DiscCard"
 
 export const RoundList = () => {
     const [rounds, setRounds] = useState([])

@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 export const RoundCard = ({ round, handleDeleteRound }) => {
     
     const decimalPuttPercentage = round.made / round.putts;
-    const puttPercentage = decimalPuttPercentage * 100;
-    
+    let twoDec = decimalPuttPercentage.toFixed(2);
+    const puttPercentage = twoDec * 100;
+ 
+
     return (
       <div className="roundContainer">
 
