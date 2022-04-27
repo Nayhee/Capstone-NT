@@ -65,7 +65,7 @@ export const Home = () => {
                             <button>My Discs</button>
                         </Link>
                         <Link to={`/create/round`}>
-                            <button>Start Putting</button>
+                            <button><b>Start Tracking</b></button>
                         </Link>
                         <Link to={`/rounds`}>
                             <button>My Rounds</button>

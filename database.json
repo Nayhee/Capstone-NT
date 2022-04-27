@@ -246,92 +246,83 @@
     {
       "id": 1,
       "userId": "1",
-      "date": "4/15/22",
+      "date": "4/15/2022",
       "discId": 10,
       "distance": "20",
       "putts": 25,
-      "made": 22,
-      "percentage": 88
+      "made": 22
     },
     {
       "id": 2,
       "userId": "1",
-      "date": "4/15/22",
+      "date": "4/15/2022",
       "discId": 10,
       "distance": 25,
       "putts": 25,
-      "made": 21,
-      "percentage": 84
+      "made": 21
     },
     {
       "id": 3,
       "userId": "1",
-      "date": "4/16/22",
+      "date": "4/16/2022",
       "discId": 9,
       "distance": 30,
       "putts": 25,
-      "made": 18,
-      "percentage": 72
+      "made": 18
     },
     {
       "id": 4,
       "userId": "1",
-      "date": "4/17/22",
+      "date": "4/17/2022",
       "discId": 9,
       "distance": 15,
       "putts": 10,
-      "made": 9,
-      "percentage": 90
+      "made": 9
     },
     {
       "id": 5,
       "userId": "2",
-      "date": "4/17/22",
+      "date": "4/17/2022",
       "discId": 4,
       "distance": 20,
       "putts": 10,
-      "made": 7,
-      "percentage": 70
+      "made": 7
     },
     {
       "id": 6,
       "userId": "3",
-      "date": "4/17/22",
+      "date": "4/17/2022",
       "discId": 5,
       "distance": 20,
       "putts": 10,
-      "made": 5,
-      "percentage": 50
+      "made": 5
     },
     {
       "id": 7,
       "userId": "3",
-      "date": "4/17/22",
+      "date": "4/17/2022",
       "discId": 6,
       "distance": 25,
       "putts": 10,
-      "made": 3,
-      "percentage": 30
+      "made": 3
     },
     {
       "id": 8,
       "userId": "2",
-      "date": "4/18/22",
+      "date": "4/18/2022",
       "discId": 12,
       "distance": 30,
       "putts": 10,
-      "made": 7,
-      "percentage": 70
+      "made": 7
     },
     {
       "id": 9,
       "userId": "1",
-      "date": "4/18/22",
+      "date": "4/18/2022",
       "discId": 12,
       "distance": 20,
       "putts": 10,
-      "made": 9,
-      "percentage": 90
+      "made": 9
     }
   ]
 }

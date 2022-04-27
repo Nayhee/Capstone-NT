@@ -101,7 +101,7 @@
    color: white;
    display: grid;
    grid-template-columns: 7rem 7.5rem 7rem 7rem 7rem 7.5rem 4.5rem;
-   font-size: 1.4rem;
+   font-size: 1.55rem;
 }
 
 .roundListLabel {
