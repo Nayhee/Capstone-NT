@@ -28,7 +28,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                     </li>}
 
                     {isAuthenticated && <li className="navbar__item">
-                        <Link className={`navbar__link ${location.pathname === '/rounds/create' ? 'active' : ''}`} to="/rounds/create">Putt</Link>
+                        <Link className={`navbar__link ${location.pathname === '/rounds/create' ? 'active' : ''}`} to="/rounds/create">Track</Link>
                     </li>}
 
                     <li className="navbar__item">

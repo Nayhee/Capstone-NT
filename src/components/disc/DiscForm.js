@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import { useNavigate } from "react-router-dom"
-import { addDisc, getAUsersDiscs } from "../../modules/DiscManager";
+import { addDisc } from "../../modules/DiscManager";
 import {getAllBrands} from "../../modules/BrandManager"
 import {getAllTypes} from "../../modules/TypeManager"
 import './DiscForm.css'
