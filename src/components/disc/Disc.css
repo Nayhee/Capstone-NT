@@ -88,8 +88,8 @@
     border-radius: 5px;
     color: cornsilk;
     /* font-weight: bold; */
-    padding: .6em;
-    font-size: 18px;
+    padding: .5em .6em .5em .6em;
+    font-size: 1.25rem;
     font-family: 'Acme', sans-serif;
 }
 .add-disc-button:hover {
@@ -117,6 +117,7 @@
     background-position-x: right;
     opacity: 94%;
     box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    animation: flyInFartherAway 1.2s ease-out;
 }
 
 .addDiscButton:hover {
@@ -127,6 +128,24 @@
 
 }
 
+
+@keyframes flyIn {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+@keyframes flyInFartherAway {
+    0% {
+        transform: translateY(600%);
+    }
+    100% {
+        transform: translateY(0%)
+    }
+}
 
   /*Image colors to use. Light to darker. 
 #5f92a5

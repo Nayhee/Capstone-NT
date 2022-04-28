@@ -35,14 +35,14 @@
       "id": 6
     },
     {
-      "email": "beep@gmail.com",
-      "firstName": "beep",
-      "lastName": "beep",
+      "email": "mrboop@gmail.com",
+      "firstName": "MrBoop",
+      "lastName": "yo",
       "id": 7
     },
     {
-      "email": "hal@gmail.com",
-      "firstName": "HALLIBA",
+      "email": "doc@gmail.com",
+      "firstName": "doc",
       "lastName": "boop",
       "id": 8
     }
@@ -329,12 +329,12 @@
     },
     {
       "userId": 1,
-      "date": "4/27/2022",
-      "discId": "10",
+      "date": "4/28/2022",
+      "discId": "12",
       "distance": "20",
-      "putts": 15,
-      "made": 15,
-      "id": 14
+      "putts": 10,
+      "made": 10,
+      "id": 12
     }
   ]
 }
