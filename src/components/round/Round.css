@@ -1,6 +1,6 @@
 .roundContainer {
     display: grid;
-    grid-template-columns: 8rem 8rem 7rem 7rem 7rem 7rem 9.5rem;
+    grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem 9rem;
     font-size: 1.5Rem;
     justify-content: center;
     margin: auto;
@@ -81,7 +81,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .roundListHeader h2 {
@@ -97,7 +97,7 @@
 .roundListLabels {
    color: hotpink;
    display: grid;
-   grid-template-columns: 8rem 8rem 7rem 7rem 7rem 7rem 9.5rem;
+   grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem 9rem;
    font-size: 1.5rem;
    text-decoration: underline;
    text-decoration-thickness: .1rem;
@@ -147,13 +147,13 @@
 .newRoundButton {
     display: flex;
     /* margin: 1rem 0px 1em 0px; */
-    border-radius: .8em;
+    border-radius: 1em;
     border: 3px solid #3fbdc2;
     background-color: #3fbdc2;
     color: #0d0f21;
     font-weight: bold;
-    padding: .2em;
-    font-size: 1.5rem;
+    padding: .3em;
+    font-size: 1.3rem;
     font-family: 'Acme', sans-serif;
 
 }
