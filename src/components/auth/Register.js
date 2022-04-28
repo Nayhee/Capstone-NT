@@ -28,14 +28,14 @@ export const Register = ({setAuthUser}) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
-                            name: `${firstName.current.value} ${lastName.current.value}`
+                            firstName: `${firstName.current.value}`,
+                            lastName: `${lastName.current.value}`
                         })
                     })
                         .then(res => res.json())
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 setAuthUser(createdUser)
-                                //maybe call the 
                                 navigate("/")
                             }
                         })

@@ -53,7 +53,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                         </PrivateRoute>
                     }/> 
                     <Route exact path="/login" element={<Login setAuthUser={setAuthUser}/>}/>
-                    <Route exact path="/register" element={<Register/>}/>
+                    <Route exact path="/register" element={<Register setAuthUser={setAuthUser}/>}/>
             </Routes>
         </>
     )
