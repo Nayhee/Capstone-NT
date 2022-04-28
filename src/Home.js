@@ -17,8 +17,7 @@ export const Home = () => {
 
     const decimalToPercentage = (decimal) => {
         let percent = decimal * 100;
-        let rounded = Math.round(percent)
-        return `${rounded}%`
+        return Math.round(percent);
     }
 
     useEffect(() => {
@@ -37,11 +36,13 @@ export const Home = () => {
             setPuttsMade(madeCount);
 
             let decimal = madeCount / puttCount;
+            console.log(decimal);
+
             let percentage = decimalToPercentage(decimal)
             if(isNaN(percentage)) {
                 setPuttPercentage("-")
             } else {
-                setPuttPercentage(percentage)
+                setPuttPercentage(`${percentage}%`)
             }
         })
     }, [])
@@ -59,7 +60,7 @@ export const Home = () => {
                             <div className="scorecardItem">{totalPutts}</div>
                             <div className="scorecardItem">Putts Made:</div>
                             <div className="scorecardItem">{puttsMade}</div>
-                            <div className="scorecardPercLabel">Putting %</div>
+                            <div className="scorecardPercLabel">% Made</div>
                             <div className="scorecardPercValue">{puttPercentage}</div>
                         </div>
                     </div>
@@ -69,7 +70,7 @@ export const Home = () => {
                             <button>My Discs</button>
                         </Link>
                         <Link to={`/create/round`}>
-                            <button><b>Start Tracking</b></button>
+                            <button>Start Tracking</button>
                         </Link>
                         <Link to={`/rounds`}>
                             <button>My Rounds</button>

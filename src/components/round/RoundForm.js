@@ -123,14 +123,31 @@ export const RoundForm = () => {
         }
     }
 
-
     return (
         <main style={{ textAlign: "center" }}>
 
-            <div className="todayScorecard">
-                <div className="todayScorecardPutts">{todayScorecard.totalPutts}</div>
-                <div className="todayScorecardMade">{todayScorecard.totalMade}</div>
-                <div className="todayScorecardPercentage">{todayScorecard.puttingPercentage}%</div>
+            <div className={todayScorecard.totalPutts > 0 ? 'todayScorecard' : 'invisible'}>
+                
+                <h2 className="todayScHeader">Today's Scorecard:</h2>
+
+                <div className="todayScDataDiv">
+                    <div className="todayScGroup">
+                        <label htmlFor="todayScPutts"># Putts</label>
+                        <div className="todayScValues"> {todayScorecard.totalPutts} </div>
+                    </div>
+
+                    <div className="todayScGroup">
+                        <label htmlFor="todayScMade"># Made</label>
+                        <div className="todayScValues"> {todayScorecard.totalMade} </div>
+                    </div>
+
+                    <div className="todayScGroup">
+                        <label htmlFor="todayScPercentage">% Made</label>
+                        <div className="todayScValues">{todayScorecard.puttingPercentage}%</div>
+                    </div>
+                </div>
+
+               
             </div>
             
             <form className={border}>
