@@ -31,9 +31,9 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                         <Link className={`navbar__link ${location.pathname === '/rounds/create' ? 'active' : ''}`} to="/rounds/create">Track</Link>
                     </li>}
 
-                    <li className="navbar__item">
+                    {/* <li className="navbar__item">
                         <h3 className="navbar__slogan">The Putting App for Disc Golfers</h3>
-                    </li>
+                    </li> */}
 
                     {isAuthenticated && <li className="navbar__item">
                         <Link className={`navbar__link ${location.pathname === '/discs' ? 'active' : ''}`} to="/discs">Discs</Link>
@@ -57,9 +57,3 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 }
 //isAuthenticated is the State passed from Capstone.js that lets us block certain Links if the User is not Authenticated. 
 //if logged in, display logout. If not logged in, display Login. 
-
-//when I created the logo.
-// {/* <div className="navbar__logo">
-//                 <p>Putt</p>
-//                 <p>Tracker</p>
-//             </div> */}

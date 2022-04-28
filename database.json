@@ -322,7 +322,7 @@
       "id": 11,
       "userId": "1",
       "date": "4/27/2022",
-      "discId": 12,
+      "discId": "18",
       "distance": 30,
       "putts": 20,
       "made": 18
@@ -330,11 +330,29 @@
     {
       "userId": 1,
       "date": "4/28/2022",
+      "discId": "9",
+      "distance": "20",
+      "putts": 20,
+      "made": 18,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "date": "4/28/2022",
+      "discId": "9",
+      "distance": "20",
+      "putts": 20,
+      "made": 20,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "date": "4/28/2022",
       "discId": "12",
       "distance": "20",
-      "putts": 10,
-      "made": 10,
-      "id": 12
+      "putts": 20,
+      "made": 17,
+      "id": 14
     }
   ]
 }
