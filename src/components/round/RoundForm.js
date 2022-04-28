@@ -26,9 +26,7 @@ export const RoundForm = () => {
         userId: currentUserId,
         date: dateFunc(),
         discId: 0,
-        distance: "",
-        putts: 0,
-        made: 0
+        distance: ""
     })
 
     const [todayScorecard, setTodayScorecard] = useState({
@@ -125,7 +123,7 @@ export const RoundForm = () => {
 
     return (
         <main style={{ textAlign: "center" }}>
-
+            
             <div className={todayScorecard.totalPutts > 0 ? 'todayScorecard' : 'invisible'}>
                 
                 <h2 className="todayScHeader">Today's Scorecard:</h2>
@@ -149,6 +147,7 @@ export const RoundForm = () => {
 
                
             </div>
+            
             
             <form className={border}>
                 <h1 className="newRoundFormTitle">Track New Round</h1>
@@ -217,6 +216,8 @@ export const RoundForm = () => {
                 </button>
 
             </form>
+
+            
 
         </main>
     )

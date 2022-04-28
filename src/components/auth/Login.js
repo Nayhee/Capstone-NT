@@ -39,6 +39,7 @@ export const Login = ({setAuthUser}) => {
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Welcome to Putt Tracker!</h1>
+                    <p>The Putting App for Disc Golfers</p>
                     <h2>Please Sign In</h2>
                     <fieldset>
                         <label className="login-label" htmlFor="inputEmail"> Email Address </label>
@@ -56,7 +57,7 @@ export const Login = ({setAuthUser}) => {
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">New User? Register</Link>
+                New to Putt Tracker? <Link to="/register"> Register</Link>
             </section>
         </main>
     )
