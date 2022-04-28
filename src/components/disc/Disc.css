@@ -98,6 +98,35 @@
     border-color: #1d2351;
 }
 
+.addDiscButton {
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: #1d2351;
+    border: 3px solid #3fbdc2;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    padding: 1.5rem;
+    font-size: 48px;
+    font-family: 'Acme', sans-serif;
+    position: relative;
+    top: 10rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    opacity: 94%;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+}
+
+.addDiscButton:hover {
+    background-color: #3fbdc2;
+    color: #1d2351;
+    border-color: #1d2351;
+    box-shadow: 0 0 2px #1d2351, 0 0 10px #1d2351, 0 0 50px #1d2351, 0 0 100px #1d2351;
+
+}
+
 
   /*Image colors to use. Light to darker. 
 #5f92a5

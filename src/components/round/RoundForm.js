@@ -39,7 +39,7 @@ export const RoundForm = () => {
 
     const [discs, setDiscs] = useState([])
     const [isLoading, setIsLoading] = useState(true)
-    const navigate = useNavigate();
+
     
     useEffect(() => {
         getAUsersDiscs(currentUserId)
@@ -59,6 +59,9 @@ export const RoundForm = () => {
             todaysRounds.forEach(round => totalMade += parseInt(round.made))
             let percentage = totalMade / totalPutts;
             let puttingPercentage = (percentage.toFixed(2) * 100)
+            if(isNaN(puttingPercentage)) {
+                puttingPercentage = ""
+            }
 
 
             let todayScorecardObj = {
@@ -73,7 +76,6 @@ export const RoundForm = () => {
     useEffect(() => {
         scorecardCalc();
     }, [isButton])
-    
 
     //for the border, maybe onclick I toggle to a almost identical class that's the same 
     // but with a border animation thats 1second animation duration.
@@ -89,10 +91,11 @@ export const RoundForm = () => {
     }
 
     const borderFunc = () => {
+
         if(border === "newRoundForm") {
             setBorder("newRoundFormBorderFlash")
         } else {
-            setBorder("newRoundFormBorderFlashTWO")
+            setBorder("newRoundForm")
 
         }
     }
@@ -105,6 +108,8 @@ export const RoundForm = () => {
             setIsLoading(true);
             
             setIsButton(!isButton)
+
+            borderFunc();
             
             round.putts = parseInt(round.putts);
             round.made = parseInt(round.made);

@@ -38,7 +38,11 @@ export const Home = () => {
 
             let decimal = madeCount / puttCount;
             let percentage = decimalToPercentage(decimal)
-            setPuttPercentage(percentage);
+            if(isNaN(percentage)) {
+                setPuttPercentage("-")
+            } else {
+                setPuttPercentage(percentage)
+            }
         })
     }, [])
 

@@ -147,7 +147,7 @@
         linear-gradient(
             #1d2351) 1;
         animation: 
-            rotate 1s ease-in 1s;
+            rotate 1s ease-in .0005s;
     /*find how to stop animation after few seconds*/
    
 }
@@ -177,7 +177,7 @@
     linear-gradient(
         #1d2351) 1;
     animation: 
-        rotate 1s ease-in 1s;
+        rotate 1s ease-in .0005s;
 /*find how to stop animation after few seconds*/
 
 }

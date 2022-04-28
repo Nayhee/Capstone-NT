@@ -28,13 +28,17 @@ export const DiscList = () => {
         getDiscs(currentUserId);
     }, [])
 
+//for new user, maybe write a func that checks if user has any discs.
+//if they don't, do a ternary that changes the classname of the add-disc-button
+//and I can make the new class much bigger and put it in the middle of screen. 
+
     return (
         <>
             <section className="add-disc-container">
                 <button type="button"
-                    className="add-disc-button"
+                    className={discs.length > 0 ? 'add-disc-button' : 'addDiscButton'}
                     onClick={() => {navigate("/discs/create")}}>
-                        Add New Disc
+                        Add Disc
                     </button>
             </section>
 
