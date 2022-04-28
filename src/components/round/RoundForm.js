@@ -61,7 +61,6 @@ export const RoundForm = () => {
                 puttingPercentage = ""
             }
 
-
             let todayScorecardObj = {
                 totalPutts: totalPutts,
                 totalMade: totalMade,
@@ -92,9 +91,9 @@ export const RoundForm = () => {
 
         if(border === "newRoundForm") {
             setBorder("newRoundFormBorderFlash")
-        } else {
+        } 
+        else {
             setBorder("newRoundForm")
-
         }
     }
 

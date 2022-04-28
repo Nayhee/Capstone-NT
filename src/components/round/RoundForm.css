@@ -100,14 +100,14 @@
     border: .4rem solid #3fbdc2;
     border-radius: 1em;
     z-index: 1;
-    height: 20rem;
+    height: 18.5rem;
     width: 45%;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #0d0f21;
-    opacity: 96%;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2;
+    opacity: 99%;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 20px #3fbdc2;
 }
 
 
@@ -115,26 +115,48 @@
     font-family: 'Acme', sans-serif;
     font-weight: bold;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 2rem 3rem 2rem 3rem;
     border: .3rem solid #3fbdc2;
     border-radius: 1em;
     z-index: 1;
-    height: 20rem;
+    height: 18.5rem;
     width: 45%;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #0d0f21;
-    opacity: 96%;
+    opacity: 98%;
     overflow: hidden;
     border-image: 
     linear-gradient(
         #1d2351) 1;
     animation: 
         rotate 1s ease-in .0005s;
-    
-   
+}
+
+.newRoundFormBorderFlashTWO {
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 2rem 3rem 2rem 3rem;
+    border: .3rem solid #3fbdc2;
+    border-radius: 1em;
+    z-index: 1;
+    height: 18.5rem;
+    width: 45%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #0d0f21;
+    opacity: 98%;
+    overflow: hidden;
+    border-image: 
+    linear-gradient(
+        #1d2351) 1;
+    animation: 
+        rotate 1s ease-in .0005s;
 }
 
 @keyframes rotate {
@@ -171,7 +193,7 @@
 }
 
 .newRoundFormTitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     margin: 1rem 0px 2rem 0px;
     display: flex;
@@ -188,8 +210,8 @@
     height: 3.5rem;
     width: 100%;
     margin: auto;
-    margin-top: 3rem;
-    margin-bottom: 1.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
@@ -205,16 +227,14 @@
 
 }
 
-
 .todayScorecard {
     /* font-size: 2rem; */
     color: white;
     font-family: 'Acme', sans-serif;
     /* font-weight: bold; */
     margin: auto;
-    margin-top: 1em;
-    margin-bottom: .6rem;
-   
+    margin-top: .5em;
+    margin-bottom: .5em;
     padding: 1.5em;
     border: .4em solid;
     z-index: 1;
@@ -224,10 +244,7 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #0d0f21;
-    opacity: 98%;
-    /* display: inline-block;
-    position: relative;
-    left: 18.5rem; */
+    opacity: 96%;
     overflow: hidden;
     border-image: 
     linear-gradient(

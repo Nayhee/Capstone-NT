@@ -1,7 +1,7 @@
 .roundContainer {
     display: grid;
-    grid-template-columns: 7rem 7.5rem 7rem 7rem 7rem 7.5rem 4.5rem;
-    font-size: 1.2Rem;
+    grid-template-columns: 8rem 8rem 7rem 7rem 7rem 7rem 9.5rem;
+    font-size: 1.5Rem;
     justify-content: center;
     margin: auto;
     font-family: 'Acme', sans-serif;
@@ -13,52 +13,54 @@
 .roundRow {
     display: flex;
     justify-content: center;
+    color:#3fbdc2;
     /* background-color: #3fbdc2; */
     align-items: center;
-    border-bottom: .2rem solid #1d2351;
+    border-bottom: .05rem solid white;
 }
 
-.roundList > :nth-child(odd) {
+/* .roundList > :nth-child(odd) {
     background-color: #3fbdc2;
 }
 .roundList > :nth-child(even) {
     background-color: #3fbdc2d9;
-}
+} */
 
 /*slightly darker green/blue
 3fbdc2c1
 */
 
 .roundRow img {
-    width: 3.75rem;
+    width: 3.8rem;
     border-radius: 50%;
-    margin: .1rem;
+    margin: .2rem;
 }
 
 
 .roundListContainer {
-    padding: 1.5rem;
+    width: 60%;
+    font-family: 'Acme', sans-serif;
+    padding: 2rem 3rem 2rem 3rem;
     background-color: #0d0f21;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60%;
     margin: auto;
+    margin-top: 2rem;
+    /* margin: 1rem; */
     position: relative;
     overflow: hidden;
-    border: .5em solid;
-    border-image: 
-    linear-gradient(
-        #ff512f,    
-        #dd2476,
-        #1c64ff) 1;
+    border: .4rem solid #3fbdc2;
     animation: 
-        rotate 3s ease-in infinite,
         flyIn .8s ease-out;
-    top: 2.25rem;
-    font-family: 'Acme', sans-serif;
     border-radius: 1rem;
-    /* box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;*/
+    z-index: 1;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    opacity: 98%;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2;
 } 
 
 @keyframes rotate {
@@ -75,87 +77,93 @@
 
 .roundListHeader {
     display: flex;
-    flex-direction: column;
-    min-width: 20%;
-    /* justify-content: space-between; */
-    margin: 1rem 1rem 0px 1rem;
-    align-items: flex-start;
-    /* position: absolute;
-    left: 24.5rem;
-    top: 8rem; */
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .roundListHeader h2 {
     color: white;
-    /* border: 3px solid #3fbdc2;
-    background-color: #1d2351; */
     padding: .5rem .5rem .5rem 0px;
     /* border-radius: .2rem; */
     font-family: 'Acme', sans-serif;
-    font-size: 2.5rem;
-    margin: 0px 1rem 0px 0px;
-    
+    font-size: 2.3rem;
+    margin: 0px 1.5rem 0px 0px;
+    width: 100%;
 }
 
 .roundListLabels {
-   color: white;
+   color: hotpink;
    display: grid;
-   grid-template-columns: 7rem 7.5rem 7rem 7rem 7rem 7.5rem 4.5rem;
-   font-size: 1.55rem;
+   grid-template-columns: 8rem 8rem 7rem 7rem 7rem 7rem 9.5rem;
+   font-size: 1.5rem;
+   text-decoration: underline;
+   text-decoration-thickness: .1rem;
+   text-underline-offset: .3rem;
+   margin-bottom: .25rem;
+   
 }
 
 .roundListLabel {
     display: flex;
     justify-content: center;
-    padding: .2rem;
+    padding: 0px 0px .2rem 0px;
 }
 
 .roundEditButton {
-    display: flex;
-    flex-direction: column;
-    border-bottom: .2rem solid #1d2351;
+    border-bottom: .05rem solid white;
     align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem;
 }
 
 .roundEditButton button {
     border: 1px solid white;
-    background-color:#275694;
-    color:white;
-    /* font-weight: bold; */
+    background-color: #0d0f21;
+    color: hotpink;
+    font-weight: bold;
     border-radius: 10%;
-    height: 1.5rem;
-    width: 3.3rem;
-    justify-items: center;
-    font-size: .85Rem;
+    height: 2rem;
+    width: 3.5rem;
+    justify-items: space-between;
+    font-size: 1Rem;
     font-family: 'Acme', sans-serif;
-    padding: .1rem;
     margin: .18rem 0px .18rem 0px;
-    opacity: 90%;
+    opacity: 98%;
 }
 
 
 .roundEditButton button:hover {
-    background-color:#1d2351;
-    border-color: #1d2351;
+    border: 2px solid white;
+    color: #3fbdc2;
+    background-color: #0d0f21;
+    text-decoration: none;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
 }
 
 .newRoundButton {
     display: flex;
-    margin: 1rem 0px 0px 0px;
-    background-color: #275694;
+    /* margin: 1rem 0px 1em 0px; */
+    border-radius: .8em;
     border: 3px solid #3fbdc2;
-    border-radius: 8px;
-    color: white;
-    /* font-weight: bold; */
+    background-color: #3fbdc2;
+    color: #0d0f21;
+    font-weight: bold;
     padding: .2em;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: 'Acme', sans-serif;
 
 }
 
 .newRoundButton:hover {
-    color: #1d2351;
-    background-color:#3fbdc2;
+    border: 2px solid white;
+    color: #3fbdc2;
+    background-color: #0d0f21;
+    text-decoration: none;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
 }
 
 

@@ -33,39 +33,40 @@ export const RoundList = () => {
 
             <div className="roundListContainer">
 
-            <div className="roundListHeader">
-                <div>
-                    <h2>{currentUserName}'s Rounds</h2>
-                </div>
-                <div>
-                    <button type="button"
-                        className="newRoundButton"
-                        onClick={() => {navigate("/rounds/create")}}>
-                            New Round
-                    </button>
-                </div>
-            </div>
-
-                <div className="labelsAndListContainer">
-
-                <div className="roundListLabels">
-                    <div className="roundListLabel">Date:</div>
-                    <div className="roundListLabel">Disc:</div>
-                    <div className="roundListLabel">Distance:</div>
-                    <div className="roundListLabel">Putts:</div>
-                    <div className="roundListLabel">Made:</div>
-                    <div className="roundListLabel"><b>Putting %</b></div>
-                </div>
-                    <div className="roundList">
-                        {rounds.map(round => 
-                            <RoundCard
-                                key={round.id}
-                                round={round}
-                                handleDeleteRound={handleDeleteRound}
-                            />)}
+                <div className="roundListHeader">
+                    <div>
+                        <h2>{currentUserName}'s Rounds</h2>
+                    </div>
+                    <div>
+                        <button type="button"
+                            className="newRoundButton"
+                            onClick={() => {navigate("/rounds/create")}}>
+                                New Round
+                        </button>
                     </div>
                 </div>
 
+                <div className="roundListBody">
+                    <div className="labelsAndListContainer">
+
+                        <div className="roundListLabels">
+                            <div className="roundListLabel">Date:</div>
+                            <div className="roundListLabel">Disc:</div>
+                            <div className="roundListLabel">Distance:</div>
+                            <div className="roundListLabel"># Putts:</div>
+                            <div className="roundListLabel"># Made:</div>
+                            <div className="roundListLabel">% Made:</div>
+                        </div>
+                        <div className="roundList">
+                            {rounds.map(round => 
+                                <RoundCard
+                                    key={round.id}
+                                    round={round}
+                                    handleDeleteRound={handleDeleteRound}
+                                />)}
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </>

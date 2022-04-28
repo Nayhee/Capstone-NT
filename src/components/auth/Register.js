@@ -59,7 +59,7 @@ export const Register = ({setAuthUser}) => {
                 <h1 className="registerHeader">Register for Putt Tracker</h1>
                 <fieldset>
                     <label htmlFor="firstName">First Name</label>
-                    <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
+                    <input ref={firstName} type="text" name="firstName" className="form-control" maxLength="13" placeholder="First name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="lastName">Last Name</label>
