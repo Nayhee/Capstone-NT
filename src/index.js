@@ -16,3 +16,9 @@ root.render(
       </Router>
     </StrictMode>
 );
+
+//Application starts by running a render method on root object. 
+//Placing Capstone inside the router tags tells React that this is the
+//component where I'll be placing my routes. 
+
+//strictMode helps with error handling. 

@@ -108,6 +108,7 @@
     background-color: #0d0f21;
     opacity: 99%;
     box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 20px #3fbdc2;
+    animation: flyIn .8s ease-out;
 }
 
 
@@ -134,7 +135,7 @@
     animation: 
         rotate 1s ease-in .0005s;
 }
-
+/* 
 .newRoundFormBorderFlashTWO {
     font-family: 'Acme', sans-serif;
     font-weight: bold;
@@ -157,7 +158,9 @@
         #1d2351) 1;
     animation: 
         rotate 1s ease-in .0005s;
-}
+} */
+
+
 
 @keyframes rotate {
     50%{
@@ -169,6 +172,17 @@
             #1c64ff) 1;
     }
 }
+
+
+@keyframes flyIn {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%)
+    }
+}
+
 
 .newRoundGridDiv {
     display: grid;

@@ -13,7 +13,6 @@ export const RoundEditForm = () => {
     const {roundId} = useParams();
     const navigate = useNavigate();
 
-     
     const currentUser = JSON.parse(sessionStorage.getItem('putt_user'));
     const currentUserId = currentUser.id;
 

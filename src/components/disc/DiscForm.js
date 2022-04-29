@@ -11,7 +11,7 @@ import './DiscForm.css'
 
 //fetch all of the users discs, set the state so the dropdown populates. 
 //handleInputChange function that takes each key and changes state to put it on the page. 
-//upon submit, immedietel setIsLoading to true, and then add the disc to DB 
+//upon submit, setIsLoading to true, and then add the disc to DB !
 
 export const DiscForm = () => {
     
@@ -34,6 +34,7 @@ export const DiscForm = () => {
     const [brands, setBrands] = useState([])
     const [types, setTypes] = useState([])
     
+    //after first render it fetches the brands and types for the select dropdown. once loaded, setIsLoading to false. 
     useEffect(() => {
         getAllBrands()
         .then(allBrands => {
@@ -48,7 +49,7 @@ export const DiscForm = () => {
     
     //create copy of current state. Grab the user's input value.
     //set the value of the newDisc using bracket notation.
-    //update state to reflect the new animal. 
+    //update state to reflect the new disc. 
     const handleControlledInputChange = (event) => {
         const newDisc = {...disc}
         let userInputValue = event.target.value;
@@ -59,6 +60,19 @@ export const DiscForm = () => {
         setDisc(newDisc);
     }
 
+    const integerCheck = (evt) => {
+        const newDisc = { ...disc }
+        
+        if(evt.target.id === "brandId") {
+            newDisc.brandId = parseInt(evt.target.value)
+        } else {
+            newDisc.typeId = parseInt(evt.target.value)
+        }
+        setDisc(newDisc)
+      }
+
+    //User Input controls that makes sure all 3 values are numbers. 
+    //if all are numbers, return true. 
     const checkUsersWeightInput = (weight) => {
         if(!isNaN(weight[0]) && !isNaN(weight[1]) && !isNaN(weight[2])) {
             return true;
@@ -67,6 +81,9 @@ export const DiscForm = () => {
         }
     }
 
+    //On click of save buton, check if all 4 fields have a value. 
+    //if they do, then calls my WeightFunc which checks all 3 values are numbers. 
+    //if they are numbers, it sets the weight property, adds the disc, and takes user to DiscList. 
     const handleClickSaveDisc = (event) => {
         event.preventDefault();
 
@@ -91,24 +108,11 @@ export const DiscForm = () => {
             <form className="discForm">
                 <h1 className="discFormTitle">New Disc</h1>
                 
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="name">Name:</label>
-                        <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="weight">Weight:</label>
-                        <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
-                    </div>
-                </fieldset>
 
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="brand">Brand:</label>
-                        <select value={disc.brandId} name="brandId" id="brandId" onChange={handleControlledInputChange} className="form-control">
+                        <select value={disc.brandId} name="brandId" id="brandId" onChange={integerCheck} className="form-control">
                             <option value="0" style={{ color: "#8e8e8e" }} >Select Brand</option>
                             {brands.map(b => (
                                 <option key={b.id} value={b.id}>
@@ -122,7 +126,7 @@ export const DiscForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="type">Type:</label>
-                        <select value={disc.typeId} name="typeId" id="typeId" onChange={handleControlledInputChange} className="form-control">
+                        <select value={disc.typeId} name="typeId" id="typeId" onChange={integerCheck} className="form-control">
                             <option value="0" style={{ color: "#8e8e8e" }} >Select Type</option>
                             {types.map(t => (
                                 <option key={t.id} value={t.id}>
@@ -133,6 +137,19 @@ export const DiscForm = () => {
                     </div>
                 </fieldset>
 
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="name">Name:</label>
+                        <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="weight">Weight:</label>
+                        <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
+                    </div>
+                </fieldset>
 
                 <button 
                     type="button"

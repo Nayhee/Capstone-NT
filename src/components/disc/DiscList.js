@@ -13,6 +13,7 @@ export const DiscList = () => {
     const currentUser = JSON.parse(sessionStorage.getItem('putt_user'))
     const currentUserId = currentUser.id;
 
+    //get the users discs and SET the state. called by UseEffect every render AFTER the first. 
     const getDiscs = (currentUserId) => {
         return getAUsersDiscs(currentUserId).then(usersDiscs => {
             setDiscs(usersDiscs)
@@ -24,17 +25,18 @@ export const DiscList = () => {
         .then(() => getAUsersDiscs(currentUserId).then(setDiscs))
     }
 
+    //gets the users discs every render AFTER the first render.
     useEffect(() => {
         getDiscs(currentUserId);
     }, [])
 
-//for new user, maybe write a func that checks if user has any discs.
-//if they don't, do a ternary that changes the classname of the add-disc-button
-//and I can make the new class much bigger and put it in the middle of screen. 
+
+    //Ternary statement that checks if the user has any discs. If they don't, it only shows a HUGE "Add Disc" button 
+    //in the middle of the page, instead of an empty list.  
 
     return (
         <>
-            <section className="add-disc-container">
+            <section className="add-disc-container"> 
                 <button type="button"
                     className={discs.length > 0 ? 'add-disc-button' : 'addDiscButton'}
                     onClick={() => {navigate("/discs/create")}}>
@@ -45,9 +47,9 @@ export const DiscList = () => {
             <div className="disc-list">
                 {discs.map(disc =>
                     <DiscCard
-                        key={disc.id}  //unique key for React to keep track of re-rendering only things that have changed. 
-                        disc={disc}    //pass the disc object and its properties. 
-                        handleDeleteDisc={handleDeleteDisc} //pass the func to child comp for the card's delete button. 
+                        key={disc.id}  //unique key for React to keep track of items and to re-render only things that have changed. 
+                        disc={disc}    //pass the disc object and its properties to child component (discCard) 
+                        handleDeleteDisc={handleDeleteDisc} //pass the delete func to child comp for the card's delete button. 
                     />)}
             </div>
         </>
