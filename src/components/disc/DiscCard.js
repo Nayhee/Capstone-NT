@@ -2,6 +2,7 @@ import React from "react"
 import "./Disc.css"
 import { Link } from "react-router-dom";
 
+
 export const DiscCard = ({ disc, handleDeleteDisc }) => {
     return (
       <div className="card-disc">

@@ -10,16 +10,21 @@ import { RoundEditForm } from "./round/RoundEditForm"
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 
+//I tell the app to display certain components when the URL matches each of these patterns.
+
 export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
     
+    //Function limiting access to child component until user IsAuthenticated. 
     const PrivateRoute = ({children}) => {
 		return isAuthenticated ? children : <Navigate to="/login"/>;
 	}
-    
+    //Function to set a user in session storage and then sets the state of IsAuthenticated (passed from Capstone.js)
     const setAuthUser = (user) => {
         sessionStorage.setItem("putt_user", JSON.stringify(user))
         setIsAuthenticated(sessionStorage.getItem("putt_user") !== null)
     }
+
+    //we use UseParams in the Edit Forms so that we can store that disc/round's ID property.  
     
     return (
         <>

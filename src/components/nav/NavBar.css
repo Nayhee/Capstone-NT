@@ -77,6 +77,10 @@
     border-radius: 100%;
 }
 
+.active {
+    color: hotpink;
+}
+
 /*Image colors to use. Light to darker. 
 #5f92a5
 #2d8296
