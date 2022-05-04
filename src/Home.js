@@ -16,7 +16,9 @@ export const Home = () => {
     const [totalPutts, setTotalPutts] = useState();
     const [puttsMade, setPuttsMade] = useState();
     const [puttPercentage, setPuttPercentage] = useState();
+
     const [distances, setDistances] = useState([]);
+    const [selectedDistance, setSelectedDistance] = useState(0);
     const [filteredRounds, setFilteredRounds] = useState([]);
     const [allUsersRounds, setAllUsersRounds] = useState([]);
 
@@ -25,7 +27,6 @@ export const Home = () => {
         let percent = decimal * 100;
         return Math.round(percent);
     }
-
 
     const isolateUniqueDistances = (allRounds) => {
         //users Rounds passed in
@@ -41,12 +42,45 @@ export const Home = () => {
     }
 
     const handleFilterChange = (event) => {
-        //when they select a distance option, grab the value of what they selected.
-        console.log(event.target.value)
-        //filter their rounds from that distance 
+        let distanceSelected = parseInt(event.target.value);
+        setSelectedDistance(distanceSelected);
+        setFilteredRounds(allUsersRounds.filter(round => round.distance === distanceSelected));
+
+        if(distanceSelected === 0) {
+            setFilteredRounds(allUsersRounds)
+        }
     }
 
+    const scorecardCalcs = (rounds) => {
+        // console.log(rounds);
+        
+        //# of total rounds is number of objects in the fetched "AllRounds" array. Set state.  
+        let roundCount = rounds.length;
+        setTotalRoundsCount(roundCount);
 
+        //set puttCount to 0, then for each round, add that round's number of putts to the count and SET state. 
+        let puttCount = 0;
+        rounds.forEach(r => puttCount += r.putts)
+        setTotalPutts(puttCount);
+
+        //set madeCount to 0, then for each round, add that round's number of made putts to the count and SET State. 
+        let madeCount = 0;
+        rounds.forEach(r => madeCount += r.made)
+        setPuttsMade(madeCount);
+
+        let decimal = madeCount / puttCount;
+        //New Users have no rounds, which returns NaN, SO, I solve by initally placing a userfriendly placeholder on the DOM.  
+        let percentage = decimalToPercentage(decimal)
+        if(isNaN(percentage)) {
+            setPuttPercentage("-")
+        } else {
+            setPuttPercentage(`${percentage}%`)
+        }
+    }
+
+    const populateScorecard = () => {
+        scorecardCalcs(allUsersRounds)
+    }
 
     //after first blank render, fetch the users rounds
     //then calculate the totals.
@@ -54,53 +88,38 @@ export const Home = () => {
         getAUsersRounds(currentUsersId)
         .then(allRounds => {
 
-            setAllUsersRounds(allRounds)
-            
-            //DISTANCES PIECE.
+            setAllUsersRounds(allRounds);
+            setFilteredRounds(allRounds)
+
             let distancesToSet = isolateUniqueDistances(allRounds);
             setDistances(distancesToSet);
-
-            //CALL FILTER FUNC.
-            
-            //IF SELECT VALUE IS 0 (ALL), DO EVERYTHING BELOW THIS. 
-            
-            //# of total rounds is number of objects in the fetched "AllRounds" array. Set state.  
-            let roundCount = allRounds.length;
-            setTotalRoundsCount(roundCount);
-
-            //set puttCount to 0, then for each round, add that round's number of putts to the count and SET state. 
-            let puttCount = 0;
-            allRounds.forEach(round => puttCount += round.putts)
-            setTotalPutts(puttCount);
-
-            //set madeCount to 0, then for each round, add that round's number of made putts to the count and SET State. 
-            let madeCount = 0;
-            allRounds.forEach(round => madeCount += round.made)
-            setPuttsMade(madeCount);
-
-            let decimal = madeCount / puttCount;
-            //New Users have no rounds, which returns NaN, SO, I solve by initally placing a userfriendly placeholder on the DOM.  
-            let percentage = decimalToPercentage(decimal)
-            if(isNaN(percentage)) {
-                setPuttPercentage("-")
-            } else {
-                setPuttPercentage(`${percentage}%`)
-            }
         })
+        .then(() => populateScorecard())
     }, [])
 
-    
+    useEffect(() => {
+        populateScorecard();
+    }, [selectedDistance])
+
+    useEffect(() => {
+        populateScorecard();
+    }, [allUsersRounds])
+
+    useEffect(() => {
+        scorecardCalcs(filteredRounds)
+    }, [filteredRounds])
+
 
     return (
         <>
             <div className="home__container">
 
                     <div className="filterScorecard">
-                        <label htmlFor="distance">Filter By Distance:</label>
+                        <label htmlFor="distance">Filter by Distance </label>
                         <select name="distance" id="distance" onChange={handleFilterChange} className="filterSelect">
-                            <option value="0">All</option>
+                            <option value={0}>All</option>
                             {distances.map(d => (
-                                <option key={d} value={d}>{d}ft</option>
+                                <option key={d} value={d}>{d} ft</option>
                             ))}
                         </select>
                     </div>

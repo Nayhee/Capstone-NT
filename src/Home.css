@@ -3,14 +3,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-   
     margin: auto;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .home__container__buttons {
     display: flex;
-    margin-top: 1em;
+    margin-top: .5em;
     /* position: absolute; */
     position: relative;
     animation: 
@@ -66,7 +65,7 @@
     overflow: hidden;
     position: relative;
     /* animation: flyIn 20s ease-out;     */
-    margin: 1.5em 0em 1em 0em;
+    margin: 0em 0em .2em 0em;
     min-width: 29rem;
     max-width: 36rem;
     background-color: #0d0f21;
@@ -125,7 +124,6 @@
     font-weight: bold;
 }
 
-
 .scorecardPercLabel {
     display: flex;
     justify-content: center;
@@ -135,6 +133,43 @@
 }
 
 
+.filterScorecard {
+    font-size: 1rem;
+    margin: .5rem 0rem .5rem 0rem;
+    border: .175rem solid #3fbdc2;
+    padding: .4rem;
+    border-radius: .5em;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #0d0f21;
+    opacity: 96%;
+    color:#3fbdc2;
+    display: flex;
+    min-width: 12rem;
+    max-width: 13rem;
+    line-height: .1;
+    align-items: center;
+    font-family: 'Acme', sans-serif;;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 5px #3fbdc2;
+
+}
+.filterScorecard label {
+    /* font-weight: bold; */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.filterSelect {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    color: #3fbdc2;
+    background-color: #0d0f21;
+    border-radius: .25rem;
+
+}
 
 
 /*COMPLEMENTARY COLOR
