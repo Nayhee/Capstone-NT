@@ -33,6 +33,12 @@
       "email": "jeff@gmail.com",
       "name": "Jeff Traczewski",
       "id": 6
+    },
+    {
+      "email": "flop@gmail.com",
+      "firstName": "Flop",
+      "lastName": "Flanigan",
+      "id": 7
     }
   ],
   "discs": [

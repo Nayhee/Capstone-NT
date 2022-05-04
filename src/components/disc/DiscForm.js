@@ -112,7 +112,7 @@ export const DiscForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="brand">Brand:</label>
-                        <select value={disc.brandId} name="brandId" id="brandId" onChange={integerCheck} className="form-control">
+                        <select value={disc.brandId} name="brandId" id="brandId" onChange={integerCheck} className="form-controls">
                             <option value="0" style={{ color: "#8e8e8e" }} >Select Brand</option>
                             {brands.map(b => (
                                 <option key={b.id} value={b.id}>
@@ -126,7 +126,7 @@ export const DiscForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="type">Type:</label>
-                        <select value={disc.typeId} name="typeId" id="typeId" onChange={integerCheck} className="form-control">
+                        <select value={disc.typeId} name="typeId" id="typeId" onChange={integerCheck} className="form-controls">
                             <option value="0" style={{ color: "#8e8e8e" }} >Select Type</option>
                             {types.map(t => (
                                 <option key={t.id} value={t.id}>
@@ -140,14 +140,14 @@ export const DiscForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input className="form-control" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
+                        <input className="form-controls" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="weight">Weight:</label>
-                        <input className="form-control" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
+                        <input className="form-controls" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
                     </div>
                 </fieldset>
 

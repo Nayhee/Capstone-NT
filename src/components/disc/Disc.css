@@ -18,7 +18,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
     transition: 0.3s;
     border-radius: 5px; 
-    margin: .5em .5em 1em 1em;
+    margin: 0em .5em 1em 1em;
     flex: 0 1 24%;
     max-width: 17%;
     z-index: 1;
@@ -81,7 +81,8 @@
 .add-disc-button {
     display: flex;
     margin: auto;
-    margin-top: .5rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
     background-color: #275694;
     border: 3px solid #3fbdc2;
     border-radius: 5px;
