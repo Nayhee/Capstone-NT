@@ -127,13 +127,13 @@ export const Home = () => {
                     <div className="userScorecard">
                         <h3>{currentUsersName}'s Scorecard</h3>
                         <div className="wrapper">
-                            <div className="scorecardItem">Total Rounds:</div>
+                            <div className="scorecardItem">Total Rounds</div>
                             <div className="scorecardItem">{totalRoundsCount}</div>
-                            <div className="scorecardItem">Total Putts:</div>
+                            <div className="scorecardItem">Total Putts</div>
                             <div className="scorecardItem">{totalPutts}</div>
-                            <div className="scorecardItem">Putts Made:</div>
+                            <div className="scorecardItem">Putts Made</div>
                             <div className="scorecardItem">{puttsMade}</div>
-                            <div className="scorecardPercLabel">Putting %</div>
+                            <div className="scorecardPercLabel">% Made</div>
                             <div className="scorecardPercValue">{puttPercentage}</div>
                         </div>
                     </div>

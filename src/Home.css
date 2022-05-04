@@ -70,6 +70,7 @@
     max-width: 36rem;
     background-color: #0d0f21;
     border: .65em solid;
+    opacity: 99%;
     border-image: 
     linear-gradient(
         #ff512f,    
@@ -113,7 +114,6 @@
     display: flex;
     justify-content: center;
     padding: .5em;
-    border-radius: .1em;
 }
 
 .scorecardPercValue {
