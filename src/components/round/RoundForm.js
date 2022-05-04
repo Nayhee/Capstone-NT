@@ -23,8 +23,7 @@ export const RoundForm = () => {
     const [round, setRound ] = useState({
         userId: currentUserId,
         date: dateFunc(),
-        discId: 0,
-        distance: ""
+        discId: 0
     })
     //set initial blank state for the todayScorecard that will populate AFTER they record a round TODAY. 
     const [todayScorecard, setTodayScorecard] = useState({
@@ -98,8 +97,8 @@ export const RoundForm = () => {
         const newRound = {...round}
         let userInputValue = event.target.value;
         if(event.target.value.includes("Id")) {
-            userInputValue = parseInt(userInputValue)
-        }
+                userInputValue = parseInt(userInputValue)
+            }
         newRound[event.target.id] = userInputValue;
         setRound(newRound);
     }
@@ -125,7 +124,7 @@ export const RoundForm = () => {
         event.preventDefault();
 
         //when the submit a round, confirm that all 4 fields were rightfully filled out. 
-        if(round.discId !== 0 && round.distance !== "" && round.putts > 0 && round.made > 0) {
+        if(round.discId !== 0 && round.distance > 0 && round.putts > 0 && round.made > 0) {
             setIsLoading(true);
             
             //if they submit a full round, I invert the IsButton state, so that the scorecard calculation 
@@ -136,6 +135,7 @@ export const RoundForm = () => {
             
             round.putts = parseInt(round.putts);
             round.made = parseInt(round.made);
+            round.distance = parseInt(round.distance);
             
             //send round to DB then 
             addRound(round)
