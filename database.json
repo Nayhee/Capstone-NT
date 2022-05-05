@@ -54,9 +54,9 @@
     {
       "id": 2,
       "userId": 1,
-      "name": "Luna",
+      "name": "OG Luna",
       "typeId": 1,
-      "weight": "173g",
+      "weight": "173gg",
       "brandId": 2,
       "image": "/images/luna.jpg"
     },
@@ -129,7 +129,7 @@
       "name": "Aviar",
       "typeId": 1,
       "brandId": 1,
-      "weight": "173g",
+      "weight": "173gggg",
       "image": "/images/d1.jpg"
     },
     {
@@ -188,21 +188,12 @@
     },
     {
       "name": "Immortal Spirit",
-      "weight": "175g",
+      "weight": "174g",
       "typeId": 1,
       "brandId": 3,
       "image": "/images/d2.png",
       "userId": 1,
       "id": 18
-    },
-    {
-      "name": "FloppleMeijer",
-      "weight": "125g",
-      "typeId": 1,
-      "brandId": 2,
-      "image": "/images/d2.png",
-      "userId": 1,
-      "id": 19
     }
   ],
   "brands": [
@@ -350,11 +341,11 @@
     },
     {
       "userId": 1,
-      "date": "5/4/2022",
+      "date": "5/5/2022",
       "discId": 18,
-      "distance": 40,
-      "putts": 10,
-      "made": 7,
+      "distance": 35,
+      "putts": 20,
+      "made": 17,
       "id": 17
     }
   ]
