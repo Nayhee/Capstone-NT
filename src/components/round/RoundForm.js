@@ -108,9 +108,6 @@ export const RoundForm = () => {
         if(border === "newRoundForm") {
             setBorder("newRoundFormBorderFlash")
         }
-        else {
-            setBorder("newRoundForm")
-        }
     }
 
     const integerCheck = (evt) => {
@@ -148,6 +145,17 @@ export const RoundForm = () => {
 
     return (
         <main style={{ textAlign: "center" }}>
+            
+            <div className={todayScorecard.totalPutts < 1 ? 'howToPlayDiv' : 'invisibleTwo'}>
+                <h4>How It Works:</h4>
+                <ol> 
+                    <li className="howToPlayItem">Throw some putts</li>
+                    <li className="howToPlayItem">Input your results</li>
+                    <li className="howToPlayItem">Click submit round</li>
+                </ol>
+            </div>
+            
+            
             
             <div className={todayScorecard.totalPutts > 0 ? 'todayScorecard' : 'invisible'}>
                 

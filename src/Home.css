@@ -185,17 +185,17 @@
     top: 18rem; 
     font-family: 'Acme', sans-serif;
     /* font-weight: bold; */
-    padding: 1.5rem;
+    padding: 2rem;
     border: .2rem solid #3fbdc2;
     border-radius: 1em;
     z-index: 1;
-    height: 8rem;
+    height: 9rem;
     width: 15%;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #0d0f21;
-    opacity: 99%;
+    opacity: 97%;
     animation: flyIn .8s ease-out;
     color:#3fbdc2;
     box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2;
@@ -222,12 +222,13 @@
     margin: auto;
     text-decoration: underline;
     text-underline-offset: .2rem;
-    color: hotpink;
-    font-size: 1.35rem;
+    color: #f5f5f5;
+    font-size: 1.45rem;
+    opacity: 96%;
 }
 .circleItem {
     margin: auto;
-    font-size: 1.3rem;
+    font-size: 1.45rem;
 }
 
 .circleWrapper {
@@ -235,7 +236,7 @@
     grid-template-columns: 5em 5em;
     font-size: 18px;
     justify-content: center;
-    column-gap: .5rem;
+    column-gap: 1rem;
     row-gap: .2rem;;
 }
 

@@ -123,7 +123,7 @@
     background-color: #0d0f21;
     opacity: 99%;
     box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 20px #3fbdc2;
-    /* animation: flyIn .8s ease-out; */
+    animation: flyIn .8s ease-out;
 }
 
 
@@ -287,6 +287,10 @@
 .invisible {
     visibility: hidden;
 }
+.invisibleTwo {
+    visibility: hidden;
+    position: absolute;
+}
 
 .todayScHeader {
     font-size: 1.8rem;
@@ -315,4 +319,46 @@
     text-decoration: underline;
     font-size: 1.3rem;
     text-underline-offset: 4px;
+}
+
+
+.howToPlayDiv {
+    position: absolute;
+    left: 3rem;
+    top: 22rem;
+    background-color:#2d8296;
+    color:#fffafa;
+    width: 15rem;
+    height: 11rem;
+    padding: 1rem 0rem 1rem 0rem;
+    font-family: 'Acme', sans-serif;
+    border: 3px solid #3fbdc2;
+    border-radius: .5em;
+    z-index: 1;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    opacity: 95%;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2;
+    font-weight: bold;
+    animation: flyIn .8s ease-out;
+
+}
+
+.howToPlayDiv ol {
+    text-align: start;
+    color: #1d2351;
+    font-size: 1.3rem;
+}
+
+.howToPlayDiv h4 {
+    font-size: 1.6rem;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    opacity: 96%;
+}
+
+.howToPlayItem {
+    padding: .1rem;
 }
