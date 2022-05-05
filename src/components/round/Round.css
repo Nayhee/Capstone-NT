@@ -19,19 +19,8 @@
     border-bottom: .05rem solid white;
 }
 
-/* .roundList > :nth-child(odd) {
-    background-color: #3fbdc2;
-}
-.roundList > :nth-child(even) {
-    background-color: #3fbdc2d9;
-} */
-
-/*slightly darker green/blue
-3fbdc2c1
-*/
-
 .roundRow img {
-    width: 3.8rem;
+    width: 3.5rem;
     border-radius: 50%;
     margin: .2rem;
 }

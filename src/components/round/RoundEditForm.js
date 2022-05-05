@@ -6,15 +6,22 @@ import "./RoundForm.css"
 
 
 export const RoundEditForm = () => {
-    const [round, setRound] = useState({discId: "", distance: "", putts: "", made: "" });
-    const [discs, setDiscs] = useState([])
-    const [isLoading, setIsLoading] = useState(true);
+
+    const currentUser = JSON.parse(sessionStorage.getItem('putt_user'));
+    const currentUserId = currentUser.id;
 
     const {roundId} = useParams();
     const navigate = useNavigate();
 
-    const currentUser = JSON.parse(sessionStorage.getItem('putt_user'));
-    const currentUserId = currentUser.id;
+    const [round, setRound] = useState({
+        discId: 0,
+        distance: 0,
+        putts: 0,
+        made: 0
+    });
+
+    const [discs, setDiscs] = useState([])
+    const [isLoading, setIsLoading] = useState(true);
 
 
     useEffect(() => {
@@ -34,26 +41,31 @@ export const RoundEditForm = () => {
 
 
     const handleFieldChange = (e) => {
-        const stateToChange = {...round}
-        if(e.target.value.includes("Id")) {
-            e.target.value = parseInt(e.target.value)
-        }
-        stateToChange[e.target.id] = e.target.value;
-        setRound(stateToChange);
+        const newRound = {...round}
+        let userInputValue = e.target.value;
+        newRound[e.target.id] = userInputValue;
+        setRound(newRound);
     }
 
     const updateExistingRound = (e) => {
         e.preventDefault()
-        setIsLoading(true);
+        
+        if(round.discId !== 0 && round.distance > 0 && round.putts > 0 && round.made > 0) {
+            setIsLoading(true);
 
-        const editedRound = {
-            id: roundId,
-            discId: round.discId,
-            distance: round.distance,
-            putts: round.putts,
-            made: round.made
-        };
-        updateRound(editedRound).then(() => navigate("/rounds"))
+            const editedRound = {
+                id: parseInt(roundId),
+                discId: parseInt(round.discId),
+                distance: parseInt(round.distance),
+                putts: parseInt(round.putts),
+                made: parseInt(round.made)
+            };
+            updateRound(editedRound).then(() => navigate("/rounds"))
+
+        } else {
+            window.alert("Please complete each field")
+        }
+
     }
 
     return (
