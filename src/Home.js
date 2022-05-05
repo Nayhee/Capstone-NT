@@ -22,6 +22,23 @@ export const Home = () => {
     const [filteredRounds, setFilteredRounds] = useState([]);
     const [allUsersRounds, setAllUsersRounds] = useState([]);
 
+
+    //useEffect with AllUsersRounds as dependency.
+
+    //loop through all rounds, and 
+
+    let c1 = []
+    let c2 = []
+    let c3 = []
+
+
+
+
+
+
+
+
+
     //helper function to turn decimal into a percentage.
     const decimalToPercentage = (decimal) => {
         let percent = decimal * 100;
@@ -29,8 +46,6 @@ export const Home = () => {
     }
 
     const isolateUniqueDistances = (allRounds) => {
-        //users Rounds passed in
-        //create set of all unique distances.
         let setOfDistances = new Set()
         allRounds.forEach(round => setOfDistances.add(round.distance));
         //convert set Object to an Array. 
@@ -46,14 +61,13 @@ export const Home = () => {
         setSelectedDistance(distanceSelected);
         setFilteredRounds(allUsersRounds.filter(round => round.distance === distanceSelected));
 
+        //if they picked ALL, setFilteredRounds with ALL of the users rounds.
         if(distanceSelected === 0) {
             setFilteredRounds(allUsersRounds)
         }
     }
 
     const scorecardCalcs = (rounds) => {
-        // console.log(rounds);
-        
         //# of total rounds is number of objects in the fetched "AllRounds" array. Set state.  
         let roundCount = rounds.length;
         setTotalRoundsCount(roundCount);
@@ -82,8 +96,7 @@ export const Home = () => {
         scorecardCalcs(allUsersRounds)
     }
 
-    //after first blank render, fetch the users rounds
-    //then calculate the totals.
+
     useEffect(() => {
         getAUsersRounds(currentUsersId)
         .then(allRounds => {
@@ -114,6 +127,21 @@ export const Home = () => {
         <>
             <div className="home__container">
 
+                    <div className="circleScorecard">
+                        <h4>% by Distance:</h4>
+                        <div className="circleWrapper">
+                            <div className="circleItemLabel">Distance:</div>
+                            <div className="circleItemLabel">% Made:</div>
+                            <div className="circleItem">1-33 ft</div>
+                            <div className="circleItem">c1</div>
+                            <div className="circleItem">33-66 ft</div>
+                            <div className="circleItem">c2</div>
+                            <div className="circleItem">66+ ft</div>
+                            <div className="circleItem">c3</div>
+                        </div>
+                    </div>
+                    
+                    
                     <div className="filterScorecard">
                         <label htmlFor="distance">Filter by Distance </label>
                         <select name="distance" id="distance" onChange={handleFilterChange} className="filterSelect">
