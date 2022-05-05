@@ -251,25 +251,25 @@
   "rounds": [
     {
       "id": 1,
-      "userId": "1",
+      "userId": 1,
       "date": "4/15/2022",
       "discId": 10,
       "distance": 20,
       "putts": 25,
-      "made": "22"
+      "made": 22
     },
     {
       "id": 4,
-      "userId": "1",
+      "userId": 1,
       "date": "4/17/2022",
       "discId": 9,
       "distance": 15,
-      "putts": "25",
-      "made": "24"
+      "putts": 25,
+      "made": 24
     },
     {
       "id": 5,
-      "userId": "2",
+      "userId": 2,
       "date": "4/17/2022",
       "discId": 4,
       "distance": 20,
@@ -278,7 +278,7 @@
     },
     {
       "id": 8,
-      "userId": "2",
+      "userId": 2,
       "date": "4/18/2022",
       "discId": 12,
       "distance": 30,
@@ -288,10 +288,10 @@
     {
       "userId": 1,
       "date": "5/4/2022",
-      "discId": 18,
+      "discId": 2,
       "distance": 25,
       "putts": 20,
-      "made": "17",
+      "made": 17,
       "id": 10
     },
     {
@@ -306,7 +306,7 @@
     {
       "userId": 3,
       "date": "5/2/2022",
-      "discId": "8",
+      "discId": 8,
       "distance": 25,
       "putts": 20,
       "made": 13,
@@ -333,19 +333,19 @@
     {
       "userId": 1,
       "date": "5/4/2022",
-      "discId": 2,
+      "discId": 12,
       "distance": 75,
       "putts": 10,
-      "made": "5",
+      "made": 5,
       "id": 16
     },
     {
       "userId": 1,
       "date": "5/4/2022",
-      "discId": 9,
+      "discId": 18,
       "distance": 40,
-      "putts": "10",
-      "made": "7",
+      "putts": 10,
+      "made": 7,
       "id": 17
     }
   ]
