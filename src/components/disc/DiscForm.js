@@ -139,18 +139,18 @@ export const DiscForm = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="name">Name:</label>
-                        <input className="form-controls" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <div className="form-group">
                         <label htmlFor="weight">Weight:</label>
                         <input className="form-controls" type="text" id="weight" onChange={handleControlledInputChange} maxLength="3" required autoFocus placeholder="Ex: 173" value={disc.weight} />
                     </div>
                 </fieldset>
 
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="name">Name:</label>
+                        <input className="form-controls" type="text" id="name" onChange={handleControlledInputChange} maxLength="20" required autoFocus placeholder="Disc Name" value={disc.name} />
+                    </div>
+                </fieldset>
+                
                 <button 
                     type="button"
                     className="save-disc-button"

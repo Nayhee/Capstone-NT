@@ -193,8 +193,8 @@ export const Home = () => {
         <>
             <div className="home__container">
 
-                    <div className="circleScorecard">
-                        <h4>% Made by Distance:</h4>
+                    { <div className="circleScorecard">
+                        {/* <h4>% Made by Distance:</h4> */}
                         <div className="circleWrapper">
                             <div className="circleItemLabel">Distance:</div>
                             <div className="circleItemLabel">% Made:</div>
@@ -205,7 +205,7 @@ export const Home = () => {
                             <div className="circleItem">66+ ft</div>
                             <div className="circleItem">{circle.c3}</div>
                         </div>
-                    </div>
+                    </div> }
                     
                     
                     <div className="filterScorecard">

@@ -18,13 +18,13 @@
     justify-items: center;
     align-content: center;
     border-radius: 50%;
-    box-shadow: 0 0 5px #3fbdc2, 0 0 25px #3fbdc2, 0 0 25px #3fbdc2;
+    box-shadow: 0 0 5px #3fbdc2, 0 0 30px #3fbdc2;
 }
 .navbar__logo p {
     margin: 0px;
     display: flex;
     justify-content: center;
-    color: white;
+    color: #fffafa;
 }
 
 .navbar ul {
@@ -70,7 +70,6 @@
     text-decoration: none;
     background:#1d2351;
     color: #1d2351;
-    /* border: 2px solid #1d2351; */
     background-color: #3fbdc2;
     height: 3.75rem;
     width: 3.75rem;
@@ -78,7 +77,8 @@
 }
 
 .active {
-    color: hotpink;
+    color: #f5f5f5;
+    opacity: 82%;
 }
 
 /*Image colors to use. Light to darker. 
