@@ -60,7 +60,7 @@
 .wrapper > div{
     background-color: #275694;  
     border: 1px solid #1d2351;
-    color: white;
+    color: #fffafa;
 }
 
 .wrapper > div:nth-child(odd){
@@ -110,7 +110,7 @@
 }
 .userScorecard > h3 {
     font-size: 2.5rem;
-    color: white;
+    color: #f5f5f5;
     margin: .5em 1em .5em 1em;
     display: flex;
     justify-content: center;
@@ -181,16 +181,16 @@
 
 .circleScorecard {
     position: absolute;
-    left: 6rem;
-    top: 16rem; 
+    left: 7rem;
+    top: 18rem; 
     font-family: 'Acme', sans-serif;
     /* font-weight: bold; */
     padding: 1.5rem;
     border: .2rem solid #3fbdc2;
     border-radius: 1em;
     z-index: 1;
-    height: 11.5rem;
-    width: 17%;
+    height: 8rem;
+    width: 15%;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -209,25 +209,25 @@
         flyIn .8s ease-out; */
 }
 
-.circleScorecard h4 {
+/* .circleScorecard h4 {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     margin: 0px 0px 1rem 0px;
-    color: white;
+    color: #f5f5f5;
     opacity: 90%;
-}
+} */
 
 .circleItemLabel {
     margin: auto;
     text-decoration: underline;
     text-underline-offset: .2rem;
     color: hotpink;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
 }
 .circleItem {
     margin: auto;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 
 .circleWrapper {
@@ -235,7 +235,7 @@
     grid-template-columns: 5em 5em;
     font-size: 18px;
     justify-content: center;
-    column-gap: 1rem;
+    column-gap: .5rem;
     row-gap: .2rem;;
 }
 

@@ -1,6 +1,6 @@
 .form--login h1 {
     font-size: 2.5rem;
-    color: white;
+    color: #fffafa;
     margin: 1rem 1rem -.5rem 1rem;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
 
 
 .form--login p {
-    color: white;
+    color: #fffafa;
     font-style: italic;
     text-align: center;
     opacity: 92%;
@@ -88,7 +88,7 @@
     display: flex;
     border: 1px solid #ced4da;
     background-color: #1d2351;
-    color: white;
+    color: #fffafa;
     border-radius: .25em;
     height: 2.2rem;
     width: 25%;
@@ -159,7 +159,7 @@
     display: flex;
     border: 1px solid #ced4da;
     background-color: #1d2351;
-    color: white;
+    color: #fffafa;
     border-radius: .25em;
     height: 2.1rem;
     width: 25%;

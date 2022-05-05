@@ -16,7 +16,7 @@
     color:#3fbdc2;
     /* background-color: #3fbdc2; */
     align-items: center;
-    border-bottom: .05rem solid white;
+    border-bottom: .05rem solid #fffafa;
 }
 
 .roundRow img {
@@ -74,7 +74,7 @@
 }
 
 .roundListHeader h2 {
-    color: white;
+    color: #fffafa;
     padding: .5rem .5rem .5rem 0px;
     /* border-radius: .2rem; */
     font-family: 'Acme', sans-serif;
@@ -102,7 +102,7 @@
 }
 
 .roundEditButton {
-    border-bottom: .05rem solid white;
+    border-bottom: .05rem solid #fffafa;
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -110,7 +110,7 @@
 }
 
 .roundEditButton button {
-    border: 1px solid white;
+    border: 1px solid #fffafa;
     background-color: #0d0f21;
     color:hotpink;
     font-weight: bold;
@@ -126,7 +126,7 @@
 
 
 .roundEditButton button:hover {
-    border: 2px solid white;
+    border: 2px solid #fffafa;
     color: #3fbdc2;
     background-color: #0d0f21;
     text-decoration: none;
@@ -148,7 +148,7 @@
 }
 
 .newRoundButton:hover {
-    border: 2px solid white;
+    border: 2px solid #fffafa;
     color: #3fbdc2;
     background-color: #0d0f21;
     text-decoration: none;

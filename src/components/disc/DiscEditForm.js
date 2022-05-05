@@ -126,21 +126,6 @@ export const DiscEditForm = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="name">Name:</label>
-                        <input
-                        type="text"
-                        id="name" 
-                        className="form-controls"
-                        onChange={handleFieldChange} 
-                        required
-                        autoFocus
-                        maxLength="20"
-                        value={disc.name} />
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <div className="form-group">
                         <label htmlFor="weight">Weight:</label>
                         <input 
                         type="text"
@@ -151,6 +136,21 @@ export const DiscEditForm = () => {
                         autoFocus
                         maxLength="3"
                         value={disc.weight} />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="name">Name:</label>
+                        <input
+                        type="text"
+                        id="name" 
+                        className="form-controls"
+                        onChange={handleFieldChange} 
+                        required
+                        autoFocus
+                        maxLength="20"
+                        value={disc.name} />
                     </div>
                 </fieldset>
 

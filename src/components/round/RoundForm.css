@@ -32,7 +32,7 @@
 
 .roundFormTitle {
     font-size: 2.5rem;
-    color: white;
+    color: #fffafa;
     margin: .2em 0px .2em 0px;
     display: flex;
     justify-content: center;
@@ -55,8 +55,8 @@
     font-style: italic;
     /* line-height: 1; */
     color: #3fbdc2;
-    background-color: #0d0f21;
-    border:1px solid white;
+    background-color:#1d2351;
+    border:1px solid #fffafa;
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -66,7 +66,7 @@
     display: flex;
     border: 1px solid #ced4da;
     background-color: #1d2351;
-    color: white;
+    color: #fffafa;
     font-weight: bold;
     border-radius: .8em;
     height: 2rem;
@@ -208,7 +208,7 @@
 
 .newRoundFormTitle {
     font-size: 2.5rem;
-    color: white;
+    color: #fffafa;
     margin: 1rem 0px 2rem 0px;
     display: flex;
     justify-content: flex-start;
@@ -233,7 +233,7 @@
 }
 
 .submitRoundButton:hover {
-    border: 2px solid white;
+    border: 2px solid #fffafa;
     color: #3fbdc2;
     background-color: #0d0f21;
     text-decoration: none;
@@ -243,7 +243,7 @@
 
 .todayScorecard {
     /* font-size: 2rem; */
-    color: white;
+    color: #fffafa;
     font-family: 'Acme', sans-serif;
     /* font-weight: bold; */
     margin: auto;

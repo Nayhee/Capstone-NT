@@ -194,6 +194,15 @@
       "image": "/images/d2.png",
       "userId": 1,
       "id": 18
+    },
+    {
+      "name": "FloppleMeijer",
+      "weight": "125g",
+      "typeId": 1,
+      "brandId": 2,
+      "image": "/images/d2.png",
+      "userId": 1,
+      "id": 19
     }
   ],
   "brands": [
