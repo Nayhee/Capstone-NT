@@ -68,6 +68,7 @@ export const DiscEditForm = () => {
         
         if(checkUsersWeightInput(disc.weight)) {
             setIsLoading(true);
+            disc.weight =  disc.weight.slice(0,3)
             disc.weight =  `${disc.weight}g`
 
             const editedDisc = {
@@ -135,7 +136,7 @@ export const DiscEditForm = () => {
                         required
                         autoFocus
                         maxLength="3"
-                        value={disc.weight} />
+                        value={disc.weight.slice(0,3)} />
                     </div>
                 </fieldset>
 
