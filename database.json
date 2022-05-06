@@ -48,15 +48,15 @@
       "name": "Barf Kitty Dot Com",
       "typeId": 1,
       "brandId": 3,
-      "weight": "175gg",
+      "weight": "175g",
       "image": "/images/d12.png"
     },
     {
       "id": 2,
       "userId": 1,
-      "name": "Luna",
+      "name": "OG Luna",
       "typeId": 1,
-      "weight": "173ggg",
+      "weight": "173gg",
       "brandId": 2,
       "image": "/images/luna.jpg"
     },
@@ -66,7 +66,7 @@
       "name": "FloppleMeijer",
       "typeId": 1,
       "brandId": 3,
-      "weight": "174gg",
+      "weight": "174g",
       "image": "/images/d1.jpg"
     },
     {
@@ -75,7 +75,7 @@
       "name": "Dr Blue Dot Com",
       "typeId": 1,
       "brandId": 1,
-      "weight": "173ggg",
+      "weight": "173g",
       "image": "/images/aviar.jpg"
     },
     {
@@ -111,7 +111,7 @@
       "name": "Space Man Dot Com",
       "typeId": 1,
       "brandId": 1,
-      "weight": "172gg",
+      "weight": "172g",
       "image": "/images/d5.png"
     },
     {
@@ -129,7 +129,7 @@
       "name": "My Boy Blue",
       "typeId": 1,
       "brandId": 1,
-      "weight": "173ggggg",
+      "weight": "173g",
       "image": "/images/d1.jpg"
     },
     {
@@ -165,7 +165,7 @@
       "name": "Dr Dot Com",
       "typeId": 1,
       "brandId": 4,
-      "weight": "172gg",
+      "weight": "172g",
       "image": "/images/d14.png"
     },
     {
@@ -188,7 +188,7 @@
     },
     {
       "name": "Immortal Spirit",
-      "weight": "174g",
+      "weight": "173g",
       "typeId": 1,
       "brandId": 3,
       "image": "/images/d2.png",
@@ -341,12 +341,21 @@
     },
     {
       "userId": 1,
-      "date": "5/4/2022",
-      "discId": 18,
+      "date": "5/5/2022",
+      "discId": 10,
       "distance": 35,
       "putts": 20,
       "made": 16,
       "id": 17
+    },
+    {
+      "userId": 1,
+      "date": "5/6/2022",
+      "discId": 12,
+      "distance": 15,
+      "putts": 25,
+      "made": 20,
+      "id": 18
     }
   ]
 }

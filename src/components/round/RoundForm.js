@@ -146,7 +146,8 @@ export const RoundForm = () => {
     return (
         <main style={{ textAlign: "center" }}>
             
-            <div className={todayScorecard.totalPutts < 1 ? 'howToPlayDiv' : 'invisibleTwo'}>
+            <div className='howToPlayDiv'>
+            {/* <div className={todayScorecard.totalPutts < 1 ? 'howToPlayDiv' : 'invisibleTwo'}> */}
                 <h4>How It Works:</h4>
                 <ol> 
                     <li className="howToPlayItem">Throw some putts</li>
