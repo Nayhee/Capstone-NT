@@ -248,11 +248,12 @@
 }
 
 .submitRoundButton:hover {
-    border: 2px solid #fffafa;
-    color: #3fbdc2;
+    border: 4px solid #3fbdc2;
+    color: hotpink;
     background-color: #0d0f21;
     text-decoration: none;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2;
+    opacity: 86%;
 
 }
 
