@@ -39,6 +39,12 @@
       "firstName": "Flop",
       "lastName": "Flanigan",
       "id": 7
+    },
+    {
+      "email": "boopbeep@gmail.com",
+      "firstName": "boop",
+      "lastName": "beep",
+      "id": 8
     }
   ],
   "discs": [
@@ -298,9 +304,9 @@
       "userId": 3,
       "date": "5/2/2022",
       "discId": 1,
-      "distance": 20,
+      "distance": 68,
       "putts": 10,
-      "made": 6,
+      "made": 3,
       "id": 12
     },
     {
@@ -316,9 +322,9 @@
       "userId": 3,
       "date": "5/2/2022",
       "discId": 3,
-      "distance": 15,
+      "distance": 35,
       "putts": 25,
-      "made": 22,
+      "made": 19,
       "id": 14
     },
     {

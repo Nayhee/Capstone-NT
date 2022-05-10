@@ -1,14 +1,14 @@
 .discFormTitle {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     color: #fffafa;
-    margin: 0px;
+    margin: 0vw;
     display: flex;
     justify-content: center;
 }
 
 .discForm fieldset {
     min-width: 0;
-    padding: .5rem 0;
+    padding: 0;
     margin: 0;
     border: 0;
 }
@@ -17,22 +17,21 @@
     display: inline-block;
     font-family: 'Acme', sans-serif;
     font-weight: bold;
-    margin: 1em 1em 1.5em 1em;
-    /* margin: 0 auto; */
+    margin: 1.5vw 1vw 1.5vw 1vw;
     text-align: left;
-    padding: .5em 1em .5em 1em;
-    border: 5px solid #1d2351;
-    border-radius: .5em;
+    padding: 1vw 2vw 1vw 2vw;
+    border: .35vw solid #1d2351;
+    border-radius: .75vw;
     z-index: 1;
-    min-height: 15rem;
-    min-width: 25rem;
-    font-size: 22px;
+    min-height: 13vw;
+    min-width: 23vw;
+    font-size: 1.25vw;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #2d8296;
     opacity: 94%;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    box-shadow: 0 0 .25vw #3fbdc2, 0 0 1vw #3fbdc2,  0 0 2vw #3fbdc2;
 }
 
 .titleAndImages {
@@ -42,49 +41,45 @@
 }
 
 .titleAndImages img {
-    width: 6rem;
+    width: 6vw;
     border-radius: 50%;
-    margin: 0px;
+    margin: 0vw;
 }
 
 .form-controls {
-    /* display: block; */
     width: 94%;
-    height: calc(1.5em + .5rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1.1rem;
+    height: 2.2vw;
+    padding: .375vw .75vw;
+    font-size: 1.1vw;
     line-height: 1;
     color: #3fbdc2;
     background-color: #1d2351;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+    border: .1vw solid #ced4da;
+    border-radius: .25vw;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .save-disc-button {
     display: flex;
-    border: 1px solid #ced4da;
+    border: .1vw solid #ced4da;
     background-color: #1d2351;
     color: #fffafa;
     font-weight: bold;
-    border-radius: .25em;
-    height: 35px;
+    border-radius: .35vw;
+    height: 2vw;
     width: 25%;
     margin: auto;
-    margin-top: .5rem;
+    margin-top: .5vw;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
 }
 
 .save-disc-button:hover {
     text-decoration: none;
     background:#1d2351;
     color: #1d2351;
-    border: 2px solid #1d2351;
+    border: .2vw solid #1d2351;
     background-color: #3fbdc2;
 }
-
-/* my input areas have className of form-control so they're pulling CSS from login.css*/
-

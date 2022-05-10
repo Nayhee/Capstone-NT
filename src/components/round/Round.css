@@ -1,55 +1,50 @@
 .roundContainer {
     display: grid;
-    grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem 9rem;
-    font-size: 1.5Rem;
+    grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 9vw;
+    font-size: 1.5vw;
     justify-content: center;
     margin: auto;
     font-family: 'Acme', sans-serif;
-    /* width: 65%; */
-    padding: .1rem;
-    /* border-radius: 1rem;; */
+    padding: .1vw;
 }
 
 .roundRow {
     display: flex;
     justify-content: center;
     color:#3fbdc2;
-    /* background-color: #3fbdc2; */
     align-items: center;
-    border-bottom: .05rem solid #fffafa;
+    border-bottom: .05vw solid #fffafa;
 }
 
 .roundRow img {
-    width: 3.5rem;
+    width: 3.5vw;
     border-radius: 50%;
-    margin: .2rem;
+    margin: .2vw;
 }
-
 
 .roundListContainer {
     width: 60%;
     font-family: 'Acme', sans-serif;
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 1.5vw 2vw 1.5vw 2vw;
     background-color: #0d0f21;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 1rem;
-    /* margin: 1rem; */
+    margin-top: 1vw;
     position: relative;
     overflow: hidden;
-    border: .4rem solid #3fbdc2;
+    border: .4vw solid #3fbdc2;
     animation: 
         flyIn .8s ease-out;
-    border-radius: 1rem;
+    border-radius: 1vw;
     z-index: 1;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
     opacity: 98%;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2;
+    box-shadow: 0 0 .25vw #3fbdc2, 0 0 1vw #3fbdc2, 0 0 1.5vw #3fbdc2;
 } 
 
 @keyframes rotate {
@@ -63,96 +58,92 @@
     }
 }
 
-
 .roundListHeader {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5vw;
 }
 
 .roundListHeader h2 {
     color: #fffafa;
-    padding: .5rem .5rem .5rem 0px;
+    padding: .5vw .5vw .5vw 0vw;
     /* border-radius: .2rem; */
     font-family: 'Acme', sans-serif;
-    font-size: 2.3rem;
-    margin: 0px 1.5rem 0px 0px;
+    font-size: 2.3vw;
+    margin: 0vw 1.5vw 0vw 0vw;
     width: 100%;
 }
 
 .roundListLabels {
    color: hotpink;
    display: grid;
-   grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem 9rem;
-   font-size: 1.5rem;
+   grid-template-columns: 7vw 7vw 7vw 7vw 7vw 7vw 9vw;
+   font-size: 1.375vw;
    text-decoration: underline;
-   text-decoration-thickness: .1rem;
-   text-underline-offset: .3rem;
-   margin-bottom: .25rem;
-   
+   text-decoration-thickness: .1vw;
+   text-underline-offset: .25vw;
+   margin-bottom: .1vw;
 }
 
 .roundListLabel {
     display: flex;
     justify-content: center;
-    padding: 0px 0px .2rem 0px;
+    padding: 0vw 0vw .2vw 0vw;
 }
 
 .roundEditButton {
-    border-bottom: .05rem solid #fffafa;
+    border-bottom: .05vw solid #fffafa;
     align-items: center;
     display: flex;
     justify-content: space-around;
-    padding: .5rem;
+    padding: .5vw;
 }
 
 .roundEditButton button {
-    border: 1px solid #fffafa;
+    border: .1vw solid #fffafa;
     background-color: #0d0f21;
     color:hotpink;
     font-weight: bold;
     border-radius: 10%;
-    height: 2rem;
-    width: 3.5rem;
+    height: 2.15vw;
+    width: 3.5vw;
     justify-items: space-between;
-    font-size: 1Rem;
+    font-size: 1vw;
     font-family: 'Acme', sans-serif;
-    margin: .18rem 0px .18rem 0px;
+    margin: .18vw 0vw .18vw 0vw;
     opacity: 98%;
 }
 
-
 .roundEditButton button:hover {
-    border: 2px solid #fffafa;
+    border: .2vw solid #fffafa;
     color: #3fbdc2;
     background-color: #0d0f21;
     text-decoration: none;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    box-shadow: 0 0 .25vw #3fbdc2, 0 0 1vw #3fbdc2;
 }
 
 .newRoundButton {
     display: flex;
-    /* margin: 1rem 0px 1em 0px; */
-    border-radius: 1em;
-    border: 3px solid #3fbdc2;
+    border-radius: 1.5vw;
+    border: .2vw solid #3fbdc2;
     background-color: #3fbdc2;
     color: #0d0f21;
     font-weight: bold;
-    padding: .3em;
-    font-size: 1.3rem;
+    padding: .4vw;
+    font-size: 1.4vw;
     font-family: 'Acme', sans-serif;
 
 }
 
 .newRoundButton:hover {
-    border: 2px solid #fffafa;
+    border: .2vw solid #fffafa;
     color: #3fbdc2;
     background-color: #0d0f21;
     text-decoration: none;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    box-shadow: 0 0 .25vw #3fbdc2, 0 0 1.5vw #3fbdc2;
 }
 
 

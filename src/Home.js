@@ -21,9 +21,7 @@ export const Home = () => {
     const [selectedDistance, setSelectedDistance] = useState(0);
     const [filteredRounds, setFilteredRounds] = useState([]);
     const [allUsersRounds, setAllUsersRounds] = useState([]);
-
     const [circle, setCircle] = useState({})
-
 
     //helper function to turn decimal into a percentage.
     const decimalToPercentage = (decimal) => {
@@ -31,6 +29,7 @@ export const Home = () => {
         return Math.round(percent);
     }
 
+    //func to identify all of the user's unique distances. 
     const isolateUniqueDistances = (allRounds) => {
         let setOfDistances = new Set()
         allRounds.forEach(round => setOfDistances.add(round.distance));
@@ -42,6 +41,8 @@ export const Home = () => {
         return distancesArray;        
     }
 
+    //func to handle when the user selects a different distance filter. 
+    //grabs the value of their selection, sets the selectedDistance state and sets the FilteredRounds state. 
     const handleFilterChange = (event) => {
         let distanceSelected = parseInt(event.target.value);
         setSelectedDistance(distanceSelected);
@@ -69,7 +70,7 @@ export const Home = () => {
         setPuttsMade(madeCount);
 
         let decimal = madeCount / puttCount;
-        //New Users have no rounds, which returns NaN, SO, I solve by initally placing a userfriendly placeholder on the DOM.  
+        //New Users have no rounds, which returns NaN, I solve by placing initial userFriendly placeholder on the DOM.  
         let percentage = decimalToPercentage(decimal)
         if(isNaN(percentage)) {
             setPuttPercentage("-")
@@ -83,37 +84,6 @@ export const Home = () => {
     }
 
 
-    useEffect(() => {
-        getAUsersRounds(currentUsersId)
-        .then(allRounds => {
-
-            setAllUsersRounds(allRounds);
-            setFilteredRounds(allRounds)
-
-            let distancesToSet = isolateUniqueDistances(allRounds);
-            setDistances(distancesToSet);
-        })
-        .then(() => populateScorecard())
-    }, [])
-
-    useEffect(() => {
-        populateScorecard();
-    }, [selectedDistance])
-
-    useEffect(() => {
-        populateScorecard();
-    }, [allUsersRounds])
-
-    useEffect(() => {
-        scorecardCalcs(filteredRounds)
-    }, [filteredRounds])
-
-    useEffect(() => {
-        circleCalcs();
-    }, [allUsersRounds])
-
-
-
     const circleCalcs = () => {
 
         let circleOne = []
@@ -121,10 +91,8 @@ export const Home = () => {
         let circleThree = []
     
         allUsersRounds.forEach(round => {
-            
             if(round.distance < 34 && round.distance > 0) {
                 circleOne.push(round);
-            
             }
             if(round.distance > 33 && round.distance < 67) {
                 circleTwo.push(round);
@@ -133,8 +101,6 @@ export const Home = () => {
                 circleThree.push(round);
             }
         })
-
-
         let c1Putts = 0;
         let c1Made = 0;
         let c2Putts = 0;
@@ -189,12 +155,41 @@ export const Home = () => {
     }
 
 
+    useEffect(() => {
+        getAUsersRounds(currentUsersId)
+        .then(allRounds => {
+
+            setAllUsersRounds(allRounds); // setAllUsersRounds. 
+            setFilteredRounds(allRounds) //set filteredRounds to All initially. 
+
+            let distancesToSet = isolateUniqueDistances(allRounds); 
+            setDistances(distancesToSet); //sets the distances for them to select from. 
+        })
+        .then(() => populateScorecard())
+    }, [])
+
+    useEffect(() => {
+        populateScorecard();
+    }, [selectedDistance])    //when SelectedDistance changes, run populate scorecard again. 
+
+    useEffect(() => {
+        populateScorecard();
+    }, [allUsersRounds])      //when the users rounds change, run populate scorecard again. 
+
+    useEffect(() => {
+        scorecardCalcs(filteredRounds)
+    }, [filteredRounds])      //re-run the scorecard calc when user selects different distance filter. 
+
+    useEffect(() => {
+        circleCalcs();
+    }, [allUsersRounds])     //re-run the circleScorecard calc when the users rounds change. 
+
+
     return (
         <>
             <div className="home__container">
 
                     { <div className="circleScorecard">
-                        {/* <h4>% Made by Distance:</h4> */}
                         <div className="circleWrapper">
                             <div className="circleItemLabel">Distance:</div>
                             <div className="circleItemLabel">% Made:</div>
