@@ -15,10 +15,10 @@
 }
   
 .card-disc {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    box-shadow: 0 1vw 2vw 0 rgba(0,0,0,0.6);
     transition: 0.3s;
-    border-radius: 5px; 
-    margin: 0em .5em 1em 1em;
+    border-radius: .5vw; 
+    margin: 0vw .5vw 1vw 1vw;
     flex: 0 1 24%;
     max-width: 17%;
     z-index: 1;
@@ -30,47 +30,46 @@
 }
   
 .card-disc-content {
-    padding: .5em;
+    padding: .5vw;
 }
 
 .image_div {
     background-color: #fffafa; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 .4vw .8vw 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 5px; 
+    border-radius: .5vw; 
     flex: 0 1 24%;
     width: 100%;
     opacity: 88%;
-
 }
   
 .card-disc-content h2 {
-    margin-bottom: .5em;
+    margin-bottom: .5vw;
     font-weight: bold;
     color: #1d2351;
-    font-size: 26px;
+    font-size: 1.75vw;
     font-family: 'Acme', sans-serif;
 }
   
 .card-disc-content p {
     color: #1d2351;
-    margin: 0px;
-    font-size: 20px;
+    margin: 0vw;
+    font-size: 1.25vw;
     font-family: 'Acme', sans-serif;
 }
 
 .card-disc button {
     background-color: #275694;
-    border: 1px solid #3fbdc2;
+    border: .1vw solid #3fbdc2;
     color: #fffafa;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px;
-    padding: .3em;
-    border-radius: 2px;
+    font-size: 1.2vw;
+    padding: .3vw;
+    border-radius: .2vw;
     width: 100%;
-    margin: .1em;
+    margin: .1vw;
     font-family: 'Acme', sans-serif;
 }
   
@@ -81,15 +80,14 @@
 .add-disc-button {
     display: flex;
     margin: auto;
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+    margin-top: .35vw;
+    margin-bottom: .35vw;
     background-color: #275694;
-    border: 3px solid #3fbdc2;
-    border-radius: 5px;
+    border: .2vw solid #3fbdc2;
+    border-radius: .5vw;
     color: #fffafa;
-    /* font-weight: bold; */
-    padding: .2em;
-    font-size: 1.25rem;
+    padding: .25vw;
+    font-size: 1.25vw;
     font-family: 'Acme', sans-serif;
 }
 .add-disc-button:hover {
@@ -101,31 +99,29 @@
 .addDiscButton {
     display: flex;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 1vw;
     background-color: #1d2351;
-    border: 3px solid #3fbdc2;
-    border-radius: 1rem;
+    border: .3vw solid #3fbdc2;
+    border-radius: 1vw;
     color: #fffafa;
     font-weight: bold;
-    padding: 1.5rem;
-    font-size: 48px;
+    padding: 1.5vw;
+    font-size: 3vw;
     font-family: 'Acme', sans-serif;
     position: relative;
-    top: 10rem;
+    top: 10vw;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
     opacity: 98%;
-    box-shadow: 0 0 2px #3fbdc2, 0 0 10px #3fbdc2, 0 0 20px #3fbdc2, 0 0 50px #3fbdc2;
+    box-shadow: 0 0 .25vw #3fbdc2, 0 0 1vw #3fbdc2,  0 0 2vw #3fbdc2;
     animation: flyInFartherAway 1.2s ease-out;
 }
 
 .addDiscButton:hover {
     background-color: #3fbdc2;
     color: #1d2351;
-    /* border-color: #1d2351; */
-    box-shadow: 0 0 2px #1d2351, 0 0 10px #1d2351, 0 0 50px #1d2351, 0 0 100px #1d2351;
-
+    box-shadow: 0 0 .25vw #3fbdc2, 0 0 1vw #3fbdc2,  0 0 2vw #3fbdc2;
 }
 
 
@@ -146,13 +142,3 @@
         transform: translateY(0%)
     }
 }
-
-  /*Image colors to use. Light to darker. 
-#5f92a5
-#2d8296
-#526184
-#275694  first actual blue one. 
-#123d72   medium dark blue
-#1d2351  dark blue
-#0d0f21 darkest. almost blackish. 
-*/
