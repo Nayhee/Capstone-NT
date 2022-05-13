@@ -64,10 +64,7 @@
 .userScorecard {
     overflow: hidden;
     position: relative;
-    /* animation: flyIn 20s ease-out;     */
     margin: 0vw 0vw .2vw 0vw;
-    /* min-width: 29rem;
-    max-width: 36rem; */
     min-width: 29.5vw;
     max-width: 36vw;
     background-color: #0d0f21;
@@ -81,7 +78,6 @@
     animation: 
         rotate 3s ease-in infinite,
         flyIn .8s ease-out;
-    /* box-shadow: 0 0 2px #275694, 0 0 10px #275694, 0 0 20px #275694, 0 0 50px #275694; */
 }
 
 @keyframes flyIn {
@@ -104,7 +100,7 @@
     }
 }
 .userScorecard > h3 {
-    font-size: 2.5vw;
+    font-size: 2.75vw;
     color: #f5f5f5;
     margin: 1.25vw 2.5vw 1.25vw 2.5vw;
     display: flex;
