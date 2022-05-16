@@ -19,8 +19,10 @@ I built a React application called Putt Tracker in 2 weeks for my front-end caps
 Putt Tracker is a tool for disc golfers that enables users to track their practice putting rounds and analyze their results. Users physically complete a round of putts, whether in their yard or on a course, then they input their results and have their putting statistics summarized and displayed to them for analysis. 
 
 ## Is there a market for a disc golf App?
-Yes. Disc Golf is the fastest growing sport in the United States (see graph below) and putting is the most important part of the game. Players, both amateur and professional, do hundreds of practice putts every single day to improve their game. However, until now, players haven't had a tool that allows them to track their putts and analyze the results. That's where Putt Tracker comes in.
+Disc Golf is the fastest growing sport in the United States (see graph below) and putting is the most important part of the game. Players, both amateur and professional, do hundreds of practice putts every single day to improve their game. However, until now, players haven't had a tool that allows them to track their putts and analyze the results. That's where Putt Tracker comes in.
+
 ![DiscGolf Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/graph.png)
+
 The number of new PDGA members has increased by 67% and the number of active members has increased by 55%. This data only accounts for players who register and pay for a PDGA membership, which most disc golfers do not. With this new influx of players, I expect a significant increase in the need for disc golf tools, like Putt Tracker, that help players perform at the highest level.
 
 ---
