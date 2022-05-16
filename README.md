@@ -1,5 +1,5 @@
 # Putt Tracker
-I built my React Application called Putt Tracker from scratch in two weeks for my front-end capstone project at Nashville Software School. 
+I built a React application called Putt Tracker in 2 weeks for my front-end capstone project at Nashville Software School. 
 
 ![Project Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/homeSNIP.png)
 
