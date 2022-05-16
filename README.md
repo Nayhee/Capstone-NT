@@ -67,7 +67,7 @@ Per the PDGA, from 2020 to 2021, the number of new PDGA members has increased by
 
 ## Author Info
 ### Created by Nathan Traczewski
-#### If you have any questions about this project, please reach out via Linkedin which is listed below.
+#### If you have any questions about this project, please reach out via Linkedin.
 
 - LinkedIn - [Nathan Traczewski](https://www.linkedin.com/in/nathan-traczewski-cpa/)
 
