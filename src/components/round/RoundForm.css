@@ -193,12 +193,12 @@
     color: #fffafa;
     font-family: 'Acme', sans-serif;
     margin: auto;
-    margin-top: .5vw;
+    margin-top: 1vw;
     padding: 1.25vw;
-    border: .4vw solid;
+    border: .48vw solid;
     z-index: 1;
-    width: 20%;
-    height: 6.5vw;
+    width: 18%;
+    height: 5vw;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position-x: right;
@@ -223,9 +223,9 @@
 }
 
 .todayScHeader {
-    font-size: 1.8rem;
+    font-size: 1.6vw;
     color: #dd2476;
-    margin: -.5vw 0vw .2vw 0vw;
+    margin: -.5vw 0vw 0vw 0vw;
 }
 
 .todayScDataDiv {
@@ -241,7 +241,7 @@
 
 .todayScValues {
     color: #dd2476;
-    font-size: 1.6vw;
+    font-size: 1.3vw;
 }
 
 .todayScDataDiv label {
