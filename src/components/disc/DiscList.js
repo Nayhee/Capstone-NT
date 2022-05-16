@@ -12,6 +12,7 @@ export const DiscList = () => {
 
     const currentUser = JSON.parse(sessionStorage.getItem('putt_user'))
     const currentUserId = currentUser.id;
+    const currentUsersName = currentUser.firstName;
 
     //get the users discs and SET the state. called by UseEffect every render AFTER the first. 
     const getDiscs = (currentUserId) => {
@@ -35,8 +36,9 @@ export const DiscList = () => {
     //in the middle of the page, instead of an empty list.  
 
     return (
-        <>
+        <>            
             <section className="add-disc-container"> 
+                <h2>{currentUsersName}'s Discs</h2>
                 <button type="button"
                     className={discs.length > 0 ? 'add-disc-button' : 'addDiscButton'}
                     onClick={() => {navigate("/discs/create")}}>
