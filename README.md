@@ -1,7 +1,7 @@
 # Putt Tracker
 I built my React Application called Putt Tracker from scratch in two weeks for my front-end capstone project at Nashville Software School. 
 
-![Project Image](https://github.com/Nayhee/Capstone-NT/capstone/public/images/homeSNIP.png)
+![Project Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/homeSNIP.png)
 
 
 ### Table of Contents
@@ -16,11 +16,11 @@ I built my React Application called Putt Tracker from scratch in two weeks for m
 ---
 
 ## Description
-Putt Tracker is a tool for disc golfers that enables users to track their practice putting rounds and analyze their results. With Putt Tracker, users physically complete a round of practice putts, whether in their yard or on a course, then they input their results and have their putting statistics summarized and displayed to them for analysis. 
+Putt Tracker is a tool for disc golfers that enables users to track their practice putting rounds and analyze their results. Users physically complete a round of putts, whether in their yard or on a course, then they input their results and have their putting statistics summarized and displayed to them for analysis. 
 
 ## Is there a market for a disc golf App?
 Yes. Disc Golf is the fastest growing sport in the United States (see graph below) and putting is the most important part of the game. Players, both amateur and professional, do hundreds of practice putts every single day to improve their game. However, until now, players haven't had a tool that allows them to track their putts and analyze the results. That's where Putt Tracker comes in.
-![DiscGolf Image](https://github.com/Nayhee/Capstone-NT/capstone/public/images/graph.png)
+![DiscGolf Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/graph.png)
 The number of new PDGA members has increased by 67% and the number of active members has increased by 55%. This data only accounts for players who register and pay for a PDGA membership, which most disc golfers do not. With this new influx of players, I expect a significant increase in the need for disc golf tools, like Putt Tracker, that help players perform at the highest level.
 
 ---
@@ -61,7 +61,7 @@ The number of new PDGA members has increased by 67% and the number of active mem
 
 ---
 
-![ERD Image](https://github.com/Nayhee/Capstone-NT/capstone/public/images/ERD.png)
+![ERD Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/ERD.png)
 
 ---
 
