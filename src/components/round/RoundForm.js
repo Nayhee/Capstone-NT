@@ -36,12 +36,8 @@ export const RoundForm = () => {
     const [discs, setDiscs] = useState([])
     //state to stop user from repeatedly clicking submit and overloading database with requests. 
     const [isLoading, setIsLoading] = useState(true)
-
-    //set initial border state to the normal class so that I can change its class to Cool border when user submits. 
-    const [border, setBorder] = useState("newRoundForm")
     //use isButton's state for my ScoreCard Calc, so that it runs everytime the button's state is changed (clicked).
     const [isButton, setIsButton] = useState(false)
-
 
     //fetch the users discs for the select dropdown. once retrieved, setIsLoading to false. 
     useEffect(() => {
@@ -103,19 +99,11 @@ export const RoundForm = () => {
         setRound(newRound);
     }
 
-     //borderFunc used to get the Animated Gradient Border to flash when user first submits a round!
-    const borderFunc = () => {
-        if(border === "newRoundForm") {
-            setBorder("newRoundFormBorderFlash")
-        }
-    }
-
     const integerCheck = (evt) => {
         const newRound = {...round}
         newRound.discId = parseInt(evt.target.value);
         setRound(newRound);
     }
-
 
     const handleClickSaveRound = (event) => {
         event.preventDefault();
@@ -126,9 +114,7 @@ export const RoundForm = () => {
             
             //if they submit a full round, I invert the IsButton state, so that the scorecard calculation 
             //runs again, updating it with the new round's data.
-            setIsButton(!isButton)
-            //swich the border class everytime submit round button clicked. 
-            borderFunc();
+            setIsButton(!isButton);
             
             round.putts = parseInt(round.putts);
             round.made = parseInt(round.made);
@@ -183,7 +169,7 @@ export const RoundForm = () => {
             </div>
             
             
-            <form className={border}>
+            <form className="newRoundForm">
                 <h1 className="newRoundFormTitle">Track New Round</h1>
 
                 <div className="newRoundGridDiv">
