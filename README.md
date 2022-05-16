@@ -59,7 +59,8 @@ Per the PDGA, from 2020 to 2021, the number of new PDGA members has increased by
 4. Once you're logged in, you can add your own discs on the "discs" page, or head over to the "Track" page to begin tracking your putting rounds. 
 
 ---
-##Entity Relationship Diagram (ERD)
+## Entity Relationship Diagram (ERD)
+
 ![ERD Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/ERD.png)
 
 ---
