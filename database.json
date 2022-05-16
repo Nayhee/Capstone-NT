@@ -8,43 +8,21 @@
     },
     {
       "id": 2,
-      "firstName": "Ryan",
-      "lastName": "Bogle",
-      "email": "bogle@gmail.com"
-    },
-    {
-      "id": 3,
       "firstName": "Palmer",
       "lastName": "Adams",
       "email": "palmer@gmail.com"
+    },
+    {
+      "id": 3,
+      "firstName": "Guest",
+      "lastName": "Binnington",
+      "email": "guest@gmail.com"
     },
     {
       "id": 4,
       "firstName": "Vince",
       "lastName": "Swann",
       "email": "vince@gmail.com"
-    },
-    {
-      "email": "holly@gmail.com",
-      "name": "Holly Traczewski",
-      "id": 5
-    },
-    {
-      "email": "jeff@gmail.com",
-      "name": "Jeff Traczewski",
-      "id": 6
-    },
-    {
-      "email": "flop@gmail.com",
-      "firstName": "Flop",
-      "lastName": "Flanigan",
-      "id": 7
-    },
-    {
-      "email": "boopbeep@gmail.com",
-      "firstName": "boop",
-      "lastName": "beep",
-      "id": 8
     }
   ],
   "discs": [
