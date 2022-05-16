@@ -9,6 +9,7 @@ I built a React application called Putt Tracker in 2 weeks for my front-end caps
 - [Description](#description)
 - [Technologies](#technologies)
 - [How To Use](#how-to-use)
+- [ERD](#entity-relationhip-diagram)
 - [Author Info](#author-info)
 - [License](#license)
 
@@ -58,7 +59,7 @@ Per the PDGA, from 2020 to 2021, the number of new PDGA members has increased by
 4. Once you're logged in, you can add your own discs on the "discs" page, or head over to the "Track" page to begin tracking your putting rounds. 
 
 ---
-
+##Entity Relationship Diagram (ERD)
 ![ERD Image](https://github.com/Nayhee/Capstone-NT/blob/main/public/images/ERD.png)
 
 ---
