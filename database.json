@@ -331,6 +331,15 @@
       "putts": 20,
       "made": 16,
       "id": 17
+    },
+    {
+      "userId": 1,
+      "date": "5/16/2022",
+      "discId": 9,
+      "distance": 25,
+      "putts": 20,
+      "made": 17,
+      "id": 18
     }
   ]
 }
