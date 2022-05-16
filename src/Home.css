@@ -169,10 +169,9 @@
 
 .circleScorecard {
     position: absolute;
-    left: 7vw;
+    left: 7.5vw;
     top: 18vw; 
     font-family: 'Acme', sans-serif;
-    /* font-weight: bold; */
     padding: 1.8vw;
     border: .25vw solid #3fbdc2;
     border-radius: 1vw;
