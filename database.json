@@ -172,7 +172,7 @@
     },
     {
       "name": "Immortal Spirit",
-      "weight": "173g",
+      "weight": "174g",
       "typeId": 1,
       "brandId": 3,
       "image": "/images/d2.png",
@@ -237,7 +237,7 @@
       "id": 1,
       "userId": 1,
       "date": "4/15/2022",
-      "discId": 10,
+      "discId": 9,
       "distance": 15,
       "putts": 25,
       "made": 23
@@ -331,6 +331,15 @@
       "putts": 20,
       "made": 16,
       "id": 17
+    },
+    {
+      "userId": 1,
+      "date": "5/17/2022",
+      "discId": 9,
+      "distance": 30,
+      "putts": 25,
+      "made": 25,
+      "id": 18
     }
   ]
 }

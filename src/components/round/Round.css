@@ -36,8 +36,8 @@
     position: relative;
     overflow: hidden;
     border: .4vw solid #3fbdc2;
-    animation: 
-        flyIn .8s ease-out;
+    /* animation: 
+        flyIn .8s ease-out; */
     border-radius: 1vw;
     z-index: 1;
     background-blend-mode: overlay;

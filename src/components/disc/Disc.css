@@ -4,7 +4,7 @@
     justify-content: center;
     align-content: stretch;
     flex-wrap: wrap;
-    animation: flyIn .8s ease-out;
+    /* animation: flyIn .8s ease-out; */
 
 }
 
