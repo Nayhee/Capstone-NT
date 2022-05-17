@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
+import { addDisc } from "../../modules/DiscManager"
 
 export const Register = ({setAuthUser}) => {
     const firstName = useRef()
@@ -36,7 +37,22 @@ export const Register = ({setAuthUser}) => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 setAuthUser(createdUser)
-                                navigate("/")
+
+                                //default disc!
+                                const currentUser = JSON.parse(sessionStorage.getItem('putt_user'))
+                                const currentUserId = currentUser.id;
+                                const currentUsersName = currentUser.firstName;
+                                
+                                let defaultDisc = {
+                                    userId: currentUserId,
+                                    name: "Default Disc",
+                                    typeId: 1,
+                                    brandId: 3,
+                                    weight: "173g",
+                                    image: "/images/d2.png"
+                                }
+                                addDisc(defaultDisc).then(() => navigate("/"))
+
                             }
                         })
                 }
