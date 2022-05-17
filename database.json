@@ -17,12 +17,6 @@
       "firstName": "Guest",
       "lastName": "Binnington",
       "email": "guest@gmail.com"
-    },
-    {
-      "id": 4,
-      "firstName": "Vince",
-      "lastName": "Swann",
-      "email": "vince@gmail.com"
     }
   ],
   "discs": [
@@ -331,15 +325,6 @@
       "putts": 20,
       "made": 16,
       "id": 17
-    },
-    {
-      "userId": 1,
-      "date": "5/17/2022",
-      "discId": 9,
-      "distance": 30,
-      "putts": 25,
-      "made": 25,
-      "id": 18
     }
   ]
 }
