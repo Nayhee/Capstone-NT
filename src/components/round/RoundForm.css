@@ -101,7 +101,31 @@
     background-color: #0d0f21;
     opacity: 99%;
     box-shadow: 0 0 .25vw #3fbdc2, 0 0 1vw #3fbdc2, 0 0 2vw #3fbdc2;
-    animation: flyIn .8s ease-out;
+    /* animation: flyIn .8s ease-out; */
+}
+
+.newRoundFormBorderFlash {
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 1vw;
+    padding: 2vw 3vw 2vw 3vw;
+    border: .4vw solid #3fbdc2;
+    border-radius: 1vw;
+    z-index: 1;
+    height: 19vw;
+    width: 45%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: #0d0f21;
+    opacity: 98%;
+    overflow: hidden;
+    border-image: 
+    linear-gradient(
+        #1d2351) 1;
+    animation: 
+        rotate 1s ease-in .0005s;
 }
 
 .newRoundControls {
@@ -270,7 +294,7 @@
     opacity: 95%;
     box-shadow: 0 0 .25vw #3fbdc2, 0 0 .75vw #3fbdc2;
     font-weight: bold;
-    animation: flyIn .8s ease-out;
+    /* animation: flyIn .8s ease-out; */
 }
 
 .howToPlayDiv ol {
